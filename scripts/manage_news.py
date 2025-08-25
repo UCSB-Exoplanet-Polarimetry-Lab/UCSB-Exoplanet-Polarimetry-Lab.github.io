@@ -29,7 +29,15 @@ def load_news_data():
 
 def save_news_data(data):
     """Save the news data back to YAML file."""
-    data_file = "_data/news.yml"
+    # Absolute path to the current file
+    current_file = os.path.abspath(__file__)
+
+    # Parent directory of the current file
+    parent_dir = os.path.dirname(current_file)
+
+    # One level above the parent directory
+    grandparent_dir = os.path.dirname(parent_dir)
+    data_file = os.path.join(grandparent_dir, "_data/news.yml")
     with open(data_file, 'w') as f:
         yaml.dump(data, f, default_flow_style=False, sort_keys=False, indent=2)
 

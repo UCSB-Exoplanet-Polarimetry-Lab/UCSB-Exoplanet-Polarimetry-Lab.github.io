@@ -1,0 +1,44 @@
+# Site settings
+title: "Millar-Blanchaer Research Group"
+email: "maxmb@ucsb.edu"
+description: "University of California, Santa Barbara - Exoplanet and Brown Dwarf Research"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: maxwellmb
+orcid_id: "0000-0001-6205-9233"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - README.txt
+  - LICENSE.txt
+  - Original_Template_html5up-massively.zip
+  - google40a051908c347317.html
+  - test.php
+  - atmospheres.php
+  - navbar.php
+  - Gemfile
+  - Gemfile.lock
+  - assets/sass/

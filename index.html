@@ -1,0 +1,136 @@
+---
+layout: default
+title: Home
+show_intro: true
+---
+
+<!-- Featured Post -->
+<article class="post featured">
+	<header class="major">
+		<p style="text-align: justify;"> 
+			Our research group focuses on exoplanet detection and characterization using high-contrast imaging and polarimetry. 
+            We develop new instrumentation, observational techniques, and data analysis methods to push the boundaries of what we can learn about planets outside our solar system.
+		</p>
+		<p style="text-align: justify;"> 	
+			Personally, my research is motivated by a desire to better understand our origins, through the study of planet formation and evolution, and to develop a better sense of our place in the universe, through the long-term search for Earth-like planets.
+			In particular, I'm interested in the detection and characterization of directly imaged of exoplanets, brown dwarfs and 
+			debris disks (extra solar analogs to our own Kuiper and asteroid belts). 
+			My work involves a mix of instrumentation, observation and data analysis. Take a look around the website, 
+			and please get in touch if you see anything that interests you! <a href="https://ui.adsabs.harvard.edu/public-libraries/wm8-TqOJROyVkhI1qZ9TqA">Click here</a> for a list of my first-author publications, or on the ADS icon for a full list. 
+		</p>
+	</header>
+</article>
+
+<!-- News and Travel Section -->
+<section class="post compact-section">
+	<header class="major compact-header">
+		<p class="news-heading">News and Travel</p>
+	</header>
+	
+	<div class="news-items">
+		{% assign all_items = site.data.news.items | sort: "date" | reverse %}
+		{% for item in all_items limit: 8 %}
+		<div class="news-item">
+			<div class="news-meta">
+				<span class="news-date">{{ item.date | date: "%b %d, %Y" }}</span>
+				{% assign category = site.data.news.categories | where: "name", item.category | first %}
+				<span class="news-category" style="color: {{ category.color }}">
+					<i class="fa {{ category.icon }}"></i> {{ category.display_name }}
+				</span>
+			</div>
+			<div class="news-content">
+				{% if item.link %}
+				<a href="{{ item.link }}" target="_blank">{{ item.description }}</a>
+				{% else %}
+				{{ item.description }}
+				{% endif %}
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</section>
+
+<style>
+.compact-section {
+	margin-top: 2rem !important;
+	border-top: none !important;
+}
+
+.compact-header {
+	margin-bottom: 0.125rem !important;
+}
+
+.post.featured {
+	margin-bottom: 0 !important;
+	border-bottom: none !important;
+}
+
+.news-heading {
+	font-size: 1.1rem;
+	margin-bottom: 0.25rem;
+	font-weight: 600;
+}
+
+.news-items {
+	font-size: 0.9rem;
+	margin-top: 0;
+}
+
+.news-item {
+	margin-bottom: 1rem;
+	padding: 0.75rem;
+	border-left: 2px solid #e0e0e0;
+	background: #fafafa;
+	border-radius: 0 4px 4px 0;
+	transition: all 0.2s ease;
+}
+
+.news-item:hover {
+	background: #f5f5f5;
+	border-left-color: #ccc;
+}
+
+.news-meta {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.25rem;
+	font-size: 0.8rem;
+}
+
+.news-date {
+	color: #888;
+	font-weight: 400;
+}
+
+.news-category {
+	font-weight: 500;
+}
+
+.news-content {
+	line-height: 1.4;
+}
+
+.news-content a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.news-content a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+	.news-meta {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.25rem;
+	}
+	
+	.news-item {
+		padding: 0.5rem;
+	}
+}
+</style>
+	</header>
+</article>

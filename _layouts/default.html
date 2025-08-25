@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+		<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+		<noscript><link rel="stylesheet" href="{{ '/assets/css/noscript.css' | relative_url }}" /></noscript>
+		{% seo %}
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				{% if page.show_intro %}
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Millar-Blanchaer<br />
+						Research Group</h1>
+						<p>University of California, Santa Barbara</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+				{% endif %}
+
+				<!-- Header -->
+					<header id="header">
+						<a href="{{ '/' | relative_url }}" class="logo">{{ site.title }}</a>
+					</header>
+
+				<!-- Nav -->
+					{% include navigation.html %}
+
+				<!-- Main -->
+					<div id="main">
+						{{ content }}
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="footer-container">
+					  <div class="photo-container">
+						<img src="{{ '/images/me.jpg' | relative_url }}" alt="I like being outside" class="center" style="max-width:50%;" />
+					  </div>
+					  <div class="contact-container">
+						<section class="split contact">
+						  <section class="alt">
+							<h3>Address</h3>
+							<p>University of California, Santa Barbara <br />
+							  Broida Hall <br />
+							  Santa Barbara CA 93106 <br />
+							  United States</p>
+						  </section>
+						  <section>
+							<h3>Email</h3>
+							<p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+						  </section>
+						</section>
+					  </div>
+					</div>
+				  </footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>Last Updated {{ site.time | date: "%b %d, %Y" }}</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+			<script src="{{ '/assets/js/jquery.scrollex.min.js' | relative_url }}"></script>
+			<script src="{{ '/assets/js/jquery.scrolly.min.js' | relative_url }}"></script>
+			<script src="{{ '/assets/js/skel.min.js' | relative_url }}"></script>
+			<script src="{{ '/assets/js/util.js' | relative_url }}"></script>
+			<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+	</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Group Page Management Guide - Maxwell Millar-Blanchaer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="University of California, Santa Barbara - Exoplanet and Brown Dwarf Research" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+		<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Group Page Management Guide | Maxwell Millar-Blanchaer</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Group Page Management Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="University of California, Santa Barbara - Exoplanet and Brown Dwarf Research" />
+<meta property="og:description" content="University of California, Santa Barbara - Exoplanet and Brown Dwarf Research" />
+<link rel="canonical" href="http://localhost:4000/GROUP_MANAGEMENT/" />
+<meta property="og:url" content="http://localhost:4000/GROUP_MANAGEMENT/" />
+<meta property="og:site_name" content="Maxwell Millar-Blanchaer" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Group Page Management Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"University of California, Santa Barbara - Exoplanet and Brown Dwarf Research","headline":"Group Page Management Guide","url":"http://localhost:4000/GROUP_MANAGEMENT/"}</script>
+<!-- End Jekyll SEO tag -->
+
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				
+
+				<!-- Header -->
+					<header id="header">
+						<a href="/" class="logo">Maxwell Millar-Blanchaer</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+	<ul class="links">
+		<li class="">
+			<a href="/">Home</a>
+		</li>
+		<li class="">
+			<a href="/science/">Science</a>
+		</li>
+		<li class="">
+			<a href="/instrumentation/">Instrumentation</a>
+		</li>
+		<li class="">
+			<a href="/software/">Software</a>
+		</li>
+		<li class="">
+			<a href="/outreach/">Outreach</a>
+		</li>
+		<li>
+			<a href="/assets/cv.pdf">CV</a>
+		</li>
+		<li class="">
+			<a href="/group/">Group</a>
+		</li>
+	</ul>
+	<ul class="icons">
+		<li>
+			<a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy)&q=%20author%3A%22Millar-Blanchaer%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">
+				<img src="/images/ads.png" alt="NASA ADS icon" style="width:48px">
+			</a>
+		</li>
+		<li>
+			<a href="https://github.com/maxwellmb" class="icon fa-github">
+				<span class="label">GitHub</span>
+			</a>
+		</li>
+		<li>
+			<div itemscope itemtype="https://schema.org/Person">
+				<a itemprop="sameAs" content="https://orcid.org/0000-0001-6205-9233" href="https://orcid.org/0000-0001-6205-9233" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:center;">
+					<img src="/images/orcid16.png" style="width:1em;margin-right:.5em;">
+				</a>
+			</div>
+		</li>
+	</ul>
+</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+						<h1 id="group-page-management-guide">Group Page Management Guide</h1>
+
+<p>The group page is now data-driven and much easier to maintain! Here’s how to manage it:</p>
+
+<h2 id="-file-structure">📁 File Structure</h2>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">_data/group_members.yml</code></strong> - Contains all group member data</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">group.html</code></strong> - The page template (don’t edit this directly)</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">scripts/update_group_member.py</code></strong> - Helper script for easy management</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">images/people/</code></strong> - Directory for member photos</li>
+</ul>
+
+<h2 id="-quick-start">🚀 Quick Start</h2>
+
+<h3 id="option-1-use-the-python-script-recommended">Option 1: Use the Python Script (Recommended)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Make the script executable</span>
+<span class="nb">chmod</span> +x scripts/update_group_member.py
+
+<span class="c"># Run the management script</span>
+python scripts/update_group_member.py
+</code></pre></div></div>
+
+<p>The script provides an interactive menu to:</p>
+<ul>
+  <li>Add new members</li>
+  <li>Edit existing members</li>
+  <li>Remove members</li>
+  <li>Move members between current/alumni sections</li>
+  <li>View current data</li>
+</ul>
+
+<h3 id="option-2-edit-the-yaml-file-directly">Option 2: Edit the YAML File Directly</h3>
+
+<p>Edit <code class="language-plaintext highlighter-rouge">_data/group_members.yml</code> directly. The structure is:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">current</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Member</span><span class="nv"> </span><span class="s">Name"</span>
+    <span class="na">role</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Graduate</span><span class="nv"> </span><span class="s">Student"</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s2">"</span><span class="s">member_photo.jpg"</span>  <span class="c1"># or leave empty for placeholder</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Research</span><span class="nv"> </span><span class="s">description..."</span>
+    <span class="na">email</span><span class="pi">:</span> <span class="s2">"</span><span class="s">member@ucsb.edu"</span>
+    <span class="na">website</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://member-website.com"</span>  <span class="c1"># optional</span>
+    <span class="na">github</span><span class="pi">:</span> <span class="s2">"</span><span class="s">github-username"</span>  <span class="c1"># optional</span>
+    <span class="na">ads</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://ui.adsabs.harvard.edu/search/..."</span>  <span class="c1"># optional</span>
+    <span class="na">orcid</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://orcid.org/0000-0000-0000-0000"</span>  <span class="c1"># optional</span>
+
+<span class="na">alumni</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Alumni</span><span class="nv"> </span><span class="s">Name"</span>
+    <span class="na">role</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Former</span><span class="nv"> </span><span class="s">Graduate</span><span class="nv"> </span><span class="s">Student"</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s2">"</span><span class="s">alumni_photo.jpg"</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">What</span><span class="nv"> </span><span class="s">they</span><span class="nv"> </span><span class="s">worked</span><span class="nv"> </span><span class="s">on..."</span>
+    <span class="na">current_position</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Current</span><span class="nv"> </span><span class="s">job/institution"</span>
+    <span class="na">email</span><span class="pi">:</span> <span class="s2">"</span><span class="s">alumni@email.com"</span>
+    <span class="na">website</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="na">github</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="na">ads</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="na">orcid</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+</code></pre></div></div>
+
+<h2 id="-adding-member-photos">📸 Adding Member Photos</h2>
+
+<ol>
+  <li>Save photos in <code class="language-plaintext highlighter-rouge">images/people/</code> directory</li>
+  <li>Use consistent naming: <code class="language-plaintext highlighter-rouge">firstname_lastname.jpg</code></li>
+  <li>Recommended size: 300x300 pixels (will be cropped to circle)</li>
+  <li>Supported formats: JPG, PNG</li>
+</ol>
+
+<h2 id="-common-tasks">🔄 Common Tasks</h2>
+
+<h3 id="adding-a-new-current-member">Adding a New Current Member</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python scripts/update_group_member.py
+<span class="c"># Choose option 1: Add current member</span>
+<span class="c"># Fill in the prompts</span>
+</code></pre></div></div>
+
+<h3 id="moving-a-member-to-alumni">Moving a Member to Alumni</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python scripts/update_group_member.py
+<span class="c"># Choose option 7: Move member between sections</span>
+<span class="c"># Choose option 1: Current → Alumni</span>
+<span class="c"># Select the member and provide their current position</span>
+</code></pre></div></div>
+
+<h3 id="updating-member-information">Updating Member Information</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python scripts/update_group_member.py
+<span class="c"># Choose option 3: Edit current member (or 4 for alumni)</span>
+<span class="c"># Select the member and update fields</span>
+</code></pre></div></div>
+
+<h2 id="-customization">🎨 Customization</h2>
+
+<h3 id="changing-the-layout">Changing the Layout</h3>
+
+<p>The layout is defined in <code class="language-plaintext highlighter-rouge">group.html</code>. Key CSS classes:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.member-card</code> - Individual member cards</li>
+  <li><code class="language-plaintext highlighter-rouge">.member-image</code> - Photo container</li>
+  <li><code class="language-plaintext highlighter-rouge">.member-info</code> - Text information</li>
+  <li><code class="language-plaintext highlighter-rouge">.alumni</code> - Alumni-specific styling</li>
+</ul>
+
+<h3 id="adding-new-fields">Adding New Fields</h3>
+
+<ol>
+  <li>Add the field to <code class="language-plaintext highlighter-rouge">_data/group_members.yml</code></li>
+  <li>Update the template in <code class="language-plaintext highlighter-rouge">group.html</code> to display it</li>
+  <li>Update the Python script if using it</li>
+</ol>
+
+<h2 id="-responsive-design">📱 Responsive Design</h2>
+
+<p>The page automatically adapts to different screen sizes:</p>
+<ul>
+  <li>Desktop: Grid layout with multiple columns</li>
+  <li>Mobile: Single column layout</li>
+  <li>Images scale appropriately</li>
+</ul>
+
+<h2 id="-troubleshooting">🔧 Troubleshooting</h2>
+
+<h3 id="missing-images">Missing Images</h3>
+<ul>
+  <li>Check that image files exist in <code class="language-plaintext highlighter-rouge">images/people/</code></li>
+  <li>Verify filename matches the YAML entry</li>
+  <li>Placeholder icons will show if no image is specified</li>
+</ul>
+
+<h3 id="yaml-syntax-errors">YAML Syntax Errors</h3>
+<ul>
+  <li>Use a YAML validator (like <a href="https://www.yamllint.com/">yamllint.com</a>)</li>
+  <li>Check indentation (use spaces, not tabs)</li>
+  <li>Ensure quotes are properly closed</li>
+</ul>
+
+<h3 id="script-issues">Script Issues</h3>
+<ul>
+  <li>Make sure Python 3 is installed</li>
+  <li>Install PyYAML: <code class="language-plaintext highlighter-rouge">pip install pyyaml</code></li>
+  <li>Check file permissions on the script</li>
+</ul>
+
+<h2 id="-tips">💡 Tips</h2>
+
+<ol>
+  <li><strong>Keep descriptions concise</strong> - 2-3 sentences work best</li>
+  <li><strong>Use consistent naming</strong> for images</li>
+  <li><strong>Update regularly</strong> - especially when people join/leave</li>
+  <li><strong>Backup the YAML file</strong> before major changes</li>
+  <li><strong>Test locally</strong> before pushing to GitHub</li>
+</ol>
+
+<h2 id="-need-help">🆘 Need Help?</h2>
+
+<p>If you encounter issues:</p>
+<ol>
+  <li>Check the browser console for errors</li>
+  <li>Verify the YAML syntax</li>
+  <li>Test the local Jekyll build: <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></li>
+  <li>Check that all image paths are correct</li>
+</ol>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="footer-container">
+					  <div class="photo-container">
+						<img src="/images/me.jpg" alt="I like being outside" class="center" style="max-width:50%;" />
+					  </div>
+					  <div class="contact-container">
+						<section class="split contact">
+						  <section class="alt">
+							<h3>Address</h3>
+							<p>University of California, Santa Barbara <br />
+							  Broida Hall <br />
+							  Santa Barbara CA 93106 <br />
+							  United States</p>
+						  </section>
+						  <section>
+							<h3>Email</h3>
+							<p><a href="mailto:maxmb@ucsb.edu">maxmb@ucsb.edu</a></p>
+						  </section>
+						</section>
+					  </div>
+					</div>
+				  </footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>Last Updated Aug 24, 2025</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/skel.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>News and Travel Management Guide - Maxwell Millar-Blanchaer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="University of California, Santa Barbara - Exoplanet and Brown Dwarf Research" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+		<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>News and Travel Management Guide | Maxwell Millar-Blanchaer</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="News and Travel Management Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="University of California, Santa Barbara - Exoplanet and Brown Dwarf Research" />
+<meta property="og:description" content="University of California, Santa Barbara - Exoplanet and Brown Dwarf Research" />
+<link rel="canonical" href="http://localhost:4000/NEWS_MANAGEMENT/" />
+<meta property="og:url" content="http://localhost:4000/NEWS_MANAGEMENT/" />
+<meta property="og:site_name" content="Maxwell Millar-Blanchaer" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="News and Travel Management Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"University of California, Santa Barbara - Exoplanet and Brown Dwarf Research","headline":"News and Travel Management Guide","url":"http://localhost:4000/NEWS_MANAGEMENT/"}</script>
+<!-- End Jekyll SEO tag -->
+
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				
+
+				<!-- Header -->
+					<header id="header">
+						<a href="/" class="logo">Maxwell Millar-Blanchaer</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+	<ul class="links">
+		<li class="">
+			<a href="/">Home</a>
+		</li>
+		<li class="">
+			<a href="/science/">Science</a>
+		</li>
+		<li class="">
+			<a href="/instrumentation/">Instrumentation</a>
+		</li>
+		<li class="">
+			<a href="/software/">Software</a>
+		</li>
+		<li class="">
+			<a href="/outreach/">Outreach</a>
+		</li>
+		<li>
+			<a href="/assets/cv.pdf">CV</a>
+		</li>
+		<li class="">
+			<a href="/group/">Group</a>
+		</li>
+	</ul>
+	<ul class="icons">
+		<li>
+			<a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy)&q=%20author%3A%22Millar-Blanchaer%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">
+				<img src="/images/ads.png" alt="NASA ADS icon" style="width:48px">
+			</a>
+		</li>
+		<li>
+			<a href="https://github.com/maxwellmb" class="icon fa-github">
+				<span class="label">GitHub</span>
+			</a>
+		</li>
+		<li>
+			<div itemscope itemtype="https://schema.org/Person">
+				<a itemprop="sameAs" content="https://orcid.org/0000-0001-6205-9233" href="https://orcid.org/0000-0001-6205-9233" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:center;">
+					<img src="/images/orcid16.png" style="width:1em;margin-right:.5em;">
+				</a>
+			</div>
+		</li>
+	</ul>
+</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+						<h1 id="news-and-travel-management-guide">News and Travel Management Guide</h1>
+
+<p>The news and travel section is now data-driven and much easier to maintain! Here’s how to manage it:</p>
+
+<h2 id="-file-structure">📁 File Structure</h2>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">_data/news.yml</code></strong> - Contains all news items and categories</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">index.html</code></strong> - The homepage template (don’t edit this directly)</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">scripts/manage_news.py</code></strong> - Helper script for easy management</li>
+</ul>
+
+<h2 id="-quick-start">🚀 Quick Start</h2>
+
+<h3 id="option-1-use-the-python-script-recommended">Option 1: Use the Python Script (Recommended)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Make the script executable</span>
+<span class="nb">chmod</span> +x scripts/manage_news.py
+
+<span class="c"># Run the management script</span>
+python scripts/manage_news.py
+</code></pre></div></div>
+
+<p>The script provides an interactive menu to:</p>
+<ul>
+  <li>Add new news items</li>
+  <li>Edit existing items</li>
+  <li>Remove items</li>
+  <li>View all items</li>
+  <li>Add new categories</li>
+</ul>
+
+<h3 id="option-2-edit-the-yaml-file-directly">Option 2: Edit the YAML File Directly</h3>
+
+<p>Edit <code class="language-plaintext highlighter-rouge">_data/news.yml</code> directly. The structure is:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">items</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">date</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2024-08-24"</span>
+    <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Postdoc</span><span class="nv"> </span><span class="s">Position</span><span class="nv"> </span><span class="s">Available"</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">I'm</span><span class="nv"> </span><span class="s">hiring</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">postdoc</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">work</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">me</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Roman</span><span class="nv"> </span><span class="s">Coronagraph</span><span class="nv"> </span><span class="s">Instrument..."</span>
+    <span class="na">category</span><span class="pi">:</span> <span class="s2">"</span><span class="s">opportunity"</span>
+    <span class="na">link</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://recruit.ap.ucsb.edu/JPF02686"</span>
+    <span class="na">featured</span><span class="pi">:</span> <span class="no">true</span>
+
+<span class="na">categories</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">opportunity"</span>
+    <span class="na">display_name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Opportunities"</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s2">"</span><span class="s">fa-briefcase"</span>
+    <span class="na">color</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#28a745"</span>
+</code></pre></div></div>
+
+<h2 id="-news-item-fields">📝 News Item Fields</h2>
+
+<h3 id="required-fields">Required Fields:</h3>
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">date</code></strong> - Date in YYYY-MM-DD format</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">title</code></strong> - Short, descriptive title</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">description</code></strong> - Full description of the news item</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">category</code></strong> - Must match a category name from the categories list</li>
+</ul>
+
+<h3 id="optional-fields">Optional Fields:</h3>
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">link</code></strong> - URL for more information</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">featured</code></strong> - Boolean (true/false) to highlight important items</li>
+</ul>
+
+<h2 id="️-categories">🏷️ Categories</h2>
+
+<h3 id="current-categories">Current Categories:</h3>
+<ul>
+  <li><strong>Opportunities</strong> - Job openings, student positions, etc.</li>
+  <li><strong>Conferences &amp; Travel</strong> - Conference presentations, travel plans</li>
+  <li><strong>Publications</strong> - New papers, research updates</li>
+  <li><strong>Updates</strong> - General website or group updates</li>
+</ul>
+
+<h3 id="adding-new-categories">Adding New Categories:</h3>
+<ol>
+  <li>Use the Python script: <code class="language-plaintext highlighter-rouge">python scripts/manage_news.py</code> → Option 5</li>
+  <li>Or edit <code class="language-plaintext highlighter-rouge">_data/news.yml</code> directly</li>
+  <li>Each category needs: <code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">display_name</code>, <code class="language-plaintext highlighter-rouge">icon</code>, <code class="language-plaintext highlighter-rouge">color</code></li>
+</ol>
+
+<h2 id="-visual-features">🎨 Visual Features</h2>
+
+<h3 id="featured-items">Featured Items:</h3>
+<ul>
+  <li><strong>Blue border</strong> and gradient background</li>
+  <li><strong>Displayed prominently</strong> at the top of the news section</li>
+  <li><strong>Limited to 3</strong> most recent featured items</li>
+</ul>
+
+<h3 id="category-styling">Category Styling:</h3>
+<ul>
+  <li><strong>Color-coded</strong> by category type</li>
+  <li><strong>Icons</strong> for visual identification</li>
+  <li><strong>Hover effects</strong> for better UX</li>
+</ul>
+
+<h3 id="responsive-design">Responsive Design:</h3>
+<ul>
+  <li><strong>Mobile-friendly</strong> layout</li>
+  <li><strong>Adaptive spacing</strong> for different screen sizes</li>
+  <li><strong>Touch-friendly</strong> interactions</li>
+</ul>
+
+<h2 id="-common-tasks">🔄 Common Tasks</h2>
+
+<h3 id="adding-a-new-news-item">Adding a New News Item</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python scripts/manage_news.py
+<span class="c"># Choose option 1: Add news item</span>
+<span class="c"># Fill in the prompts</span>
+</code></pre></div></div>
+
+<h3 id="making-an-item-featured">Making an Item Featured</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python scripts/manage_news.py
+<span class="c"># Choose option 2: Edit news item</span>
+<span class="c"># Select the item and set featured to 'y'</span>
+</code></pre></div></div>
+
+<h3 id="removing-old-items">Removing Old Items</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python scripts/manage_news.py
+<span class="c"># Choose option 3: Remove news item</span>
+<span class="c"># Select the item to remove</span>
+</code></pre></div></div>
+
+<h3 id="viewing-all-items">Viewing All Items</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python scripts/manage_news.py
+<span class="c"># Choose option 4: View all news items</span>
+<span class="c"># See all items sorted by date</span>
+</code></pre></div></div>
+
+<h2 id="-how-it-appears-on-the-website">📱 How It Appears on the Website</h2>
+
+<h3 id="featured-section">Featured Section:</h3>
+<ul>
+  <li><strong>Top 3 featured items</strong> displayed prominently</li>
+  <li><strong>Large cards</strong> with blue styling</li>
+  <li><strong>“Learn More” buttons</strong> for items with links</li>
+</ul>
+
+<h3 id="recent-updates-section">Recent Updates Section:</h3>
+<ul>
+  <li><strong>All items</strong> (up to 10 most recent)</li>
+  <li><strong>Smaller cards</strong> with category indicators</li>
+  <li><strong>Chronological order</strong> (newest first)</li>
+</ul>
+
+<h2 id="-tips">💡 Tips</h2>
+
+<ol>
+  <li><strong>Keep titles concise</strong> - 5-10 words work best</li>
+  <li><strong>Use descriptive descriptions</strong> - 1-2 sentences</li>
+  <li><strong>Set important items as featured</strong> - They’ll appear prominently</li>
+  <li><strong>Add links when relevant</strong> - Makes items more actionable</li>
+  <li><strong>Use appropriate categories</strong> - Helps visitors find relevant information</li>
+  <li><strong>Update regularly</strong> - Keep the section fresh and current</li>
+</ol>
+
+<h2 id="-troubleshooting">🔧 Troubleshooting</h2>
+
+<h3 id="yaml-syntax-errors">YAML Syntax Errors:</h3>
+<ul>
+  <li>Use a YAML validator (like <a href="https://www.yamllint.com/">yamllint.com</a>)</li>
+  <li>Check indentation (use spaces, not tabs)</li>
+  <li>Ensure quotes are properly closed</li>
+</ul>
+
+<h3 id="script-issues">Script Issues:</h3>
+<ul>
+  <li>Make sure Python 3 is installed</li>
+  <li>Install PyYAML: <code class="language-plaintext highlighter-rouge">pip install pyyaml</code></li>
+  <li>Check file permissions on the script</li>
+</ul>
+
+<h3 id="display-issues">Display Issues:</h3>
+<ul>
+  <li>Verify category names match exactly</li>
+  <li>Check that dates are in YYYY-MM-DD format</li>
+  <li>Ensure all required fields are present</li>
+</ul>
+
+<h2 id="-need-help">🆘 Need Help?</h2>
+
+<p>If you encounter issues:</p>
+<ol>
+  <li>Check the browser console for errors</li>
+  <li>Verify the YAML syntax</li>
+  <li>Test the local Jekyll build: <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></li>
+  <li>Check that all category names match</li>
+</ol>
+
+<h2 id="-best-practices">🎯 Best Practices</h2>
+
+<ol>
+  <li><strong>Regular updates</strong> - Add news items as they happen</li>
+  <li><strong>Consistent formatting</strong> - Use similar title and description styles</li>
+  <li><strong>Relevant links</strong> - Include links to papers, registration forms, etc.</li>
+  <li><strong>Appropriate categorization</strong> - Helps visitors find what they’re looking for</li>
+  <li><strong>Featured highlights</strong> - Use featured status for important announcements</li>
+</ol>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="footer-container">
+					  <div class="photo-container">
+						<img src="/images/me.jpg" alt="I like being outside" class="center" style="max-width:50%;" />
+					  </div>
+					  <div class="contact-container">
+						<section class="split contact">
+						  <section class="alt">
+							<h3>Address</h3>
+							<p>University of California, Santa Barbara <br />
+							  Broida Hall <br />
+							  Santa Barbara CA 93106 <br />
+							  United States</p>
+						  </section>
+						  <section>
+							<h3>Email</h3>
+							<p><a href="mailto:maxmb@ucsb.edu">maxmb@ucsb.edu</a></p>
+						  </section>
+						</section>
+					  </div>
+					</div>
+				  </footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>Last Updated Aug 24, 2025</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/skel.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<nav id="nav">
+	<ul class="links">
+		<li class="{% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">
+			<a href="{{ '/' | relative_url }}">Home</a>
+		</li>
+		<li class="{% if page.url contains 'science' %}active{% endif %}">
+			<a href="{{ '/science/' | relative_url }}">Science</a>
+		</li>
+		<li class="{% if page.url contains 'instrumentation' %}active{% endif %}">
+			<a href="{{ '/instrumentation/' | relative_url }}">Instrumentation</a>
+		</li>
+		<li class="{% if page.url contains 'software' %}active{% endif %}">
+			<a href="{{ '/software/' | relative_url }}">Software</a>
+		</li>
+		<li class="{% if page.url contains 'outreach' %}active{% endif %}">
+			<a href="{{ '/outreach/' | relative_url }}">Outreach</a>
+		</li>
+		<li>
+			<a href="{{ '/assets/cv.pdf' | relative_url }}">CV</a>
+		</li>
+		<li class="{% if page.url contains 'group' %}active{% endif %}">
+			<a href="{{ '/group/' | relative_url }}">Group</a>
+		</li>
+	</ul>
+	<ul class="icons">
+		<li>
+			<a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy)&q=%20author%3A%22Millar-Blanchaer%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">
+				<img src="{{ '/images/ads.png' | relative_url }}" alt="NASA ADS icon" style="width:48px">
+			</a>
+		</li>
+		<li>
+			<a href="https://github.com/{{ site.github_username }}" class="icon fa-github">
+				<span class="label">GitHub</span>
+			</a>
+		</li>
+		<li>
+			<div itemscope itemtype="https://schema.org/Person">
+				<a itemprop="sameAs" content="https://orcid.org/{{ site.orcid_id }}" href="https://orcid.org/{{ site.orcid_id }}" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:center;">
+					<img src="{{ '/images/orcid16.png' | relative_url }}" style="width:1em;margin-right:.5em;">
+				</a>
+			</div>
+		</li>
+	</ul>
+</nav>

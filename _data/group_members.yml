@@ -32,7 +32,7 @@ current:
     
   - name: "Ronald Lopez"
     role: "NSF Astronomy and Astrophysics Postdoctoral Fellow"
-    image: "Ronald_Lopez.jpeg"
+    image: "Ronald_Lopez.jpg"
     description: "Ronald is interested in astronomical instrumentation and the discovery and characterization of directly imaged exoplanets. He is currently working on the commissioning plan for the updated polarimetry mode on the upcoming GPI 2.0 instrument and developing an MKID high-resolution multi-object spectrograph testbed for exoplanet characterization. He is also passionate about taking steps towards a more diverse, equitable, and inclusive environment in physics and astronomy."
     email: "ronald.lopez@ucsb.edu"
     website: ""
@@ -42,7 +42,7 @@ current:
   
   - name: "Briley Lewis"
     role: "NSF Astronomy and Astrophysics Postdoctoral Fellow"
-    image: "briley-lewis.jpg"
+    image: "briley-lewis.jpeg"
     description: "Briley is interested in high-contrast + polarimetric instrumentation/data processing and observations of debris disks. She is currently working on commissioning the NIRC2 polarimetry mode and completing a uniform analysis of the Gemini Planet Imager debris disk sample using GPU-enabled modeling. She is also passionate about teaching, science writing, and accessibility in astronomy."
     email: "brileylewis@ucsb.edu"
     website: "https://www.briley-lewis.com/"

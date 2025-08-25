@@ -39,6 +39,16 @@ current:
     github: ""
     ads: ""
     orcid: ""
+  
+  - name: "Briley Lewis"
+    role: "NSF Astronomy and Astrophysics Postdoctoral Fellow"
+    image: "briley-lewis.jpg"
+    description: "Briley is interested in high-contrast + polarimetric instrumentation/data processing and observations of debris disks. She is currently working on commissioning the NIRC2 polarimetry mode and completing a uniform analysis of the Gemini Planet Imager debris disk sample using GPU-enabled modeling. She is also passionate about teaching, science writing, and accessibility in astronomy."
+    email: "brileylewis@ucsb.edu"
+    website: "https://www.briley-lewis.com/"
+    github: "https://github.com/briley-lewis"
+    ads: "https://ui.adsabs.harvard.edu/user/libraries/nfgZ-AMTQ_yWWXP1_OZNVA"
+    orcid: "https://orcid.org/0000-0002-8984-4319"
     
 # Group Alumni
 alumni:

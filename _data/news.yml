@@ -48,11 +48,6 @@ items:
     link: "https://ui.adsabs.harvard.edu/abs/2022SPIE12184E..3XM/abstract"
     featured: true
     
-  - date: "2024-08-10"
-    title: "News Section Updated"
-    description: "I've finally updated my news and travel section after a long hiatus! Other sections will be updated soon!"
-    category: "update"
-    featured: false
 
 # Categories for filtering
 categories:

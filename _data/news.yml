@@ -1,72 +1,73 @@
-# News and Travel Items
-# Each item should have: date, title, description, category, link (optional), featured (optional)
-
 items:
-  - date: "2024-08-24"
-    title: "Postdoc Position Available"
-    description: "I'm hiring a new postdoc to work with me on the Roman Coronagraph Instrument, as well as other instrumentation/observational projects."
-    category: "opportunity"
-    link: "https://recruit.ap.ucsb.edu/JPF02686"
-    featured: true
-    
-  - date: "2024-08-24"
-    title: "Website Update Complete"
-    description: "I've just completed a much needed website update. Please browse around!"
-    category: "update"
-    featured: false
-    
-  - date: "2024-08-24"
-    title: "Graduate Student Applications"
-    description: "Potential Graduate Students: I'm likely to take on a new graduate student in Fall 2024."
-    category: "opportunity"
-    featured: true
-    
-  - date: "2024-09-15"
-    title: "Exo-Zodiacal Dust Workshop"
-    description: "Come join us at the Workshop on The Impact of Exo-Zodiacal Dust on Exoplanet Direct Imaging Surveys at STSci or online. I'll be presenting on behalf of both the post-processing and the observational priorities groups."
-    category: "conference"
-    link: "https://forms.gle/Tw11Rf8G6ZqUHWcZ8"
-    featured: true
-    
-  - date: "2024-08-20"
-    title: "SPIE Optics and Photonics Conference"
-    description: "From Aug. 20-24 I'll be at the SPIE Optics and Photonics conference. I'll be giving a talk on 'The inner working angle you need to detect ocean glints with HabWorlds', based on a paper that a group of us wrote at a Lorentz Workshop this past winter."
-    category: "conference"
-    link: "https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.5477V/abstract"
-    featured: true
-    
-  - date: "2024-08-20"
-    title: "Student Presentations at SPIE"
-    description: "At SPIE also don't miss talks from students of mine: Sofia Hillman (UCSB Undergrad), Rebecca Zhang (UCSB Grad) and Skyler Palatnick (UCSB Grad)."
-    category: "conference"
-    featured: false
-    
-  - date: "2024-08-15"
-    title: "Polarization Ray Tracing Paper"
-    description: "Check out my most recent paper where I wrote a polarization ray tracing code to model the Gemini Telescope and showed that we can detect the polarization aberrations with GPI."
-    category: "publication"
-    link: "https://ui.adsabs.harvard.edu/abs/2022SPIE12184E..3XM/abstract"
-    featured: true
-    
-
-# Categories for filtering
+- date: '2024-08-24'
+  title: Postdoc Position Available
+  description: I'm hiring a new postdoc to work with me on the Roman Coronagraph Instrument,
+    as well as other instrumentation/observational projects.
+  category: opportunity
+  link: https://recruit.ap.ucsb.edu/JPF02686
+  featured: true
+- date: '2024-08-24'
+  title: Website Update Complete
+  description: I've just completed a much needed website update. Please browse around!
+  category: update
+  featured: false
+- date: '2024-08-24'
+  title: Graduate Student Applications
+  description: 'Potential Graduate Students: I''m likely to take on a new graduate
+    student in Fall 2024.'
+  category: opportunity
+  featured: true
+- date: '2024-09-15'
+  title: Exo-Zodiacal Dust Workshop
+  description: Come join us at the Workshop on The Impact of Exo-Zodiacal Dust on
+    Exoplanet Direct Imaging Surveys at STSci or online. I'll be presenting on behalf
+    of both the post-processing and the observational priorities groups.
+  category: conference
+  link: https://forms.gle/Tw11Rf8G6ZqUHWcZ8
+  featured: true
+- date: '2024-08-20'
+  title: SPIE Optics and Photonics Conference
+  description: From Aug. 20-24 I'll be at the SPIE Optics and Photonics conference.
+    I'll be giving a talk on 'The inner working angle you need to detect ocean glints
+    with HabWorlds', based on a paper that a group of us wrote at a Lorentz Workshop
+    this past winter.
+  category: conference
+  link: https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.5477V/abstract
+  featured: true
+- date: '2024-08-20'
+  title: Student Presentations at SPIE
+  description: 'At SPIE also don''t miss talks from students of mine: Sofia Hillman
+    (UCSB Undergrad), Rebecca Zhang (UCSB Grad) and Skyler Palatnick (UCSB Grad).'
+  category: conference
+  featured: false
+- date: '2024-08-15'
+  title: Polarization Ray Tracing Paper
+  description: Check out my most recent paper where I wrote a polarization ray tracing
+    code to model the Gemini Telescope and showed that we can detect the polarization
+    aberrations with GPI.
+  category: publication
+  link: https://ui.adsabs.harvard.edu/abs/2022SPIE12184E..3XM/abstract
+  featured: true
+- date: '2025-08-24'
+  title: Website Migration and Updates
+  description: The website has been migrated to be hosted on github.io and has several
+    quality of life improvements
+  category: update
+  featured: true
 categories:
-  - name: "opportunity"
-    display_name: "Opportunities"
-    icon: "fa-briefcase"
-    color: "#28a745"
-    
-  - name: "conference"
-    display_name: "Conferences & Travel"
-    icon: "fa-plane"
-    color: "#007bff"
-    
-  - name: "publication"
-    display_name: "Publications"
-    icon: "fa-file-text"
-    color: "#6f42c1"
-    
-  - name: "update"
-    display_name: "Updates"
-    icon: "fa-info-circle"
-    color: "#ffc107"
+- name: opportunity
+  display_name: Opportunities
+  icon: fa-briefcase
+  color: '#28a745'
+- name: conference
+  display_name: Conferences & Travel
+  icon: fa-plane
+  color: '#007bff'
+- name: publication
+  display_name: Publications
+  icon: fa-file-text
+  color: '#6f42c1'
+- name: update
+  display_name: Updates
+  icon: fa-info-circle
+  color: '#ffc107'

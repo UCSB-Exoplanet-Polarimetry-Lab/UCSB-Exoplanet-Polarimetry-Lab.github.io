@@ -39,6 +39,16 @@ current:
     github: ""
     ads: ""
     orcid: ""
+
+  - name: "Jaren N. Ashcraft"
+    role: "NASA Hubble Fellow"
+    image: "Ronald_Lopez.jpg"
+    description: "Jaren works on the intersection of polarization and high-contrast imaging instrumentation for NASA's Habitable Worlds Observatory. He recieved his Ph.D. in Optical Sciences from the University of Arizona, and B.S. in Optical Engineering from the University of Rochester."
+    email: "jarenashcraft@ucsb.edu"
+    website: "jashcraf.github.io"
+    github: "https://github.com/Jashcraf"
+    ads: ""
+    orcid: "0000-0001-5082-7442"
     
 # Group Alumni
 alumni:

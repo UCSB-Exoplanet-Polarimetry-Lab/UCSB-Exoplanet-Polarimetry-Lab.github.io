@@ -56,6 +56,12 @@ current:
     description: "Mihir's research focuses on developing GPU enabled modeling techniques for debris disk and JWST forward modeling."
     email: "mihirkondapalli@ucsb.edu"
     website: "https://www.mihirkondapalli.space"
+  
+  - name: "Eric Shen"
+    role: "Undergraduate Student"
+    image: ""
+    description: "Eric is currently working on developing simulations and the data reduction pipeline for the Roman Coronagraph instrument."
+    email: "yshen349@ucsb.edu"
     
 # Group Alumni
 alumni:

@@ -22,14 +22,13 @@ current:
     
   - name: "Skyler Palatnick"
     role: "Graduate Student"
-    image: ""
+    image: "Skyler_Palatnick_pic.jpeg"
     description: "Skyler's research focuses on design, fabrication, and characterization of metasurface optics for high-contrast imaging, as well as usng current instrumentation for exoplanet and debris disk detection and characterization."
     email: "skylerpalatnick@ucsb.edu"
     website: "https://skylerpalatnick.wixsite.com/info"
     github: ""
     ads: "https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&p_=0&q=%20%20first_author%3A%22Palatnick%2C%20Skyler%22&sort=date%20desc%2C%20bibcode%20desc"
     orcid: "0000-0001-5053-2660"
-    image: ""
     
   - name: "Ronald Lopez"
     role: "NSF Astronomy and Astrophysics Postdoctoral Fellow"

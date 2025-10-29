@@ -50,6 +50,14 @@ current:
     ads: "https://ui.adsabs.harvard.edu/user/libraries/nfgZ-AMTQ_yWWXP1_OZNVA"
     orcid: "https://orcid.org/0000-0002-8984-4319"
     
+  - name: "Thomas McIntosh"
+    role: "Undergraduate Student"
+    image: "thomas_mcintosh.jpg"
+    description: "Thomas is a sophomore physics major interested in high contrast imaging instrumentation and observation. He is currently working on a Mueller matrix model for the Subaru/SCExAO/CHARIS spectropolarimetric mode that characterizes how the optical path polarizes incoming starlight and an accompanying open source Mueller matrix modeling package."
+    email: "thomasmcintosh@ucsb.edu"
+    github: "https://github.com/thomasmcintoshh"
+
+
 # Group Alumni
 alumni:
   - name: "Jack Grossman"

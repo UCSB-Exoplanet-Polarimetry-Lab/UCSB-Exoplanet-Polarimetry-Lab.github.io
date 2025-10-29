@@ -49,6 +49,16 @@ current:
     github: "https://github.com/briley-lewis"
     ads: "https://ui.adsabs.harvard.edu/user/libraries/nfgZ-AMTQ_yWWXP1_OZNVA"
     orcid: "https://orcid.org/0000-0002-8984-4319"
+
+  - name: "Andy Zhou"
+    role: "Undergraduate Student"
+    image: ""
+    description: "Andy’s research focuses on high-contrast imaging. His current work is on focal-plane wavefront sensing, developing regularized Speckle Area Nulling (SAN) method to suppress quasi-static speckles that can mimic planets."
+    email: "xiaochuan@ucsb.edu"
+    website: ""
+    github: "https://github.com/Andyzhou336"
+    ads: ""
+    orcid: ""
     
 # Group Alumni
 alumni:

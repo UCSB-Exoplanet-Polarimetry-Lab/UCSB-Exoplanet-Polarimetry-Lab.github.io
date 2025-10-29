@@ -49,6 +49,13 @@ current:
     github: "https://github.com/briley-lewis"
     ads: "https://ui.adsabs.harvard.edu/user/libraries/nfgZ-AMTQ_yWWXP1_OZNVA"
     orcid: "https://orcid.org/0000-0002-8984-4319"
+
+  - name: "Mihir Kondapalli"
+    role: "Undergraduate Student"
+    image: ""
+    description: "Mihir's research focuses on developing GPU enabled modeling techniques for debris disk and JWST forward modeling."
+    email: "mihirkondapalli@ucsb.edu"
+    website: "https://www.mihirkondapalli.space"
     
 # Group Alumni
 alumni:

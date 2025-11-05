@@ -50,6 +50,11 @@ current:
     ads: "https://ui.adsabs.harvard.edu/user/libraries/nfgZ-AMTQ_yWWXP1_OZNVA"
     orcid: "https://orcid.org/0000-0002-8984-4319"
 
+  - name: "Ryan Hersey"
+    role: "Graduate Student"
+    image: "Ryan_headshot.png"
+    description: "Ryan is a 2nd year graduate student interested in developing metasurface optics for high contrast imaging."
+    email: "rhersey@ucsb.edu"
   - name: "Jaren N. Ashcraft (He/They)"
     role: "NASA Hubble Fellow"
     image: ""

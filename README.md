@@ -1,6 +1,6 @@
 # Millar-Blanchaer Research Group - Academic Website
 
-This is the source code for my academic website, built with Jekyll and hosted on GitHub Pages.
+This is the source code for my academic website, built with Jekyll (with the help of Cursor) and hosted on GitHub Pages.
 
 ## Local Development
 

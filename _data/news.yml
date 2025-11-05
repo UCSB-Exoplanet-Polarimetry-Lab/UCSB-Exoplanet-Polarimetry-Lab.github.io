@@ -1,4 +1,12 @@
 items:
+- date: '2025-10-29'
+  title: Graduate student Skyler Palatnick leads disk discovery with JWST
+  description: As part of a large, international collaboration, Skyler Palatnick and several other group members 
+    recently published a paper reporting the detection of a debris disk around an M-dwarf star, TWA 20, with JWST. The disk 
+    is just the sixth M-dwarf disk detection in scattered light.
+  category: update
+  link: https://arxiv.org/abs/2510.20216
+  featured: true
 - date: '2024-08-24'
   title: Postdoc Position Available
   description: I'm hiring a new postdoc to work with me on the Roman Coronagraph Instrument,

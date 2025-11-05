@@ -82,7 +82,7 @@ current:
     
   - name: "Thomas McIntosh"
     role: "Undergraduate Student"
-    image: "thomas_mcintosh.jpg"
+    image: "thomas_mcintosh.JPG"
     description: "Thomas is a sophomore physics major interested in high contrast imaging instrumentation and observation. He is currently working on a Mueller matrix model for the Subaru/SCExAO/CHARIS spectropolarimetric mode that characterizes how the optical path polarizes incoming starlight and an accompanying open source Mueller matrix modeling package."
     email: "thomasmcintosh@ucsb.edu"
     github: "thomasmcintoshh"

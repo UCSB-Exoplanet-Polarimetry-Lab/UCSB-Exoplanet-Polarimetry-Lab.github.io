@@ -55,6 +55,11 @@ current:
     image: "Ryan_headshot.png"
     description: "Ryan is a 2nd year graduate student interested in developing metasurface optics for high contrast imaging."
     email: "rhersey@ucsb.edu"
+    website: ""
+    github: ""
+    ads: ""
+    orcid: ""
+
   - name: "Jaren N. Ashcraft (He/They)"
     role: "NASA Hubble Fellow"
     image: ""
@@ -95,7 +100,7 @@ current:
     website: ""
     orcid: ""
    
-- name: "Sarah Choi"
+  - name: "Sarah Choi"
     role: "Undergradauate Student"
     image: "Sarah Choi.jpeg"
     description: "Sarah is a CCS Physics student at UCSB interested in images, optics, and exoplanets. She is currently working on a visible-light polarimeter that will help understand how devices change one polarization state into another."

@@ -1,4 +1,12 @@
 items:
+- date: '2025-11-20'
+  title: Postdoc Briley Lewis's education research featured as a PRPER Editor's Suggestion
+  description: NSF AAPF Postdoc Briley Lewis just published a paper on how physicists and astronomers learn to write,
+    based on a large survey of people's experiences in the field. 
+    Published in Physical Review Physics Education Research, her paper has been selected as an "Editor's Suggestion" in the journal.
+  category: update
+  link: https://journals.aps.org/prper/abstract/10.1103/453f-l8hy
+  featured: true
 - date: '2025-10-29'
   title: Graduate student Skyler Palatnick leads disk discovery with JWST
   description: As part of a large, international collaboration, Skyler Palatnick and several other group members 

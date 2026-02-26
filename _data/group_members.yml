@@ -2,13 +2,13 @@
 current:
   - name: "Rebecca Zhang"
     role: "Graduate Student"
-    image: ""
+    image: "Rebecca_Zhang_Slack_Profile_Picture.jpg"
     description: "Rebecca's research focuses on characterizing the instrumental polarization of SCExAO VAMPIRES and developing new polarimetry techniques for exoplanet characterization."
-    email: "rebecca.zhang@ucsb.edu"
+    email: "manxuanzhang@ucsb.edu"
     website: ""
-    github: ""
-    ads: ""
-    orcid: ""
+    github: "https://github.com/becca9808"
+    ads: "https://ui.adsabs.harvard.edu/search/q=orcid%3A%200000-0003-3567-6839&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+    orcid: "https://orcid.org/0000-0003-3567-6839"
     
   - name: "Connor Vancil"
     role: "Graduate Student"

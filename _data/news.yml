@@ -1,4 +1,10 @@
 items:
+- date: '2026-01-09'
+  title: Millar-Blanchaer Lab at AAS 247
+  description: Several members of the Millar-Blanchaer Lab (Postdocs Ronald Lopez and Briley Lewis, graduate student Connor Vancil, undergraduate Thomas McIntosh, REU student Logan Bennett) 
+    attended and presented at the 247th AAS meeting in Phoenix.
+  category: conference
+  featured: true
 - date: '2025-12-17'
   title: Millar-Blanchaer Lab goes to ExSoCal 2025
   description: Several members of the Millar-Blanchaer Lab attended the ExSoCal 2025 conference at UCLA this week. Postdoc Briley Lewis was the conference's SOC chair, and postdoc Jingwen Zhang was a member of the SOC.

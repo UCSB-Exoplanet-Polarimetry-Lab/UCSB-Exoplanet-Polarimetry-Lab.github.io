@@ -4,6 +4,36 @@ title: Home
 show_intro: true
 ---
 
+<!-- Photo Carousel -->
+{% if site.data.carousel and site.data.carousel.items and site.data.carousel.items.size > 0 %}
+<section class="post carousel-section">
+	<div class="carousel" data-interval="5000" aria-roledescription="carousel">
+		<div class="carousel-track">
+			{% for item in site.data.carousel.items %}
+			{% assign img_scale = item.scale | default: 100 %}
+			<figure class="carousel-slide{% if forloop.first %} is-active{% endif %}" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}">
+				<img src="{{ item.image | relative_url }}" alt="{{ item.alt | default: item.caption }}" style="transform: scale({{ img_scale | times: 0.01 }});" />
+				{% if item.caption %}
+				<figcaption class="carousel-caption">{{ item.caption }}</figcaption>
+				{% endif %}
+			</figure>
+			{% endfor %}
+		</div>
+
+		{% if site.data.carousel.items.size > 1 %}
+		<button class="carousel-btn carousel-prev" type="button" aria-label="Previous photo">&#10094;</button>
+		<button class="carousel-btn carousel-next" type="button" aria-label="Next photo">&#10095;</button>
+
+		<div class="carousel-dots" role="tablist">
+			{% for item in site.data.carousel.items %}
+			<button type="button" class="carousel-dot{% if forloop.first %} is-active{% endif %}" data-index="{{ forloop.index0 }}" aria-label="Go to photo {{ forloop.index }}"></button>
+			{% endfor %}
+		</div>
+		{% endif %}
+	</div>
+</section>
+{% endif %}
+
 <!-- Featured Post -->
 <article class="post featured">
 	<header class="major">
@@ -128,11 +158,208 @@ show_intro: true
 		align-items: flex-start;
 		gap: 0.25rem;
 	}
-	
+
 	.news-item {
 		padding: 0.5rem;
 	}
 }
+
+/* ---------- Photo carousel ---------- */
+.carousel-section {
+	padding: 2rem 8rem 4rem 8rem !important;
+	border-top: none !important;
+	margin-top: 0 !important;
+}
+
+.carousel {
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	background: #000;
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-track {
+	position: relative;
+	width: 100%;
+	/* Aspect-ratio box so slides can be absolutely positioned and cross-fade */
+	aspect-ratio: 16 / 9;
+}
+
+.carousel-slide {
+	position: absolute;
+	inset: 0;
+	margin: 0;
+	opacity: 0;
+	transition: opacity 0.6s ease-in-out;
+	pointer-events: none;
+}
+
+.carousel-slide.is-active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.carousel-slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	display: block;
+}
+
+.carousel-caption {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 1rem 1.25rem;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	color: #fff;
+	font-size: 0.95rem;
+	line-height: 1.4;
+	opacity: 0;
+	transform: translateY(10px);
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	pointer-events: none;
+}
+
+.carousel-slide:hover .carousel-caption,
+.carousel-slide:focus-within .carousel-caption {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.carousel-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 42px;
+	height: 42px;
+	border: none;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.45);
+	color: #fff;
+	font-size: 1.2rem;
+	line-height: 1;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.2s ease;
+	z-index: 2;
+}
+
+.carousel-btn:hover,
+.carousel-btn:focus {
+	background: rgba(0, 0, 0, 0.75);
+	outline: none;
+}
+
+.carousel-prev { left: 12px; }
+.carousel-next { right: 12px; }
+
+.carousel-dots {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 6px;
+	z-index: 2;
+}
+
+.carousel-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: none;
+	padding: 0;
+	background: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+	transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-dot.is-active {
+	background: #fff;
+	transform: scale(1.2);
+}
+
+@media (max-width: 980px) {
+	.carousel-section {
+		padding: 1.5rem 2rem 3rem 2rem !important;
+	}
+}
+
+@media (max-width: 736px) {
+	.carousel-caption {
+		/* On touch devices, just show the caption since there's no hover */
+		opacity: 1;
+		transform: none;
+		font-size: 0.85rem;
+		padding: 0.75rem 1rem;
+	}
+}
 </style>
+
+<script>
+(function () {
+	var carousel = document.querySelector('.carousel');
+	if (!carousel) return;
+
+	var slides = Array.prototype.slice.call(carousel.querySelectorAll('.carousel-slide'));
+	var dots = Array.prototype.slice.call(carousel.querySelectorAll('.carousel-dot'));
+	var prevBtn = carousel.querySelector('.carousel-prev');
+	var nextBtn = carousel.querySelector('.carousel-next');
+	var interval = parseInt(carousel.getAttribute('data-interval'), 10) || 5000;
+
+	if (slides.length <= 1) return;
+
+	var current = 0;
+	var timer = null;
+
+	function show(index) {
+		current = (index + slides.length) % slides.length;
+		slides.forEach(function (slide, i) {
+			var active = i === current;
+			slide.classList.toggle('is-active', active);
+			slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+		});
+		dots.forEach(function (dot, i) {
+			dot.classList.toggle('is-active', i === current);
+		});
+	}
+
+	function next() { show(current + 1); }
+	function prev() { show(current - 1); }
+
+	function start() {
+		stop();
+		timer = setInterval(next, interval);
+	}
+	function stop() {
+		if (timer) { clearInterval(timer); timer = null; }
+	}
+
+	if (nextBtn) nextBtn.addEventListener('click', function () { next(); start(); });
+	if (prevBtn) prevBtn.addEventListener('click', function () { prev(); start(); });
+	dots.forEach(function (dot) {
+		dot.addEventListener('click', function () {
+			show(parseInt(dot.getAttribute('data-index'), 10));
+			start();
+		});
+	});
+
+	// Pause on hover so users can read captions
+	carousel.addEventListener('mouseenter', stop);
+	carousel.addEventListener('mouseleave', start);
+	carousel.addEventListener('focusin', stop);
+	carousel.addEventListener('focusout', start);
+
+	start();
+})();
+</script>
 	</header>
 </article>

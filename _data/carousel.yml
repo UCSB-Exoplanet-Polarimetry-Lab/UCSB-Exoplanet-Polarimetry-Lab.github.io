@@ -1,0 +1,18 @@
+# Photo carousel shown on the home page.
+# Each item needs:
+#   image:   path relative to the site root (e.g. /images/foo.jpg)
+#   caption: short text shown when the cursor hovers over the photo
+#   alt:     (optional) alt text for accessibility; falls back to caption
+#   scale:   (optional) percentage size of the image within the slide frame
+#            e.g. 80 = 80% size, 120 = 120% size. Defaults to 100 if omitted.
+#
+# Add as many items as you like — the home page carousel will cycle through them.
+
+items:
+  - image: /images/scales_vortex_microscope.png
+    caption: "An alignment camera image of a vortex metasurface in the SCALES instrument (from Deno Stelter)"
+    alt: "Scales Metasurface Vortex Alignment Image"
+  - image: /images/the_group_at_lyot.jpg
+    caption: "A good showing of the research group at the 2026 Spirit of Lyot Conference in Pasadena"
+    alt: "Group photo at Lyot"
+    

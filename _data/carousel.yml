@@ -15,4 +15,15 @@ items:
   - image: /images/the_group_at_lyot.jpg
     caption: "A good showing of the research group at the 2026 Spirit of Lyot Conference in Pasadena"
     alt: "Group photo at Lyot"
+  - image: /images/jwst_hd141569A.jpg
+    caption: "JWST image of the HD 141569A transition disk from Millar-Blanchear et al. 2025"
+    alt: "JWST image of HD 141569A"
+  - image: /images/max_rebecca_keck.jpg
+    caption: "Max and Rebecca at Keck II to install the NIRC2 polarimetry mode"
+    alt: "Max and Rebecca at Keck II"
+  - image: /images/rebecca_on_ao.jpg
+    caption: "Rebecca on the AO bench at Keck II working on the PCU2 stages to enable the NIRC2 polarimetry mode"
+    alt: "Rebecca on the AO bench"
+  
+
     

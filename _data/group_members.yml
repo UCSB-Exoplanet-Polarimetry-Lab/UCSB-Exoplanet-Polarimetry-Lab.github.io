@@ -109,7 +109,7 @@ current:
 alumni:
   - name: "Jack Grossman"
     role: "Former Undergraduate Student"
-    image: "jack_grossman.jpg"
+    image: ""
     description: "Jack worked on high-contrast imaging techniques and data analysis."
     current_position: "Graduate Student at [Institution]"
     email: ""
@@ -120,7 +120,7 @@ alumni:
     
   - name: "William Chang"
     role: "Former Undergraduate Student"
-    image: "william_chang.jpg"
+    image: ""
     description: "William's research focused on polarimetry and instrumentation development."
     current_position: "Software Engineer at [Company]"
     email: ""
@@ -131,7 +131,7 @@ alumni:
     
   - name: "Ivan Abreu"
     role: "Former Undergraduate Student"
-    image: "ivan_abreu.jpg"
+    image: ""
     description: "Ivan worked on exoplanet detection and characterization."
     current_position: "Research Assistant at [Institution]"
     email: ""
@@ -142,7 +142,7 @@ alumni:
     
   - name: "Kyle Lam"
     role: "Former Undergraduate Student"
-    image: "kyle_lam.jpg"
+    image: ""
     description: "Kyle's research focused on brown dwarf atmospheres and polarimetry."
     current_position: "Graduate Student at [Institution]"
     email: ""
@@ -153,7 +153,7 @@ alumni:
   
   - name: "Sofia Hillman"
     role: "Undergraduate Student"
-    image: "sofia_hillman.jpg"
+    image: ""
     description: "Sofia is working on characterizing optics for a new polarimetry mode at the Keck II telescope."
     email: "sofia.hillman@ucsb.edu"
     website: ""

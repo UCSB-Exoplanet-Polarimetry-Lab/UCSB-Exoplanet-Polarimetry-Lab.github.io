@@ -1,0 +1,31 @@
+# Photo carousel shown on the home page.
+# Each item needs:
+#   image:   path relative to the site root (e.g. /images/foo.jpg)
+#   caption: short text shown when the cursor hovers over the photo
+#   alt:     (optional) alt text for accessibility; falls back to caption
+#   scale:   (optional) percentage size of the image within the slide frame
+#            e.g. 80 = 80% size, 120 = 120% size. Defaults to 100 if omitted.
+#
+# Add as many items as you like — the home page carousel will cycle through them.
+
+items:
+  - image: /images/scales_vortex_microscope.png
+    caption: "An alignment camera image of a vortex metasurface in the SCALES instrument (from Deno Stelter)"
+    alt: "Scales Metasurface Vortex Alignment Image"
+  - image: /images/the_group_at_lyot.jpg
+    caption: "A good showing of the research group at the 2026 Spirit of Lyot Conference in Pasadena"
+    alt: "Group photo at Lyot"
+  - image: /images/jwst_hd141569A.jpg
+    caption: "JWST image of the HD 141569A transition disk from Millar-Blanchear et al. 2025"
+    alt: "JWST image of HD 141569A"
+  - image: /images/max_rebecca_keck.jpg
+    caption: "Max and Rebecca at Keck II to install the NIRC2 polarimetry mode"
+    alt: "Max and Rebecca at Keck II"
+  - image: /images/rebecca_on_ao.jpg
+    caption: "Rebecca on the AO bench at Keck II working on the PCU2 stages to enable the NIRC2 polarimetry mode"
+    alt: "Rebecca on the AO bench"
+  - image: /images/sb_orrery.jpg
+    caption: "3D models of the solar system planets made by NSF AAPF Briley Lewis for outreach with blind and low vision people"
+    alt: "3D models of the solar system planets"
+  
+  

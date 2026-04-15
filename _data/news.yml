@@ -1,4 +1,18 @@
 items:
+- date: '2026-04-13'
+  title:
+  description: Congratulations to Skyler Palatnick for being awarded a 51 Peg b fellowsgip at UCLA to continue his work on 
+    metasurface optics!
+  category: update
+  link: https://news.ucsb.edu/2026/022493/designing-lightweight-optics-detect-signs-life-beyond-our-solar-system
+  featured: true
+- date: '2026-04-13'
+  title: JWST ERS Paper Published
+  description: As part of the JWST ERS program, Max Millar-Blanchaer recently published a new paper, showing the
+    first detection of water ice in the HD 141569A system. The observations showed an unexpected radial gradient in 
+    dust properties. The work was a huge team effort, so thanks to everyone involved!
+  category: update
+  link: https://ui.adsabs.harvard.edu/abs/2025ApJ...994..199M/abstract
 - date: '2026-01-09'
   title: Millar-Blanchaer Lab at AAS 247
   description: Several members of the Millar-Blanchaer Lab (Postdocs Ronald Lopez and Briley Lewis, graduate student Connor Vancil, undergraduate Thomas McIntosh, REU student Logan Bennett) 

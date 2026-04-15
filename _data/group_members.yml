@@ -113,7 +113,7 @@ current:
 # Group Alumni
 alumni:
   - name: "Jack Grossman"
-    role: "Former UCSB Undergraduate Student"
+    role: "Former Undergraduate Student"
     image: ""
     description: "Jack worked on high-contrast imaging techniques and data analysis."
     current_position: "Graduate Student at Michigan Tech"
@@ -124,7 +124,7 @@ alumni:
     orcid: ""
     
   - name: "William Chang"
-    role: "Former UCSB Undergraduate Student"
+    role: "Former Undergraduate Student"
     image: ""
     description: "William's research focused on polarimetry and instrumentation development."
     current_position: "Graduate Student at Yale"
@@ -146,7 +146,7 @@ alumni:
     orcid: ""
     
   - name: "Kyle Lam"
-    role: "Former UCSB Undergraduate Student"
+    role: "Former Undergraduate Student"
     image: ""
     description: "Kyle's research focused on brown dwarf atmospheres and polarimetry."
     current_position: ""
@@ -157,7 +157,7 @@ alumni:
     orcid: ""
   
   - name: "Sofia Hillman"
-    role: "Former UCSB Undergraduate Student"
+    role: "Former Undergraduate Student"
     image: ""
     description: "Sofia is working on characterizing optics for a new polarimetry mode at the Keck II telescope."
     current_position: "Graduate Student at University of Arizona"

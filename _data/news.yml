@@ -13,6 +13,32 @@ items:
     dust properties. The work was a huge team effort, so thanks to everyone involved!
   category: update
   link: https://ui.adsabs.harvard.edu/abs/2025ApJ...994..199M/abstract
+- date: '2026-01-09'
+  title: Millar-Blanchaer Lab at AAS 247
+  description: Several members of the Millar-Blanchaer Lab (Postdocs Ronald Lopez and Briley Lewis, graduate student Connor Vancil, undergraduate Thomas McIntosh, REU student Logan Bennett) 
+    attended and presented at the 247th AAS meeting in Phoenix.
+  category: conference
+  featured: true
+- date: '2025-12-17'
+  title: Millar-Blanchaer Lab goes to ExSoCal 2025
+  description: Several members of the Millar-Blanchaer Lab attended the ExSoCal 2025 conference at UCLA this week. Postdoc Briley Lewis was the conference's SOC chair, and postdoc Jingwen Zhang was a member of the SOC.
+    Graduate student Rebecca Zhang presented a talk on NIRC2 polarimetry, and undergraduate Thomas McIntosh presented a poster. 
+  category: conference
+  featured: true
+- date: '2025-11-21'
+  title: Physics Magazine Discusses Postdoc Briley Lewis's Survey of How Physicists Learn to Write.
+  description: NSF AAPF Postdoc Briley Lewis's recent paper is featured in Physics Magazine.
+    The article discusses how the survey revealed that physicists and astronomers are not provided sufficient support in their writing education.
+  category: update
+  link: https://physics.aps.org/articles/v18/186
+  featured: true
+- date: '2025-11-20'
+  title: Postdoc Briley Lewis's education research featured as a PRPER Editor's Suggestion
+  description: NSF AAPF Postdoc Briley Lewis just published a paper on how physicists and astronomers learn to write,
+    based on a large survey of people's experiences in the field. 
+    Published in Physical Review Physics Education Research, her paper has been selected as an "Editor's Suggestion" in the journal.
+  category: update
+  link: https://journals.aps.org/prper/abstract/10.1103/453f-l8hy
   featured: true
 - date: '2025-10-29'
   title: Graduate student Skyler Palatnick leads disk discovery with JWST

@@ -1,0 +1,48 @@
+name: Weekly publications update
+
+# Every Monday at 14:00 UTC (7am Pacific), or by hand from the Actions tab.
+# Pulls the group's papers from NASA ADS into _data/publications.json; if anything changed,
+# opens a pull request for you to approve. GitHub emails you when the PR opens. Merging it
+# publishes (the build-deploy workflow runs on every push to main and stamps "Last updated").
+#
+# One-time setup in the repo settings:
+#   1. Settings -> Secrets and variables -> Actions -> New repository secret: ADS_DEV_KEY
+#      (token from https://ui.adsabs.harvard.edu/user/settings/token)
+#   2. Settings -> Actions -> General -> Workflow permissions:
+#      "Read and write permissions" + tick "Allow GitHub Actions to create and approve pull requests"
+
+on:
+  schedule:
+    - cron: "0 14 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Fetch publications from ADS
+        env:
+          ADS_DEV_KEY: ${{ secrets.ADS_DEV_KEY }}
+        run: python3 scripts/fetch_ads.py
+      - name: Open a pull request for approval
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: auto/publications
+          delete-branch: true
+          add-paths: _data/publications.json
+          commit-message: "Update publications from ADS"
+          title: "Weekly publications update"
+          body: |
+            The weekly ADS query found changes to the group publication list (`_data/publications.json`).
+            Merge to publish; both themes pick it up on the next build.
+            To drop a stray paper, add its bibcode to `exclude_bibcodes` in `_data/ads_config.yml`.
+          labels: automated

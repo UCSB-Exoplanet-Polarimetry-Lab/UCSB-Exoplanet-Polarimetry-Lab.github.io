@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260">
+  <!-- Tiled wallpaper: a debris disk, a coronagraph image, a ringed planet and an edge-on disk. -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".35" stop-color="#FFE9A8" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#FFE9A8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="35%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#F2B990"/>
+      <stop offset=".6" stop-color="#C96A3C"/>
+      <stop offset="1" stop-color="#4A2416"/>
+    </radialGradient>
+    <radialGradient id="bd" cx="35%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#B86A4A"/>
+      <stop offset="1" stop-color="#3B1A10"/>
+    </radialGradient>
+    <!-- scattering phase function: smooth brightening from the far (back-scattering) side
+         to the near (forward-scattering) side of the ring; runs along the minor axis -->
+    <linearGradient id="spf" gradientUnits="userSpaceOnUse" x1="0" y1="-17" x2="0" y2="17">
+      <stop offset="0" stop-color="#F2B990" stop-opacity=".22"/>
+      <stop offset=".45" stop-color="#F7C9A8" stop-opacity=".5"/>
+      <stop offset=".8" stop-color="#FFE3CC" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".95"/>
+    </linearGradient>
+    <linearGradient id="spfGlow" gradientUnits="userSpaceOnUse" x1="0" y1="-17" x2="0" y2="17">
+      <stop offset="0" stop-color="#F2B990" stop-opacity=".04"/>
+      <stop offset=".6" stop-color="#F2B990" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#FFD9B8" stop-opacity=".3"/>
+    </linearGradient>
+    <radialGradient id="ocean" cx="38%" cy="35%" r="75%">
+      <stop offset="0" stop-color="#8CCBF5"/>
+      <stop offset=".55" stop-color="#3A82D6"/>
+      <stop offset="1" stop-color="#174A96"/>
+    </radialGradient>
+    <radialGradient id="bloom" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset=".3" stop-color="#FFF6DC" stop-opacity=".85"/>
+      <stop offset=".55" stop-color="#FFD98A" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#FFB13B" stop-opacity="0"/>
+    </radialGradient>
+    <!-- JWST primary mirror segment (flat-top hexagon) -->
+    <polygon id="hex" points="2.6,0 1.3,2.25 -1.3,2.25 -2.6,0 -1.3,-2.25 1.3,-2.25" fill="#E8B84A" stroke="#7A5A14" stroke-width=".35"/>
+  </defs>
+  <rect width="260" height="260" fill="#070B2E"/>
+
+  <!-- background stars -->
+  <g fill="#FFFFFF">
+    <circle cx="14" cy="22" r="1.2"/><circle cx="96" cy="14" r=".8"/><circle cx="178" cy="8" r="1"/>
+    <circle cx="246" cy="40" r="1.3"/><circle cx="34" cy="128" r=".9"/><circle cx="130" cy="110" r="1.1"/>
+    <circle cx="214" cy="118" r=".8"/><circle cx="20" cy="236" r="1"/><circle cx="110" cy="246" r=".9"/>
+    <circle cx="238" cy="206" r="1.2"/><circle cx="150" cy="170" r=".7"/><circle cx="66" cy="96" r=".7"/>
+  </g>
+  <g fill="#BFD3FF">
+    <circle cx="58" cy="10" r="1"/><circle cx="200" cy="90" r="1.4"/><circle cx="8" cy="170" r="1.1"/>
+    <circle cx="168" cy="236" r=".9"/><circle cx="118" cy="60" r=".8"/>
+  </g>
+  <g fill="#FFE9A8">
+    <circle cx="140" cy="20" r="1"/><circle cx="40" cy="60" r=".8"/><circle cx="226" cy="160" r=".9"/><circle cx="84" cy="206" r="1"/>
+  </g>
+  <!-- one twinkly four-point star -->
+  <path d="M232 70 l1.4 5 5 1.4 -5 1.4 -1.4 5 -1.4 -5 -5 -1.4 5 -1.4z" fill="#FFFFFF" opacity=".9"/>
+
+  <!-- 1. Star with an inclined debris ring (think HD 157587 / HR 4796A) -->
+  <g transform="translate(72 66) rotate(-28)">
+    <ellipse rx="50" ry="17" fill="none" stroke="url(#spfGlow)" stroke-width="10"/>
+    <ellipse rx="50" ry="17" fill="none" stroke="url(#spf)" stroke-width="2.4"/>
+    <!-- the star, slightly offset: there's an unseen planet in there somewhere -->
+    <circle cx="3" cy="0" r="7" fill="url(#glow)"/>
+    <circle cx="3" cy="0" r="1.6" fill="#FFFFFF"/>
+  </g>
+
+  <!-- 2. Coronagraph image: masked star, speckle halo, and a planet -->
+  <g transform="translate(192 44)">
+    <circle r="22" fill="#2A1A3A" opacity=".55"/>
+    <circle r="16" fill="#5A2E22" opacity=".45"/>
+    <circle r="11" fill="#8A4420" opacity=".4"/>
+    <circle r="7.5" fill="#000000" stroke="#BFD3FF" stroke-opacity=".5" stroke-width=".8"/>
+    <path d="M-2.5 -2.5 l5 5 M2.5 -2.5 l-5 5" stroke="#FFFFFF" stroke-width=".9" opacity=".8"/>
+    <!-- the planet: resolved, finally -->
+    <circle cx="14" cy="-9" r="2.4" fill="#FFB13B"/>
+    <circle cx="14" cy="-9" r="1.1" fill="#FFF6D6"/>
+  </g>
+
+  <!-- 3. Ringed gas giant -->
+  <g transform="translate(186 176) rotate(-18)">
+    <ellipse rx="22" ry="6" fill="none" stroke="#BFD3FF" stroke-opacity=".35" stroke-width="4"/>
+    <circle r="11" fill="url(#planet)"/>
+    <path d="M-10 -3 q10 -3 20 0" stroke="#F7D6C2" stroke-opacity=".35" stroke-width="1.2" fill="none"/>
+    <path d="M-11 2 q11 3 22 0" stroke="#7A3A22" stroke-opacity=".5" stroke-width="1.4" fill="none"/>
+    <!-- front half of the ring passes over the planet -->
+    <path d="M-22 0 a22 6 0 0 0 44 0" fill="none" stroke="#DCE3FF" stroke-opacity=".8" stroke-width="1.6"/>
+  </g>
+
+  <!-- 4. Edge-on disk (Beta Pic style needle) with a faint warp -->
+  <g transform="translate(70 196) rotate(12)">
+    <path d="M-46 0 Q-20 -3 0 0 Q20 3 46 0 Q20 -1.5 0 0 Q-20 1.5 -46 0z" fill="#FFD9B8" fill-opacity=".55"/>
+    <path d="M-46 0 Q0 -1 46 0" stroke="#FFFFFF" stroke-opacity=".5" stroke-width=".8" fill="none"/>
+    <circle r="4" fill="url(#glow)"/>
+    <circle r="1.1" fill="#FFFFFF"/>
+    <!-- Beta Pic b, somewhere along its orbit -->
+    <circle cx="9" cy="-1.2" r="1.3" fill="#FFB13B"/>
+  </g>
+
+  <!-- 6. JWST: kite-shaped sunshield, 18-segment gold mirror, secondary on three struts -->
+  <g transform="translate(130 128) rotate(-14)">
+    <!-- five-layer sunshield, seen a little from above -->
+    <polygon points="-30,8 0,-4 30,8 0,20" fill="#C9C3E6" opacity=".9"/>
+    <polygon points="-27,8.5 0,-1.5 27,8.5 0,17.5" fill="#B5AEDC" opacity=".9"/>
+    <polygon points="-24,9 0,1 24,9 0,15" fill="#E4E0F5" opacity=".9"/>
+    <!-- spacecraft bus under the shield -->
+    <rect x="-4" y="12" width="8" height="5" fill="#8C8A99"/>
+    <!-- primary mirror -->
+    <g transform="translate(0 -8)">
+      <use href="#hex" x="0" y="0"/>
+      <use href="#hex" x="3.9" y="2.25"/><use href="#hex" x="0" y="4.5"/><use href="#hex" x="-3.9" y="2.25"/>
+      <use href="#hex" x="-3.9" y="-2.25"/><use href="#hex" x="0" y="-4.5"/><use href="#hex" x="3.9" y="-2.25"/>
+      <use href="#hex" x="7.8" y="0"/><use href="#hex" x="7.8" y="4.5"/><use href="#hex" x="3.9" y="6.75"/>
+      <use href="#hex" x="-3.9" y="6.75"/><use href="#hex" x="-7.8" y="4.5"/><use href="#hex" x="-7.8" y="0"/>
+      <use href="#hex" x="-7.8" y="-4.5"/><use href="#hex" x="-3.9" y="-6.75"/><use href="#hex" x="3.9" y="-6.75"/>
+      <use href="#hex" x="7.8" y="-4.5"/>
+      <!-- the center segment is the hole where the secondary looks through -->
+      <circle r="1.3" fill="#070B2E"/>
+      <!-- secondary mirror on its tripod -->
+      <path d="M-6 -7 L0 -16 M6 -7 L0 -16 M0 -2 L0 -16" stroke="#C7C2D9" stroke-width=".7" fill="none"/>
+      <circle cy="-16" r="1.4" fill="#E8B84A" stroke="#7A5A14" stroke-width=".35"/>
+    </g>
+  </g>
+
+  <!-- 7. Hubble: a silver tube, aperture door open, two blue solar arrays -->
+  <g transform="translate(236 118) rotate(32)">
+    <rect x="-3.5" y="-13" width="7" height="26" rx="1.2" fill="#C9CCD6" stroke="#6E7280" stroke-width=".5"/>
+    <rect x="-3.5" y="-13" width="7" height="6" fill="#A9ADB8"/>
+    <rect x="-3.5" y="4" width="7" height="9" fill="#B0B4C0"/>
+    <!-- open aperture door -->
+    <path d="M-3.5 -13 L-1 -19.5 L3.5 -17" fill="#DEE1EA" stroke="#6E7280" stroke-width=".5"/>
+    <!-- solar arrays -->
+    <rect x="-16" y="-3" width="11" height="6" fill="#2F4FB8" stroke="#BFD3FF" stroke-width=".5"/>
+    <rect x="5" y="-3" width="11" height="6" fill="#2F4FB8" stroke="#BFD3FF" stroke-width=".5"/>
+    <path d="M-10.5 -3 v6 M10.5 -3 v6 M-16 0 h11 M5 0 h11" stroke="#BFD3FF" stroke-opacity=".6" stroke-width=".4"/>
+    <!-- high-gain antenna -->
+    <path d="M3.5 6 l5 2" stroke="#9EA3B0" stroke-width=".6"/><circle cx="9" cy="8.3" r="1.1" fill="#DEE1EA"/>
+  </g>
+
+  <!-- 8. Roman Space Telescope: wide barrel with sunshade, open aperture cover, solar-array skirt -->
+  <g transform="translate(46 146) rotate(22)">
+    <!-- solar array sun shield: panels fanning out around the base -->
+    <polygon points="-8,10 -20,24 -10,26 -4,12" fill="#2F4FB8" stroke="#BFD3FF" stroke-width=".5"/>
+    <polygon points="8,10 20,24 10,26 4,12" fill="#2F4FB8" stroke="#BFD3FF" stroke-width=".5"/>
+    <polygon points="-5,12 -8,27 8,27 5,12" fill="#3A5BC7" stroke="#BFD3FF" stroke-width=".5"/>
+    <!-- barrel + outer sunshade -->
+    <rect x="-8" y="-18" width="16" height="30" rx="1.5" fill="#D9DCE4" stroke="#6E7280" stroke-width=".5"/>
+    <rect x="-8" y="-18" width="16" height="7" fill="#F1F2F6" stroke="#6E7280" stroke-width=".5"/>
+    <rect x="-8" y="4" width="16" height="8" fill="#B9BDC9"/>
+    <!-- deployable aperture cover, hinged open -->
+    <path d="M-8 -18 L-14 -27 L6 -25 L8 -18z" fill="#E9EBF2" stroke="#6E7280" stroke-width=".5"/>
+    <!-- the Coronagraph Instrument hangs off the side -->
+    <rect x="8" y="-2" width="5" height="9" fill="#8C8A99" stroke="#6E7280" stroke-width=".4"/>
+    <!-- high-gain antenna -->
+    <path d="M-8 6 l-5 2" stroke="#9EA3B0" stroke-width=".6"/><circle cx="-13.5" cy="8.3" r="1.3" fill="#DEE1EA"/>
+  </g>
+
+  <!-- 9. An Earth-like planet, with somebody else's continents -->
+  <g transform="translate(222 232)">
+    <circle r="14.5" fill="#BFD3FF" opacity=".18"/>
+    <circle r="12" fill="url(#ocean)"/>
+    <clipPath id="globe"><circle r="12"/></clipPath>
+    <g clip-path="url(#globe)">
+      <!-- continents (invented) -->
+      <path d="M-11 -1.5 q4 -6 9 -4 q3 2 1 5 q-3 2 -6 1 q-4 1 -4 -2z" fill="#5E8E4A"/>
+      <path d="M-3 2 q5 -2 8 2 q2 4 -1 7 q-4 2 -7 -1 q-2 -4 0 -8z" fill="#6B9A4E"/>
+      <path d="M2 -11 q5 1 7 5 q-2 3 -5 1 q-3 -3 -2 -6z" fill="#C8B07A"/>
+      <path d="M-12 7 q3 -2 6 1 q1 3 -2 4 q-4 0 -4 -5z" fill="#5E8E4A"/>
+      <!-- polar caps -->
+      <ellipse cy="-11.5" rx="7" ry="2.2" fill="#FFFFFF" opacity=".9"/>
+      <ellipse cy="11.5" rx="5" ry="1.8" fill="#FFFFFF" opacity=".9"/>
+      <!-- clouds -->
+      <path d="M-9 -7 q4 -1 7 1 q3 0 5 1" stroke="#FFFFFF" stroke-opacity=".7" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+      <path d="M-4 5 q4 1 7 -1" stroke="#FFFFFF" stroke-opacity=".6" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M4 8 q3 0 5 -2" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <!-- ocean glint, Cassini-at-Titan style: a hard blown-out white core with a soft warm bloom -->
+      <circle cx="-3" cy="-6.5" r="5" fill="url(#bloom)"/>
+      <circle cx="-3" cy="-6.5" r="1.3" fill="#FFFFFF"/>
+      <path d="M-3 -10.5 v8 M-7 -6.5 h8" stroke="#FFFFFF" stroke-opacity=".7" stroke-width=".55" stroke-linecap="round"/>
+      <!-- night side, pushed back so most of the disk is in daylight -->
+      <circle cx="10" cy="7" r="15" fill="#070B2E" opacity=".32"/>
+    </g>
+    <circle r="12" fill="none" stroke="#BFD3FF" stroke-opacity=".5" stroke-width=".6"/>
+    <path d="M-11.3 -4 A12 12 0 0 1 -4 -11.3" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="1.1" stroke-linecap="round"/>
+  </g>
+
+  <!-- 5. A lonely brown dwarf with banded clouds (hello, Luhman 16A) -->
+  <g transform="translate(130 236) rotate(-10)">
+    <circle r="6" fill="url(#bd)"/>
+    <path d="M-5.5 -2 q5.5 -1.2 11 0 M-6 1 q6 1.4 12 0 M-4.5 3.6 q4.5 .8 9 0" stroke="#E58A5B" stroke-opacity=".6" stroke-width="1" fill="none"/>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+title: The Gemini Planet Imager
+nav: instrumentation
+show_title: true
+back: {href: instrumentation.html, label: Instrumentation}
+description: "My work on the Gemini Planet Imager's polarimetry mode."
+blocks:
+  - type: text
+    html: >-
+      The Gemini Planet Imager (GPI) is a high-contrast imager at the Gemini South telescope that combines an extreme adaptive optics system, a coronagraph
+      and an integral field spectrograph/polarimeter in order to directly image exoplanets. I have worked
+      extensively on GPI's polarimetry mode since about 2011, characterizing its performance (both in-lab and on-sky),
+      developing data reduction procedures and using it for science.
+    aside_image: images/gpi_logo.jpg
+  - type: text
+    html: "Recently I demonstrated that GPI is sensitive to the polarization aberrations of the Gemini South telescope."
+  - type: figure
+    src: images/gpi_pol_aberrations.png
+    width: 90%
+    alt: "GPI's sensitivity to the polarization aberrations of the Gemini South telescope"
+    caption: >-
+      In the top row we see a model of GPI's coronagraph and in the bottom row we see on-sky data.
+      In the Q and U panels we see that the on-sky (at least qualitatively) match the model predictions.
+  - type: text
+    html: "Here's a quick list of GPI papers I've written either characterizing GPI's polarimetry mode or using it for science:"
+  - type: list
+    items:
+      - {href: "https://ui.adsabs.harvard.edu/abs/2022SPIE12184E..3XM/abstract", name: "The polarization aberrations of the Gemini Telescope as seen by the Gemini Planet Imager"}
+      - {href: "https://ui.adsabs.harvard.edu/abs/2016AJ....152..128M/abstract", name: "Imaging an 80 au Radius Dust Ring around the F5V Star HD 157587"}
+      - {href: "https://ui.adsabs.harvard.edu/abs/2016SPIE.9908E..36M/abstract", name: "GPI observational calibrations XIV: polarimetric contrasts and new data reduction techniques"}
+      - {href: "https://ui.adsabs.harvard.edu/abs/2015ApJ...811...18M/abstract", name: "Beta Pictoris' Inner Disk in Polarized Light and New Orbital Parameters for Beta Pictoris b"}
+      - {href: "https://ui.adsabs.harvard.edu/abs/2014SPIE.9151E..4IM/abstract", name: "Polarization gratings for visible and near-infrared astronomy"}

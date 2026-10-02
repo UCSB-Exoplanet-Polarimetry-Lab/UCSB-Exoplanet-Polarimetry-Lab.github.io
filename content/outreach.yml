@@ -1,0 +1,24 @@
+title: Outreach
+nav: outreach
+description: "Public outreach: Astronomy On Tap, tactile 3D-printed models, and more."
+blocks:
+  - type: heading
+    text: "Want to learn more about Astronomy?"
+    first: true
+  - type: text
+    html: >-
+      Check out the links below for some information about previous public outreach events that I've been involved with in Pasadena
+      or in Toronto, and some current efforts my group at UCSB is involved in. If you're not an astronomer, but have any questions about my work or astronomy in general,
+      feel free to send me a message. I'd be happy to chat!
+    align: left
+  - type: figure
+    src: images/astro_ontap.jpg
+    width: 75%
+    caption: "Me giving a public talk on polarimetry at Astronomy On Tap Pasadena"
+  - type: links
+    items:
+      - {href: "http://www.briley-lewis.com/tactile-models.html", title: "3D-Printed Tactile Models", blurb: "Solar system models for outreach with blind and low-vision people, by NSF AAPF Briley Lewis.", image: images/sb_orrery.jpg, retro_only_image: true}
+      - {href: "http://www.astro.caltech.edu/outreach/aot/", title: "Astronomy On Tap Pasadena", blurb: "Public astronomy talks in a bar. The best kind of lecture hall."}
+      - {href: "https://www.astro.caltech.edu/outreach/stargazing-lecture-series", title: "Caltech Stargazing &amp; Lecture Series", blurb: "Monthly public lectures followed by stargazing."}
+      - {href: "https://universe.utoronto.ca/talks-lectures/astronomy-on-tap/", title: "Astronomy On Tap Toronto", blurb: "The Toronto chapter, from my grad school days."}
+      - {href: "http://www.astro.utoronto.ca/astrotours/", title: "University of Toronto Astrotours", blurb: "Free public tours, talks and telescope viewing at U of T."}

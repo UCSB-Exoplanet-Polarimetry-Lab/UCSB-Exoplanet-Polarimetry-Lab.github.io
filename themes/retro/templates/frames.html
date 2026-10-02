@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ site.title }} (frames edition)</title>
+</head>
+<frameset rows="92,*" frameborder="1" border="5" bordercolor="#D6D3CC">
+  <frame src="frame_top.html" name="top" scrolling="no" noresize title="Site banner">
+  <frameset cols="224,*" frameborder="1" border="5" bordercolor="#D6D3CC">
+    <frame src="frame_nav.html" name="nav" scrolling="auto" title="Navigation">
+    <frame src="index.html" name="main" scrolling="auto" title="Content">
+  </frameset>
+  <noframes>
+    <body>Your browser does not support frames. It is either very old or very new. <a href="index.html">Enter the no-frames version.</a></body>
+  </noframes>
+</frameset>
+</html>

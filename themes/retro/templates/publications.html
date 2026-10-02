@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% import "blocks.html" as B %}
+{% import "icons.html" as I %}
+{% set pubs = data.publications %}
+{% set KIND = {"refereed": "REFEREED", "proceedings": "PROCEEDINGS", "preprint": "PREPRINT", "other": "OTHER"} %}
+{% macro authors(list) %}
+{%- for a in list[:8] -%}
+{%- if is_member(a) %}<strong>{{ a | e }}</strong>{% else %}{{ a | e }}{% endif %}{{ "; " if not loop.last }}
+{%- endfor -%}
+{%- if list | length > 8 %}; et al.{% set hidden = list[8:] | select("is_member") | list %}{% endif -%}
+{% endmacro %}
+{% block main %}
+<section class="panel">
+  <h2 class="sec">GROUP PUBLICATIONS {{ I.tag('new') }}{% if pubs and pubs['items'] %}<span class="path"><span id="pubCount">{{ pubs['items'] | length }}</span> shown</span>{% endif %}</h2>
+  <p>Papers by the Millar-Blanchaer group at UCSB since {{ data.ads_config.since_year }}: anything on NASA ADS with the PI or a current group member as an author.</p>
+  {% if not pubs or not pubs['items'] %}
+  {{ B.construction({"text": "No publication list yet. The first weekly ADS run (scripts/fetch_ads.py) will fill this page."}) }}
+  <p>In the meantime: <a href="{{ site.ads }}">my papers on ADS</a> and <a href="{{ site.first_author }}">my first-author papers</a>.</p>
+  {% else %}
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px" role="group" aria-label="Filter publications">
+    <button class="btn sm pill active" type="button" data-kind="all" aria-pressed="true">All</button>
+    <button class="btn sm pill" type="button" data-kind="refereed" aria-pressed="false">Refereed</button>
+    <button class="btn sm pill" type="button" data-kind="proceedings" aria-pressed="false">Proceedings</button>
+    <button class="btn sm pill" type="button" data-kind="preprint" aria-pressed="false">Preprints</button>
+  </div>
+  <div class="bevel-in" style="background:#fff;padding:4px 16px;overflow-x:auto"><table class="pubs-table">
+  {% for year, items in pubs_by_year(pubs) %}
+    <tr class="yr"><td colspan="3"><span class="px" style="font-size:12px">{{ year }}</span></td></tr>
+    {% for p in items %}
+    {% set ads = "https://ui.adsabs.harvard.edu/abs/" ~ p.bibcode ~ "/abstract" %}
+    <tr class="pub" data-kind="{{ p.kind }}">
+      <td class="mono small muted" style="white-space:nowrap">{{ (p.pubdate or '')[:7] }}</td>
+      <td><div style="font-weight:700;line-height:1.35"><a href="{{ ads }}">{{ p.title | e }}</a></div>
+        <div class="small" style="color:var(--ink2);margin-top:3px">{{ authors(p.authors) }}</div>
+        <div class="small muted" style="margin-top:3px"><em>{{ p.journal or '' }}</em>{% if p.citations %} &middot; {{ p.citations }} citation{{ 's' if p.citations != 1 }}{% endif %} &middot; <a href="{{ ads }}">ADS</a>{% if p.doi %} &middot; <a href="https://doi.org/{{ p.doi }}">DOI</a>{% endif %}{% if p.arxiv %} &middot; <a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv</a>{% endif %}</div></td>
+      <td style="text-align:right;white-space:nowrap"><span class="px" style="font-size:9px;border:1px solid var(--ink);padding:2px 5px">{{ KIND.get(p.kind, 'OTHER') }}</span></td>
+    </tr>
+    {% endfor %}
+  {% endfor %}
+  </table></div>
+  <p class="small muted" style="margin-top:12px">Names in <strong>bold</strong> are current group members. Built from <a href="{{ pubs.search_url }}">this ADS query</a>, refreshed weekly by a GitHub Action. The list is only as good as ADS author matching, so tell me if someone is missing or a stranger snuck in.</p>
+  {% endif %}
+</section>
+{% endblock %}

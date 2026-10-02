@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Banner</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>html,body{height:100%} body{overflow:hidden}</style>
+</head><body class="is-frame"><div id="site" style="height:100%;box-sizing:border-box">
+<div style="height:100%;display:flex;flex-direction:column">
+  {% include "ticker.html" %}
+  <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:18px;padding:6px 12px;color:#fff">
+    <span class="px" style="font-size:22px;text-shadow:3px 3px 0 var(--red),5px 5px 0 #5A0A16">MILLAR-BLANCHAER RESEARCH GROUP</span>
+    <span class="comic" style="font-size:15px;color:var(--yellow)">{{ site.institution }}</span>
+    <span class="badge flash" style="background:#C8102E;border-color:#FFD27A;min-width:0;height:26px;font-size:8px">FRAMES!!</span>
+  </div>
+</div>
+</div><script src="script.js"></script></body></html>

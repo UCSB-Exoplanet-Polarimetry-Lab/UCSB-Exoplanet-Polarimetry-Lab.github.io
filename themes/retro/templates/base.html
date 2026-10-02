@@ -1,0 +1,38 @@
+{% import "icons.html" as I %}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{% if page.slug != 'home' %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ page.description or site.description }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css">
+{% include "switch.html" %}
+</head>
+<body>
+<div id="site">
+{% include "ticker.html" %}
+<div class="page">
+<header class="masthead"><h1><a href="index.html">Millar-Blanchaer<br>Research Group</a></h1>
+<p class="sub">{{ site.institution }}</p>
+<div class="tag"><span class="blinker" style="display:inline-block;width:9px;height:9px;background:#FF3B3B"></span>EXOPLANETS &middot; POLARIMETRY &middot; HIGH-CONTRAST IMAGING</div></header>
+<nav class="navbar" aria-label="Primary">
+{% for n in nav %}<a class="btn{% if n.key == page.nav %} active{% endif %}" href="{{ n.url }}"{% if n.key == page.nav %} aria-current="page"{% endif %}>{{ n.label }}</a>{% endfor %}
+<span class="icons">
+<a class="btn sm" href="{{ site.ads }}" title="My papers on NASA ADS"><img src="{{ img('images/ads.png') }}" alt="NASA ADS"></a>
+<a class="btn sm" href="{{ site.github }}" title="GitHub">GitHub</a>
+<a class="btn sm" href="{{ site.orcid }}" title="ORCID"><img src="{{ img('images/orcid16.png') }}" alt="ORCID" style="height:16px"></a>
+<button class="btn sm px" type="button" id="calmBtn" aria-pressed="false" title="Turn off the blinking">CALM DOWN</button>
+<span style="display:inline-flex;gap:3px"><button class="btn sm px" type="button" id="prevTrack" title="Previous track">|&lt;&lt;</button><button class="btn sm px" type="button" id="soundBtn" aria-pressed="false" title="Play / stop the soundtrack">&#9835; SOUND OFF</button><button class="btn sm px" type="button" id="nextTrack" title="Next track">&gt;&gt;|</button></span>
+{% for s in page.switch_links %}<a class="btn sm px" href="{{ s.url }}" data-theme="{{ s.name }}" title="Switch to the {{ s.name }} theme" style="background:#DFF5E6;border-color:#F0FBF3 #9ACBAA #9ACBAA #F0FBF3;color:#174D2B">{{ s.label }}</a>{% endfor %}
+</span>
+</nav>
+{% block main %}{% endblock %}
+{% include "footer.html" %}
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

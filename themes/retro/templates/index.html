@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% import "blocks.html" as B %}
+{% import "icons.html" as I %}
+{% block main %}
+<section class="panel">
+  <div class="hero-grid">
+    <div>
+      <div class="status"><span class="dot blinker"></span>ONLINE &middot; BROIDA HALL, UCSB</div>
+      <h2 class="rainbowtext">Welcome to our Homepage!!!</h2>
+      <p>{{ page.welcome }}</p>
+      <div class="badges" style="margin:10px 0 14px">
+        <span class="badge flash" style="background:#C8102E;border-color:#FFD27A">UPDATED!!</span>
+        <span class="badge hue" style="background:#FF3BE4;border-color:#fff">COOL SITE OF THE DAY</span>
+        <span class="badge" style="background:#141413;border-color:#7CFF9B">{{ I.arrow() }}SCROLL DOWN</span>
+        <span class="badge invert" style="border-color:#7CFF9B">RECRUITING NEW GRADS</span>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn" href="group.html">Meet the group</a>
+        <a class="btn" href="publications.html">Group publications</a>
+        <a class="btn" href="science.html">What we study</a>
+        <a class="btn" href="mailto:{{ site.email }}">{{ I.mail("#141413") }}Join us</a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <span class="frame"><img src="{{ img('images/the_group_at_lyot.jpg') }}" alt="The research group at the 2026 Spirit of Lyot conference" width="280"></span>
+      <span class="px small" style="text-align:center">&lt;&lt; that's us &gt;&gt;</span>
+    </div>
+  </div>
+</section>
+
+<hr class="rainbow" aria-hidden="true">
+
+<section class="panel" id="photos">
+  <h2 class="sec">{{ I.star() }}PHOTO ALBUM<span class="path">~/photos</span></h2>
+  <div class="show" aria-roledescription="carousel">
+    <div class="stage">{% for s in data.carousel['items'] %}<img src="{{ img(s.image.lstrip('/')) }}" alt="{{ s.caption | e }}" loading="lazy">{% endfor %}</div>
+    <div class="cap" aria-live="polite"></div>
+    <div class="ctl"><button class="btn sm px prev" type="button">&lt;&lt; PREV</button><span class="dots" role="tablist"></span><button class="btn sm px next" type="button">NEXT &gt;&gt;</button></div>
+  </div>
+</section>
+
+<section class="panel white" id="about">
+  <h2 class="sec">ABOUT THE GROUP {{ I.tag('hot') }}<span class="path">~/about</span></h2>
+  <div class="prose">
+    <p>{{ page.group_detail }}</p>
+    <h3 style="margin-top:6px">A note from the PI</h3>
+    <p><span class="frame" style="float:right;margin:0 0 10px 16px;width:120px"><img src="{{ img('images/me.jpg') }}" alt="{{ site.pi }}"></span>
+    {{ page.pi_note.replace('{first_author}', site.first_author).replace('{cv}', root ~ 'assets/cv.pdf') }}
+    <a href="{{ root }}assets/cv.pdf">Here</a> is my CV.</p>
+  </div>
+  <div style="clear:both"></div>
+  <div class="doors">
+  {% for d in page.doors %}{{ B.door(d) }}{% endfor %}
+  </div>
+</section>
+
+<hr class="rainbow" aria-hidden="true">
+
+<section class="panel" id="news">
+  <h2 class="sec">WHAT'S NEW {{ I.tag('new') }}<span class="path">news &amp; travel</span></h2>
+  <div class="news">
+  {% for it in data.news_items[:page.news_count or 8] %}
+    <div class="news-item{% if it.celebrate %} party{% endif %}" style="border-left-color:{{ it.cat.color }}">{% if it.celebrate %}{% for k in "abcdef" %}<span class="fw {{ k }}" aria-hidden="true"></span>{% endfor %}{% endif %}<div class="news-meta"><span>{{ it.date | date }}{% if (today - it.date).days < 92 %} <span class="tag-new blinker">NEW!</span>{% endif %}</span><span class="news-cat" style="background:{{ it.cat.color }};color:{{ '#141413' if it.cat.name == 'update' else '#fff' }}">{{ it.cat.display_name | upper }}</span></div><div class="news-body">{% if it.link %}<a href="{{ it.link }}" target="_blank" rel="noopener">{{ it.description | e }}</a>{% else %}{{ it.description | e }}{% endif %}</div></div>
+  {% endfor %}
+  </div>
+</section>
+
+<section class="panel white" id="guestbook">
+  <h2 class="sec">SIGN OUR GUESTBOOK <span class="invert px" style="font-size:10px;padding:4px 8px;display:inline-flex;align-items:center;gap:6px">{{ I.arrow("currentColor") }}SIGN IT!</span></h2>
+  <p>Visiting from a conference, a classroom, or a web ring? Leave a note. (Entries are saved only in your own browser. It's 1998 and I don't have a CGI script.)</p>
+  <div class="gb-grid">
+    <form id="gbForm" class="bevel" style="background:#fff;padding:18px;display:flex;flex-direction:column;gap:12px">
+      <div><label for="gb-name">Your name</label><input class="field" id="gb-name" type="text" placeholder="e.g. a fellow traveller"></div>
+      <div><label for="gb-from">Where are you visiting from?</label><input class="field" id="gb-from" type="text" placeholder="City, institution, or the void"></div>
+      <div><label for="gb-msg">Message</label><textarea class="field" id="gb-msg" rows="4" placeholder="Nice site! Greetings from…" required></textarea></div>
+      <button class="btn" type="submit" style="align-self:flex-start">Sign the guestbook</button>
+      <p id="signedMsg" hidden class="px small" style="color:#0F6B2E;margin:0">THANK YOU FOR SIGNING! COME BACK SOON.</p>
+    </form>
+    <div><div class="px small" style="margin-bottom:8px">RECENT ENTRIES</div><div id="gbList"></div></div>
+  </div>
+</section>
+{% endblock %}

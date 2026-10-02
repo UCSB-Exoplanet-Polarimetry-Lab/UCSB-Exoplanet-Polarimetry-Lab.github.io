@@ -1,0 +1,32 @@
+title: Instrumentation
+nav: instrumentation
+description: "Astronomical instrumentation: polarimetric modes for GPI, WIRC+Pol, Keck NIRC2, metasurface optics and the Roman Coronagraph."
+blocks:
+  - type: text
+    html: >-
+      With a BSc in Electrical Engineering and a BSc in Physics, I have always found astronomical instrumentation
+      to be a perfect match to my interests and training. In general my current instrumentation focus is on the
+      development and implementation of new polarimetric modes for the characterization of exoplanets and debris
+      disks, but I'm also interested in non-polarimetric instrumentation and techniques for direct imaging of exoplanets and debris disks.
+      In the pages below, I give some more examples of my current and past instrumentation projects.
+  - type: text
+    html: >-
+      In addition to the projects below I am also currently working on implementing a new polarimetry mode for the Keck NIRC2 infrared imager,
+      characterizing the Subaru/SCExAO/VAMPIRES polarimetry mode
+      <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12680/2677599/Characterizing-the-instrumental-polarization-of-SCExAO-VAMPIRES/10.1117/12.2677599.short">(see this paper by my student Rebecca Zhang)</a>
+      and planning for direct imaging instrumentation for thirty-meter class telescopes
+      <a href="https://ui.adsabs.harvard.edu/abs/2023SPIE12680E..1XV/abstract">(see this paper by my student Connor Vancil on PSISIM)</a>.
+      Most recently I've joined the Roman Coronagraph Instrument project and am co-leading the Data Reduction and Simulations working group.
+  - type: figure
+    src: images/max_rebecca_keck.jpg
+    width: 70%
+    caption: "Max and Rebecca at Keck II to install the NIRC2 polarimetry mode."
+    themes: [retro]
+  - type: links
+    items:
+      - {href: gpi.html, title: "The Gemini Planet Imager", blurb: "An extreme-AO coronagraphic integral field spectrograph/polarimeter at Gemini South. I've worked on its polarimetry mode since 2011.", image: images/gpi_logo.jpg, light: true, modern_width: 10px}
+      - {href: metasurfaces.html, title: "Metasurface Optics", blurb: "Subwavelength nanostructures that shape phase, amplitude and polarization: focal- and pupil-plane coronagraphs.", image: images/metavort_SEM_MMBwebsite.png, tag: hot, modern_width: 50px}
+      - {href: wircpol.html, title: "WIRC+Pol", blurb: "R~100 spectropolarimetry in J and H at the Palomar 200-inch, built around a polarization grating.", image: images/wircpol_logo.png, light: true, modern_width: 320px}
+      - {href: pgs.html, title: "Polarization Gratings", blurb: "Diffraction gratings that are also polarizing beam splitters, with >90% efficiency from 500 to 850 nm.", image: images/PG_Photo.png, retro_only_image: true}
+      - {href: previous_work.html, title: "Previous Projects", blurb: "TMT NFIRAOS calibration unit, the WIFIS image slicer, Keck NIRES detectors, and a trip to the high Arctic.", image: images/arctic1.png, retro_only_image: true}
+      - {title: "Other Projects", blurb: "Keck NIRC2 polarimetry, SCExAO/VAMPIRES, the Roman Coronagraph pipeline...", construction: true, themes: [retro]}

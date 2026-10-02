@@ -1,0 +1,36 @@
+{% import "icons.html" as I %}
+<footer class="footer">
+  <div class="ring-row" id="webring" data-ring='{{ site.webring | map(attribute="url") | list | tojson }}'>
+    <a href="{{ site.webring[-1].url }}" title="{{ site.webring[-1].name }}" rel="noopener">&larr; PREV</a>
+    <span class="ring-title">{{ I.globe() }}THE EXOPLANET DIRECT IMAGING WEB RING{{ I.globe() }}</span>
+    <span style="display:inline-flex;gap:18px"><a href="#" id="ringRandom">RANDOM</a><a href="{{ site.webring[0].url }}" title="{{ site.webring[0].name }}" rel="noopener">NEXT &rarr;</a></span>
+  </div>
+  <p class="small" style="margin:-8px 0 0;color:#BDBAB2">Ring members: {% for m in site.webring %}<a href="{{ m.url }}" rel="noopener">{{ m.name }}</a>{{ " &middot; " if not loop.last }}{% endfor %} &middot; and you are here.</p>
+  <div class="foot-grid">
+    <div><span class="frame" style="padding:4px"><img src="{{ img('images/prime_focus.png') }}" alt="Max in the Palomar prime-focus cage" loading="lazy"></span></div>
+    <div>
+      <h3>ADDRESS</h3>
+      <p>{{ site.pi }}<br>Department of Physics<br>{{ site.address | join('<br>') }}</p>
+      <h3>E-MAIL</h3>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <div class="badges">
+        <span class="badge flash-slow" style="background:#0B1240;border-color:#BFD3FF">BEST VIEWED IN NETSCAPE 4.0</span>
+        <span class="badge" style="background:#0F6B2E;border-color:#7CFF9B">MADE BY NON-SENTIENT ROBOTS</span>
+        <span class="badge hue" style="background:#5B1A8A;border-color:#E2C6FF">OPEN ACCESS ALWAYS</span>
+        <span class="badge invert" style="border-color:#7CFF9B">NO TRACKERS, NO ADS</span>
+        <a class="badge" href="mailto:{{ site.email }}" style="background:#C8102E;border-color:#FFD27A">{{ I.mail() }}E-MAIL ME</a>
+        <a class="badge flash-slow" href="frames.html" target="_top" style="background:#8A4B00;border-color:#FFD27A">FRAMES VERSION</a>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="counter"><span class="lbl">YOU ARE VISITOR NUMBER</span><div class="digits" id="visitorDigits"><span>0</span><span>0</span><span>1</span><span>9</span><span>9</span><span>8</span></div></div>
+      <div class="nowplaying"><span class="eq"><i></i><i></i><i></i><i></i></span><span id="npLabel">SOUNDTRACK: Jan125, "Stereotypical 90's space shooter music" (toggle up top)</span></div>
+      <p class="small" style="color:#BDBAB2;margin:0">Music: <a href="https://opengameart.org/content/stereotypical-90s-space-shooter-music">"Stereotypical 90's space shooter music"</a> by Jan125,
+      licensed <a href="https://static.opengameart.org/OGA-BY-3.0.txt">OGA-BY 3.0</a>. Thank you, Jan125. If the files won't load you get a robot-composed FM loop instead.</p>
+    </div>
+  </div>
+  <div class="copy">
+    <span>&copy; {{ year }} {{ site.pi }} &middot; Last updated {{ updated }} &middot; Original design: <a href="https://html5up.net">HTML5 UP</a>, lovingly de-modernized.</span>
+    <span class="mono">Zero GIFs were harmed: every flash on this site is CSS.</span>
+  </div>
+</footer>

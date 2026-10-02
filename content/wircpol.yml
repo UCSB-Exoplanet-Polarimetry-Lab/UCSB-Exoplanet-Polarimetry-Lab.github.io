@@ -1,0 +1,26 @@
+title: WIRC+Pol
+nav: instrumentation
+show_title: true
+back: {href: instrumentation.html, label: Instrumentation}
+description: "WIRC+Pol: a spectropolarimetry mode for the Palomar 200-inch telescope."
+blocks:
+  - type: text
+    html: >-
+      WIRC+Pol is a new polarimetry mode for the WIRC camera at the Palomar 200-inch
+      telescope that provides R~100 spectropolarimetry in the J and H-bands. A description
+      of the initial 2017 upgrade can be found in
+      <a href="https://ui.adsabs.harvard.edu/abs/2019PASP..131b5001T/abstract">Tinyanont, Millar-Blanchaer et al., 2019a</a>. In 2019 I led a further upgrade of the
+      instrument to include a rotatable half-wave plate <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv190810409T/abstract">(Tinyanont, Millar-Blanchaer et al., 2019b)</a>.
+      Post-upgrade characterization puts our instrumental
+      polarization at &lt;0.05%, well below the ~0.1% needed for our brown dwarf and exoplanet survey <a href="https://ui.adsabs.harvard.edu/abs/2020SPIE11447E..5YM/abstract">(Millar-Blanchaer et al. 2020).</a>
+    aside_image: images/wircpol_logo.png
+  - type: figure
+    src: images/prime_focus.png
+    width: 50%
+    caption: "An image of me in the Palomar prime-focus cage floating 15m above the primary mirror where we installed the new WIRC+Pol upgrade."
+  - type: figure
+    src: images/wirc_pol.png
+    width: 75%
+    caption: >-
+      A demonstration of the spectropolarimetric precision of WIRC+Pol in the J-band after the 2019 upgrade. Image reproduced from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv190810409T/abstract">Tinyanont, Millar-Blanchaer et al., 2019b</a>.
+      We are now beginning routine operations of WIRC+Pol, which is being used for a brown dwarf and exoplanet survey (see my <a href="atmospheres.html">Science</a> section), as well as observations of supernova, asteroids and protoplanetary disks.

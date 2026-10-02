@@ -1,0 +1,20 @@
+title: Previous Instrumentation Projects
+nav: instrumentation
+show_title: true
+title_level: h3
+back: {href: instrumentation.html, label: Instrumentation}
+description: "Pre-PhD instrumentation work: TMT NFIRAOS, WIFIS, Keck NIRES, and Arctic site testing."
+blocks:
+  - type: text
+    html: >-
+      Before beginning my PhD I carried out instrumentation research as both an undergraduate summer student and as a research assistant after
+      completion of my undergraduate studies. As a summer student I performed initial design studies for the calibration unit of
+      the first-light adaptive optics system for the Thirty Meter Telescope (TMT), called NFIRAOS (<a href="https://ui.adsabs.harvard.edu/abs/2010SPIE.7735E..5NM/abstract">SPIE proceedings</a>).
+      As a research assistant I took part in the early characterization of the image-slicer for the <a href="https://ui.adsabs.harvard.edu/abs/2012SPIE.8446E..4SS/abstract">WIFIS integral field spectrograph,</a>
+      and detector characterization for both WIFIS and the NIRES echelle spectrograph at the W.M. Keck Observatory. I also built a differential image motion monitor that I took to the high Canadian Arctic as part of
+      a broader <a href="https://ui.adsabs.harvard.edu/abs/2013PASP..125..866S/abstract">site-testing campaign.</a>
+  - type: figure
+    src: images/arctic1.png
+    width: 90%
+    alt: "-40 degrees is where C and F meet"
+    caption: "-40 degrees is where C and F meet."

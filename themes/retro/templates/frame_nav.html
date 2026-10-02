@@ -1,0 +1,28 @@
+{% import "icons.html" as I %}
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Navigation</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>html,body{height:100%} body{overflow:auto}</style>
+</head><body class="is-frame"><div id="site" style="height:100%;box-sizing:border-box">
+<div style="padding:10px;display:flex;flex-direction:column;gap:8px;min-height:100%;box-sizing:border-box">
+  <span class="px" style="color:var(--cream);font-size:10px;text-align:center">&gt;&gt; NAVIGATION &lt;&lt;</span>
+  {% for n in nav %}<a class="btn" href="{{ n.url }}" target="main" style="width:100%;justify-content:flex-start">{{ n.label }}</a>
+  {% endfor %}
+  <hr class="rainbow" aria-hidden="true">
+  <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center">
+    <a class="btn sm" href="{{ site.ads }}" target="main" title="My papers on NASA ADS"><img src="{{ img('images/ads.png') }}" alt="NASA ADS"></a>
+    <a class="btn sm" href="{{ site.github }}" target="main">GitHub</a>
+    <a class="btn sm" href="{{ site.orcid }}" target="main"><img src="{{ img('images/orcid16.png') }}" alt="ORCID" style="height:16px"></a>
+  </div>
+  <div style="display:flex;gap:4px"><button class="btn sm px" type="button" id="prevTrack" title="Previous track">|&lt;&lt;</button><button class="btn sm px" type="button" id="soundBtn" aria-pressed="false" title="Play / stop the soundtrack" style="flex:1">&#9835; SOUND OFF</button><button class="btn sm px" type="button" id="nextTrack" title="Next track">&gt;&gt;|</button></div>
+  <a class="badge" href="mailto:{{ site.email }}" style="background:#C8102E;border-color:#FFD27A;width:100%;min-width:0">{{ I.mail() }}E-MAIL ME</a>
+  <div class="counter" style="padding:8px"><span class="lbl">VISITOR NUMBER</span><div class="digits" id="visitorDigits" style="transform:scale(.8)"><span>0</span><span>0</span><span>1</span><span>9</span><span>9</span><span>8</span></div></div>
+  <div class="construction crawl" style="margin:4px 0;padding:8px"><span class="inner" style="font-size:9px;padding:6px 8px">{{ I.warn() }}NAV FRAME UNDER CONSTRUCTION</span></div>
+  <div style="margin-top:auto;display:flex;flex-direction:column;gap:6px">
+    <span class="badge invert" style="width:100%;min-width:0;border-color:#7CFF9B">BEST VIEWED AT 800x600</span>
+    <a class="btn sm px" href="index.html" target="_top" style="width:100%">NO FRAMES VERSION</a>
+    {% for s in page.switch_links %}<a class="btn sm px" href="{{ s.url }}" target="_top" data-theme="{{ s.name }}" style="width:100%">{{ s.label }}</a>{% endfor %}
+  </div>
+</div>
+</div><script src="script.js"></script></body></html>

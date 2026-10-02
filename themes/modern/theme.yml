@@ -1,0 +1,5 @@
+# The previous look: HTML5 UP "Massively". Lives at /modern/.
+label: Modern
+out: modern
+image_dir: images               # bg.jpg and overlay.png, referenced by the Massively CSS
+switch_labels: {retro: "1998 mode"}

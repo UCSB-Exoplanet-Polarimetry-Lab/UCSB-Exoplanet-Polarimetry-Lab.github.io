@@ -1,0 +1,21 @@
+title: Software
+nav: software
+description: "Open-source software for high-contrast imaging and polarimetry: GPI DRP, WIRC+Pol DRP, PSISIM, pyMuellerMat, pyKLIP, GRaTeR-JAX."
+blocks:
+  - type: text
+    html: "As part of my research I have led the development of and contributed to a range of projects, including:"
+    align: left
+  - type: list
+    items:
+      - {href: "http://docs.planetimager.org/pipeline/", name: "The GPI Data Reduction Pipeline", desc: "The main data reduction pipeline for the Gemini Planet Imager"}
+      - {href: "https://github.com/WIRC-Pol/wirc_drp", name: "The WIRC+Pol Data Reduction Pipeline", desc: "The main data reduction pipeline for WIRC+Pol"}
+      - {href: "https://github.com/planetarysystemsimager/psisim", name: "PSISIM", desc: "A tool to simulate science outputs from high-contrast imagers, spectrographs and polarimeters"}
+      - {href: "https://github.com/maxwellmb/pyMuellerMat", name: "pyMuellerMat", desc: "A library to generate and work with flexible Mueller Matrices for simulating polarimeters"}
+      - {href: "https://pyklip.readthedocs.io/en/latest/", name: "pyklip", desc: "A post-processing library for high-contrast data"}
+      - {href: "https://github.com/UCSB-Exoplanet-Polarimetry-Lab/GRaTeR-JAX", name: "GRaTeR-JAX", desc: "GRaTeR-JAX provides tools for JAX-enhanced forward modeling of scattered light debris disk images."}
+  - type: text
+    html: 'Please check out <a href="https://github.com/maxwellmb">my Github Page</a> for my recent activity!'
+    align: left
+  - type: construction
+    text: "Documentation is always under construction. Pull requests welcome."
+    themes: [retro]

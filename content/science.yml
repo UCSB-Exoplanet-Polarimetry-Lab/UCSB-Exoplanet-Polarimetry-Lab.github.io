@@ -1,0 +1,27 @@
+title: Science
+nav: science
+description: "Science: exoplanet and brown dwarf atmospheres in polarized light, and circumstellar disk morphology and composition."
+blocks:
+  - type: text
+    html: >-
+      I am interested in furthering our understanding of planet properties and formation processes by asking questions such as:
+      What are planets outside our solar system made of? How did they form? What are the architectures of their solar systems?
+      To answer these questions I use high-contrast direct imaging techniques to observe exoplanets and
+      their neighbouring debris, extrasolar analogs to the Kuiper and Asteroid belts. In particular, I focus on using polarimetry as a tool for the
+      detection and characterization of both exoplanets and circumstellar disks.
+  - type: video
+    src: videos/betapic.mp4
+    poster: images/betapic.png
+    width: 85%
+    caption: >-
+      Here's an example of actual images of an exoplanet orbiting its star. The video shows observations of
+      the planet Beta Pictoris b obtained with the Gemini Planet Imager. You see the planet get closer to its star (center left)
+      over a span of roughly 2.5 years.
+  - type: text
+    html: >-
+      I currently have observational projects using data from a wide range of telescopes including: Keck, Gemini, Subaru, JWST and HST.
+      In the two pages below, I give some more examples of my current and past projects.
+  - type: links
+    items:
+      - {href: atmospheres.html, title: "Exoplanet and Brown Dwarf Atmospheres in Polarized Light", blurb: "Luhman 16, the WIRC+Pol brown dwarf survey, and clouds seen through polarization.", image: images/Luhman16.png, light: true}
+      - {href: disks.html, title: "Circumstellar Disk Morphology and Composition", blurb: "Debris disks with GPI, and water ice in HD 141569A with JWST.", image: images/jwst_hd141569A.jpg}

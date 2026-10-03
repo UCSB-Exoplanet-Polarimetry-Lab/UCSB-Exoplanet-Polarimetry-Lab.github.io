@@ -1,0 +1,6 @@
+{% set bits %}
+<span>*** WELCOME TO THE UCSB EXOPLANET POLARIMETRY LAB HOMEPAGE ***</span><span>Last updated: {{ updated }}</span>
+{%- for it in data.news_items[:5] %}<span>NEWS &middot; {{ it.date | dateiso }}: <a href="index.html#news">{{ (it.title or it.description.split('.')[0]) | e }}</a></span>{% endfor -%}
+<span>Please sign our guestbook before you leave!</span><span>Best viewed in Netscape Navigator 4.0 at 800x600</span>
+{% endset %}
+<div class="ticker-wrap" aria-label="Site announcements"><div class="ticker-track">{{ bits }}{{ bits }}</div></div>

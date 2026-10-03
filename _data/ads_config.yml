@@ -1,0 +1,13 @@
+# Settings for _build/fetch_ads.py (the weekly ADS publications update).
+# The query is:  (PI OR member1 OR member2 ...) AND collection:astronomy AND year >= since_year AND NOT doctype:abstract
+# Members come from group_members.yml -> current.  A member with an ORCID is matched by ORCID;
+# a member without one is matched by  author:"Last, First" AND aff:"Santa Barbara"  to keep
+# common names from pulling in strangers.  Add an `ads_query:` field to a member in
+# group_members.yml to override the automatic term for that person.
+pi:
+  name: "Millar-Blanchaer, Maxwell"
+  orcid: "0000-0001-6205-9233"
+since_year: 2020          # the group started at UCSB in Nov 2020
+max_rows: 500
+exclude_doctypes: [abstract]   # no AAS/DPS meeting abstracts; real papers and proceedings only
+exclude_bibcodes: []      # bibcodes to drop from the list, e.g. ["2021AAS...23712345X"]

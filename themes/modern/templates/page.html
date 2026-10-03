@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% import "blocks.html" as B %}
+{% block main %}
+<!-- Post -->
+<section class="post">
+	{% if page.show_title %}<article>{% endif %}
+	<header class="major">
+		{% if page.show_title %}<{{ page.title_level or 'h2' }}>{{ page.title }}</{{ page.title_level or 'h2' }}>{% endif %}
+		{% for b in page.blocks if b.type != 'links' %}
+{{ B.render(b) }}
+		{% endfor %}
+	</header>
+	{% if page.show_title %}</article>{% endif %}
+</section>
+{% for b in page.blocks if b.type == 'links' and B.want(b) %}
+{{ B.links(b) }}
+{% endfor %}
+{% endblock %}

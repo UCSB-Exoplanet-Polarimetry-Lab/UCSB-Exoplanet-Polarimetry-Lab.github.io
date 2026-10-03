@@ -1,0 +1,43 @@
+title: Metasurface Optics
+nav: instrumentation
+show_title: true
+tag: hot
+back: {href: instrumentation.html, label: Instrumentation}
+description: "Metasurface optics for high-contrast imaging: focal-plane and pupil-plane coronagraphs."
+blocks:
+  - type: text
+    html: >-
+      Metasurface optics have drawn significant interest over the last several years due to their unique ability to precisely control various properties of incident light.
+      Metasurfaces are arrays of subwavelength nanostructures spatially distributed across a thin substrate.
+      The nanostructures can be periodic, and can have relatively arbitrary geometry within the constraints
+      of nanofabrication processes. The material properties, as well as the exact shape and pattern of the
+      structures determine the optical effects on incident wavefronts. By appropriately designing specific
+      nanostructures, metasurfaces have been demonstrated that can manipulate phase, amplitude, and polarization.
+  - type: figure
+    src: images/metavort_SEM_MMBwebsite.png
+    width: 80%
+    caption: "Scanning electron microscope image of a metasurface vortex fabricated at the UCSB Nanofab."
+    themes: [retro]
+  - type: text
+    html: >-
+      We are currently exploring various metasurface applications in the Millar-Blanchaer lab, including focal plane and pupil
+      plane coronagraphs. See these papers by Skyler Palatnick, one of my students:
+  - type: list
+    items:
+      - {href: "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12680/126800P/Prospects-for-metasurfaces-in-exoplanet-direct-imaging-systems--from/10.1117/12.2677834.short", name: "Prospects for metasurfaces in exoplanet direct imaging systems: from principles to design"}
+      - {href: "https://opg.optica.org/abstract.cfm?uri=oe-32-26-47057", name: "Achromatizing photolithographically patterned metasurfaces with arbitrary, variable unit cell size"}
+      - {href: "https://pubs.aip.org/avs/jvb/article/42/6/062602/3318364", name: "Investigating pathways for deep-UV photolithography of large-area nanopost-based metasurfaces with high feature-size contrast"}
+      - {href: "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13100/1310063/Optimizing-metasurfaces-to-achieve-deeper-direct-imaging-contrasts--analyses/10.1117/12.3018594.short", name: "Optimizing metasurfaces to achieve deeper direct imaging contrasts: analyses of current performance and lessons learned from fabrication"}
+      - {href: "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13627/136271C/In-lab-demonstration-of-a-metasurface-scalar-vortex-coronagraph-in/10.1117/12.3064107.short", name: "In-lab demonstration of a metasurface scalar-vortex coronagraph in a coronagraphic testbed"}
+  - type: figure
+    src: images/vortex_gallery.png
+    width: 90%
+    alt: "A gallery of metasurface vortex designs"
+    caption: >-
+      A gallery of different achromatic metasurface vortex designs from:
+      <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12680/126800P/Prospects-for-metasurfaces-in-exoplanet-direct-imaging-systems--from/10.1117/12.2677834.short">Palatnick et al. 2023</a>
+  - type: figure
+    src: images/scales_vortex_microscope.png
+    width: 50%
+    caption: "An alignment camera image of a vortex metasurface in the SCALES instrument (from Deno Stelter)."
+    themes: [retro]

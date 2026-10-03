@@ -1,0 +1,37 @@
+title: Home
+nav: home
+template: index.html
+description: "Millar-Blanchaer Research Group at UC Santa Barbara: exoplanet detection and characterization with high-contrast imaging and polarimetry."
+
+# Short welcome line used by themes that open with a hero / greeting.
+welcome: >-
+  We are the <strong>UCSB Exoplanet Polarimetry Lab</strong>: postdocs, graduate students and undergraduates in the Department of Physics at the
+  University of California, Santa Barbara, led by Max Millar-Blanchaer. We focus on exoplanet detection and characterization using high-contrast imaging and polarimetry,
+  and we develop new instrumentation, observational techniques, and data analysis methods to push the boundaries of what we can learn about planets outside our solar system.
+
+# The group paragraph shown on the home page of every theme.
+group_blurb: >-
+  Our research group focuses on exoplanet detection and characterization using high-contrast imaging and polarimetry.
+  We develop new instrumentation, observational techniques, and data analysis methods to push the boundaries of what we can learn about planets outside our solar system.
+
+# A slightly longer description of what the group does (used by themes with an "about the group" section).
+group_detail: >-
+  Our research interests span directly imaged exoplanets, brown dwarfs and debris disks, and the instruments and software needed to study them:
+  new polarimetric modes for Keck, Gemini, Subaru and Palomar, metasurface optics built in the UCSB Nanofab, the Roman Coronagraph pipeline,
+  and JWST observations of disks. Students in the group work on everything from nanofabrication to telescope commissioning to GPU-accelerated disk modeling.
+
+# The PI's personal note. {first_author} and {cv} are filled in by the templates.
+pi_note: >-
+  My research is motivated by a desire to better understand our origins, through the study of planet formation and evolution, and to develop a better sense of our place in the universe, through the long-term search for Earth-like planets.
+  In particular, I'm interested in the detection and characterization of directly imaged exoplanets, brown dwarfs and
+  debris disks (extrasolar analogs to our own Kuiper and asteroid belts).
+  My work involves a mix of instrumentation, observation and data analysis. Take a look around the website,
+  and please get in touch if you see anything that interests you! <a href="{first_author}">Click here</a> for a list of my first-author publications, or on the ADS icon for a full list.
+
+# Quick links from the home page to the main sections (themes may show these as cards/doors).
+doors:
+  - {href: science.html, title: Science, blurb: "Exoplanet &amp; brown dwarf atmospheres in polarized light, and the morphology and composition of circumstellar disks.", image: images/betapic.png}
+  - {href: instrumentation.html, title: Instrumentation, blurb: "GPI, WIRC+Pol, metasurface optics, polarization gratings, Keck NIRC2 polarimetry, and the Roman Coronagraph.", image: images/gpi_logo.jpg, light: true}
+  - {href: group.html, title: The Group, blurb: "Meet the postdocs, graduate students and undergraduates of the UCSB Exoplanet Polarimetry Lab.", image: images/the_group_at_lyot.jpg}
+
+news_count: 8

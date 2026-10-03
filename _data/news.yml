@@ -1,4 +1,26 @@
 items:
+- date: '2026-10-02'
+  title: Recruiting a new graduate student
+  description: I'll be recruiting a new grad student this year. I encourage anyone with an astronomy, physics and/or engineering degree to apply.
+  category: opportunity
+  featured: true
+- date: '2026-10-02'
+  title: Onward and upward
+  description: We send our best wishes to Rebecca, Ronald and Jaren at their new positions at UC Berkeley, JPL and JPL!
+  category: update
+  featured: true
+- date: '2026-08-25'
+  title: First-light paper for the NIRC2 polarimeter
+  description: 'We recently submitted our first-light paper for the new NIRC2 polarimetry mode at Keck II, led by postdoc Briley Lewis: "NIRC2-Pol: First Light of Near-Infrared Polarimetry on Keck II".'
+  category: publication
+  link: https://ui.adsabs.harvard.edu/abs/2026arXiv260824661L/abstract
+  featured: true
+- date: '2026-08-19'
+  title: Dr. Rebecca Zhang
+  description: A huge congratulations to Dr. Rebecca Zhang, who successfully defended her thesis today!
+  category: update
+  celebrate: true      # retro theme sets off fireworks on this one
+  featured: true
 - date: '2026-04-15'
   title: Postdoc Position at UC Berkeley
   description: Congratulations to Rebecca Zhang for accepting a postdoctoral position at UC Berkeley to start in Fall 2026!
@@ -9,7 +31,7 @@ items:
 
 - date: '2026-04-13'
   title:
-  description: Congratulations to Skyler Palatnick for being awarded a 51 Peg b fellowsgip at UCLA to continue his work on 
+  description: Congratulations to Skyler Palatnick for being awarded a 51 Peg b fellowship at UCLA to continue his work on 
     metasurface optics!
   category: update
   link: https://news.ucsb.edu/2026/022493/designing-lightweight-optics-detect-signs-life-beyond-our-solar-system
@@ -21,7 +43,7 @@ items:
     dust properties. The work was a huge team effort, so thanks to everyone involved!
   category: update
   link: https://ui.adsabs.harvard.edu/abs/2025ApJ...994..199M/abstract
-  featuresd: true
+  featured: true
 - date: '2026-01-09'
   title: Millar-Blanchaer Lab at AAS 247
   description: Several members of the Millar-Blanchaer Lab (Postdocs Ronald Lopez and Briley Lewis, graduate student Connor Vancil, undergraduate Thomas McIntosh, REU student Logan Bennett) 

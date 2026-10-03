@@ -1,0 +1,6 @@
+# GeoCities edition: the default theme, at the site root.
+label: Retro
+out: ""
+image_dir: retro-img            # theme-only images live here (resized copies, wallpaper), so they never collide with shared images/
+switch_labels: {modern: "MODERN MODE"}
+extra_outputs: [frames.html, frame_top.html, frame_nav.html]

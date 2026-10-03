@@ -1,0 +1,6 @@
+Music: "Stereotypical 90's space shooter music" by Jan125
+Source: https://opengameart.org/content/stereotypical-90s-space-shooter-music
+License: OGA-BY 3.0 (https://static.opengameart.org/OGA-BY-3.0.txt)
+        = Creative Commons Attribution 3.0 without the anti-DRM clause. Attribution required.
+Files used: level1.ogg .. level5.ogg (unmodified). MIDI sources are in the original pack.
+The author asks, optionally, to be told where the music is used and for a link back.

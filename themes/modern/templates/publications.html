@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% set pubs = data.publications %}
+{% macro authors(list) %}
+{%- for a in list[:8] -%}
+	{%- if is_member(a) %}<strong>{{ a | e }}</strong>{% else %}{{ a | e }}{% endif %}{{ "; " if not loop.last }}
+{%- endfor -%}
+{%- if list | length > 8 %}; et al.{% endif -%}
+{% endmacro %}
+{% block main %}
+<section class="post">
+	<header class="major">
+		<h2>Group Publications</h2>
+		<p style="text-align:justify; text-align-last: center">
+			Papers by the Millar-Blanchaer group at UCSB since {{ data.ads_config.since_year }}: anything on NASA ADS with the PI or a current group member as an author.
+			Names in <strong>bold</strong> are current group members.
+			{% if pubs %}Refreshed weekly from <a href="{{ pubs.search_url }}">this ADS query</a>.{% endif %}
+		</p>
+	</header>
+
+	{% if not pubs or not pubs['items'] %}
+	<h4>Publication list coming soon.</h4>
+	<p style="text-align:center">In the meantime: <a href="{{ site.ads }}">papers on ADS</a> and <a href="{{ site.first_author }}">first-author papers</a>.</p>
+	{% else %}
+	<ul class="actions" style="justify-content:center" role="group" aria-label="Filter publications">
+		<li><button class="button small pub-filter primary" data-kind="all" type="button">All</button></li>
+		<li><button class="button small pub-filter" data-kind="refereed" type="button">Refereed</button></li>
+		<li><button class="button small pub-filter" data-kind="proceedings" type="button">Proceedings</button></li>
+		<li><button class="button small pub-filter" data-kind="preprint" type="button">Preprints</button></li>
+	</ul>
+	<p style="text-align:center; font-size:0.8rem; color:#888"><span id="pubCount">{{ pubs['items'] | length }}</span> publications shown</p>
+
+	{% for year, items in pubs_by_year(pubs) %}
+	<h3 class="pub-year" style="margin-top:2rem">{{ year }}</h3>
+	<ul class="pub-list" style="list-style:none; padding-left:0">
+		{% for p in items %}
+		<li class="pub" data-kind="{{ p.kind }}" style="margin-bottom:1.25rem; padding-left:0; text-align:left">
+			<a href="https://ui.adsabs.harvard.edu/abs/{{ p.bibcode }}/abstract" style="font-weight:600; border-bottom:none">{{ p.title | e }}</a><br>
+			<span style="font-size:0.85rem">{{ authors(p.authors) }}</span><br>
+			<span style="font-size:0.8rem; color:#888"><em>{{ p.journal or '' }}</em>{% if p.pubdate %} &middot; {{ p.pubdate[:7] }}{% endif %}
+				&middot; <a href="https://ui.adsabs.harvard.edu/abs/{{ p.bibcode }}/abstract">ADS</a>
+				{% if p.doi %}&middot; <a href="https://doi.org/{{ p.doi }}">DOI</a>{% endif %}
+				{% if p.arxiv %}&middot; <a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv</a>{% endif %}
+				{% if p.citations %}&middot; {{ p.citations }} citation{{ 's' if p.citations != 1 }}{% endif %}
+			</span>
+		</li>
+		{% endfor %}
+	</ul>
+	{% endfor %}
+	{% endif %}
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+(function(){
+	var pills=document.querySelectorAll('.pub-filter'), rows=document.querySelectorAll('.pub'), years=document.querySelectorAll('.pub-year');
+	pills.forEach(function(p){p.addEventListener('click',function(){
+		var k=p.getAttribute('data-kind'), n=0;
+		pills.forEach(function(q){q.classList.toggle('primary',q===p);});
+		rows.forEach(function(r){var show=k==='all'||r.getAttribute('data-kind')===k;r.style.display=show?'':'none';if(show)n++;});
+		years.forEach(function(y){var list=y.nextElementSibling, any=list&&Array.prototype.some.call(list.children,function(li){return li.style.display!=='none';});y.style.display=any?'':'none';if(list)list.style.display=any?'':'none';});
+		var c=document.getElementById('pubCount');if(c)c.textContent=n;
+	});});
+})();
+</script>
+{% endblock %}

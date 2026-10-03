@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% import "icons.html" as I %}
+{% macro link_url(v, prefix) %}{{ v if v.startswith('http') else prefix ~ v }}{% endmacro %}
+{% macro card(m, alumni=False) %}
+<div class="member"><div class="pic">{% if m.image %}<img src="{{ img('images/people/' ~ m.image) }}" alt="{{ m.name | e }}" loading="lazy">{% else %}<div class="noimg">NO PHOTO<br>(YET)</div>{% endif %}</div>
+<div><h3>{{ m.name | e }}</h3><p class="role">{{ m.role | e }}</p><p class="desc">{{ m.description | e }}</p>
+{% if alumni and m.current_position %}<p class="now"><strong>Now:</strong> {{ m.current_position | e }}</p>{% endif %}
+<div class="links">
+{% if m.email %}<a class="btn sm" href="mailto:{{ m.email }}" target="_blank" rel="noopener">E-mail</a>{% endif %}
+{% if m.website %}<a class="btn sm" href="{{ m.website }}" target="_blank" rel="noopener">Homepage</a>{% endif %}
+{% if m.github %}<a class="btn sm" href="{{ link_url(m.github, 'https://github.com/') }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+{% if m.ads %}<a class="btn sm" href="{{ m.ads }}" target="_blank" rel="noopener">ADS</a>{% endif %}
+{% if m.orcid %}<a class="btn sm" href="{{ link_url(m.orcid, 'https://orcid.org/') }}" target="_blank" rel="noopener">ORCID</a>{% endif %}
+</div></div></div>
+{% endmacro %}
+{% block main %}
+<section class="panel">
+  <h2 class="sec">MEET THE GROUP<span class="path">~/group</span></h2>
+  <p>The UCSB Exoplanet Polarimetry Lab: postdocs, graduate students and undergraduates working on instrumentation, observations and data analysis.
+  Interested in joining? <a href="mailto:{{ site.email }}">E-mail me</a>. <span class="badge invert" style="min-width:0;height:24px;font-size:8px;vertical-align:middle">RECRUITING NEW GRADS</span></p>
+  <figure><span class="frame" style="width:80%"><img src="{{ img('images/the_group_at_lyot.jpg') }}" alt="The research group at the 2026 Spirit of Lyot Conference" loading="lazy"></span><figcaption>A good showing of the research group at the 2026 Spirit of Lyot Conference in Pasadena.</figcaption></figure>
+  <h3 class="px">CURRENT GROUP MEMBERS</h3>
+  <div class="members">{% for m in data.group_members.current %}{{ card(m) }}{% endfor %}</div>
+</section>
+<section class="panel alumni">
+  <h2 class="sec">GROUP ALUMNI<span class="path">~/group/alumni</span></h2>
+  <div class="members">{% for m in data.group_members.alumni %}{{ card(m, True) }}{% endfor %}</div>
+</section>
+{% endblock %}

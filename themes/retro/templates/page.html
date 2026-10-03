@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "blocks.html" as B %}
+{% import "icons.html" as I %}
+{% block main %}
+<section class="panel">
+  <h2 class="sec">{{ page.title | upper }} {{ I.tag(page.tag) }}<span class="path">~/{{ page.nav }}{% if page.nav != page.slug %}/{{ page.slug }}{% endif %}</span></h2>
+  {% if page.back %}<p class="small"><a href="{{ page.back.href }}">&larr; Back to {{ page.back.label }}</a></p>{% endif %}
+  <div class="prose">
+  {% for b in page.blocks if b.type != 'links' %}
+{{ B.render(b) }}
+  {% endfor %}
+  </div>
+  {% for b in page.blocks if b.type == 'links' and B.want(b) %}
+{{ B.links(b) }}
+  {% endfor %}
+</section>
+{% endblock %}

@@ -1,0 +1,9 @@
+{# Theme switch: remember the visitor's choice and send them to the same page in their preferred theme. #}
+<script>
+(function(){try{
+  var cur='{{ theme_name }}', links={ {% for s in page.switch_links %}'{{ s.name }}':'{{ s.url }}'{{ "," if not loop.last }}{% endfor %} };
+  var pref=localStorage.getItem('mmb-theme');
+  if(pref&&pref!==cur&&links[pref]&&!/[?&]stay/.test(location.search)&&window.top===window.self){location.replace(links[pref]+location.hash);}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-theme]');if(a){localStorage.setItem('mmb-theme',a.getAttribute('data-theme'));}});
+}catch(e){}})();
+</script>

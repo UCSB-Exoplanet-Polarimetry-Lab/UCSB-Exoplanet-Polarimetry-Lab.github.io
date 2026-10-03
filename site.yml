@@ -1,0 +1,39 @@
+# Site-wide settings shared by every theme.
+title: "Millar-Blanchaer Research Group"
+short_title: "UCSB Exoplanet Polarimetry Lab"
+institution: "University of California, Santa Barbara"
+description: "University of California, Santa Barbara - Exoplanet and Brown Dwarf Research"
+email: "maxmb@ucsb.edu"
+pi: "Max Millar-Blanchaer"
+github: "https://github.com/maxwellmb"
+orcid: "https://orcid.org/0000-0001-6205-9233"
+ads: "https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy)&q=%20author%3A%22Millar-Blanchaer%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+first_author: "https://ui.adsabs.harvard.edu/public-libraries/wm8-TqOJROyVkhI1qZ9TqA"
+address:
+  - "University of California, Santa Barbara"
+  - "Broida Hall"
+  - "Santa Barbara CA 93106"
+  - "United States"
+
+# Navigation, in order. `key` matches a page's `nav:` field. `shared: true` means the href points at
+# a shared static file (so themes living in a subfolder prefix it with ../).
+nav:
+  - {href: index.html,           label: Home,            key: home}
+  - {href: science.html,         label: Science,         key: science}
+  - {href: instrumentation.html, label: Instrumentation, key: instrumentation}
+  - {href: software.html,        label: Software,        key: software}
+  - {href: publications.html,    label: Publications,    key: publications}
+  - {href: outreach.html,        label: Outreach,        key: outreach}
+  - {href: assets/cv.pdf,        label: CV,              key: cv, shared: true}
+  - {href: group.html,           label: Group,           key: group}
+
+# Themes to build. Each is a folder under themes/ with theme.yml, templates/ and static/.
+themes: [retro, modern]   # first one is the default and lives at the site root
+
+# The Exoplanet Direct Imaging Web Ring (retro footer). PREV/NEXT walk this list; RANDOM picks one.
+webring:
+  - {name: "Jaren Ashcraft", url: "https://jashcraf.github.io/"}
+  - {name: "Briley Lewis", url: "https://www.briley-lewis.com/"}
+  - {name: "Jingwen Zhang", url: "https://jingwenzhang.space/"}
+  - {name: "Wenhao Xuan", url: "https://wenhaoxuan.github.io/"}
+  - {name: "Skyler Palatnick", url: "https://skylerpalatnick.wixsite.com/info"}

@@ -1,0 +1,70 @@
+{# Block renderers for the GeoCities theme. #}
+{% import "icons.html" as I %}
+{% macro want(b) %}{{ 'y' if (not b.themes) or (theme_name in b.themes) else '' }}{% endmacro %}
+
+{% macro text(b) %}
+{% if b.aside_image %}<p><span class="frame" style="float:right;margin:0 0 12px 18px;width:220px"><img src="{{ img(b.aside_image) }}" alt=""></span>
+{{ b.html }}</p><div style="clear:both"></div>
+{% else %}<p>{{ b.html }}</p>
+{% endif %}
+{% endmacro %}
+
+{% macro heading(b) %}
+<h3{% if b.first %} style="margin-top:0"{% endif %}>{{ b.text }} {{ I.tag(b.tag) }}</h3>
+{% endmacro %}
+
+{% macro figure(b) %}
+<figure><span class="frame"{% if b.width %} style="width:{{ b.width }}"{% endif %}><img src="{{ img(b.src) }}" alt="{{ (b.alt or b.caption or '') | striptags | e }}" loading="lazy"></span>{% if b.caption %}<figcaption>{{ b.caption }}</figcaption>{% endif %}</figure>
+{% endmacro %}
+
+{% macro video(b) %}
+<figure>
+  <span class="frame" style="width:100%;max-width:720px"><video class="vid" controls preload="metadata"{% if b.poster %} poster="{{ img(b.poster) }}"{% endif %} style="width:100%"><source src="{{ href(b.src) }}" type="video/mp4">Your browser does not support the video tag.</video></span>
+  {% if b.caption %}<figcaption>{{ b.caption }}</figcaption>{% endif %}
+</figure>
+{% endmacro %}
+
+{% macro list(b) %}
+<ul class="disk">
+{% for it in b['items'] %}
+  <li><a href="{{ it.href }}">{% if it.desc %}<strong>{{ it.name }}</strong>{% else %}{{ it.name }}{% endif %}</a>{% if it.desc %} &mdash; {{ it.desc }} <span class="px" style="font-size:9px;color:#0F6B2E">[FREE DOWNLOAD]</span>{% endif %}</li>
+{% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro construction(b) %}
+<div class="construction crawl"><span class="inner">{{ I.warn() }}<span>{{ b.text or 'THIS SECTION IS UNDER CONSTRUCTION' }}</span></span></div>
+{% endmacro %}
+
+{% macro door(it) %}
+<div class="door">
+  {% if it.construction %}
+  <span class="thumb" style="background:#ECEAE3;align-items:center;justify-content:center">{{ I.warn() }}</span><h3>{{ it.title }}</h3><p>{{ it.blurb }}</p>
+  <span class="badge flash-slow" style="background:#8A4B00;border-color:#FFD27A">UNDER CONSTRUCTION</span>
+  {% else %}
+  {% if it.image %}<a class="thumb{% if it.light %} light{% endif %}" href="{{ it.href }}"><img src="{{ img(it.image) }}" alt="" loading="lazy"></a>{% endif %}
+  <h3><a href="{{ it.href }}">{{ it.title }}</a> {{ I.tag(it.tag) }}</h3><p>{{ it.blurb }}</p><a class="btn sm" href="{{ it.href }}">Tell me more!</a>
+  {% endif %}
+</div>
+{% endmacro %}
+
+{% macro links(b) %}
+<div class="doors">
+{% for it in b['items'] if (not it.themes) or (theme_name in it.themes) %}
+{{ door(it) }}
+{% endfor %}
+</div>
+{% endmacro %}
+
+{% macro render(b) %}
+{% if want(b) %}
+{% if b.type == 'text' %}{{ text(b) }}
+{% elif b.type == 'heading' %}{{ heading(b) }}
+{% elif b.type == 'figure' %}{{ figure(b) }}
+{% elif b.type == 'video' %}{{ video(b) }}
+{% elif b.type == 'list' %}{{ list(b) }}
+{% elif b.type == 'construction' %}{{ construction(b) }}
+{% elif b.type == 'links' %}{{ links(b) }}
+{% endif %}
+{% endif %}
+{% endmacro %}

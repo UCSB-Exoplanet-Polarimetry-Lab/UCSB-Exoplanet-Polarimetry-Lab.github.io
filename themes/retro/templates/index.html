@@ -67,7 +67,7 @@
   <h2 class="sec">WHAT'S NEW {{ I.tag('new') }}<span class="path">news &amp; travel</span></h2>
   <div class="news">
   {% for it in data.news_items[:page.news_count or 8] %}
-    <div class="news-item{% if it.celebrate %} party{% endif %}" style="border-left-color:{{ it.cat.color }}">{% if it.celebrate %}{% for k in "abcdef" %}<span class="fw {{ k }}" aria-hidden="true"></span>{% endfor %}{% endif %}<div class="news-meta"><span>{{ it.date | date }}{% if (today - it.date).days < 92 %} <span class="tag-new blinker">NEW!</span>{% endif %}</span><span class="news-cat" style="background:{{ it.cat.color }};color:{{ '#141413' if it.cat.name == 'update' else '#fff' }}">{{ it.cat.display_name | upper }}</span></div><div class="news-body">{% if it.link %}<a href="{{ it.link }}" target="_blank" rel="noopener">{{ it.description | e }}</a>{% else %}{{ it.description | e }}{% endif %}</div></div>
+    <div class="news-item{% if it.celebrate %} party{% endif %}" style="border-left-color:{{ it.cat.color }}">{% if it.celebrate %}{% for k in "abcde" %}<span class="fw {{ k }}" aria-hidden="true"></span>{% endfor %}{% endif %}<div class="news-meta"><span>{{ it.date | date }}{% if (today - it.date).days < 92 %} <span class="tag-new blinker">NEW!</span>{% endif %}</span><span class="news-cat" style="background:{{ it.cat.color }};color:{{ '#141413' if it.cat.name == 'update' else '#fff' }}">{{ it.cat.display_name | upper }}</span></div><div class="news-body">{% if it.link %}<a href="{{ it.link }}" target="_blank" rel="noopener">{{ it.description | e }}</a>{% else %}{{ it.description | e }}{% endif %}</div></div>
   {% endfor %}
   </div>
 </section>

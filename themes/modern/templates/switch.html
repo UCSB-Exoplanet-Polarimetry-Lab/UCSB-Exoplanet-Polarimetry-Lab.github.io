@@ -2,8 +2,10 @@
 <script>
 (function(){try{
   var cur='{{ theme_name }}', links={ {% for s in page.switch_links %}'{{ s.name }}':'{{ s.url }}'{{ "," if not loop.last }}{% endfor %} };
+  var q=new URLSearchParams(location.search), want=q.get('theme');
+  if(want){ localStorage.setItem('mmb-theme',want); q.delete('theme'); var rest=q.toString(); history.replaceState(null,'',location.pathname+(rest?'?'+rest:'')+location.hash); }
   var pref=localStorage.getItem('mmb-theme');
-  if(pref&&pref!==cur&&links[pref]&&!/[?&]stay/.test(location.search)){location.replace(links[pref]+location.hash);}
+  if(!want&&pref&&pref!==cur&&links[pref]&&!/[?&]stay/.test(location.search)){location.replace(links[pref]+location.hash);}
   document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-theme]');if(a){localStorage.setItem('mmb-theme',a.getAttribute('data-theme'));}});
 }catch(e){}})();
 </script>

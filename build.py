@@ -117,7 +117,9 @@ class Theme:
             if t.name == self.name:
                 continue
             rel = posixpath.relpath(t.out_sub or ".", self.out_sub or ".")
-            url = posixpath.normpath(posixpath.join(rel, page_filename))
+            # ?theme=<name> carries the choice in the URL, so the link works even when a theme's mobile menu
+            # clones the nav and drops data attributes; the landing page stores it and strips the parameter.
+            url = posixpath.normpath(posixpath.join(rel, page_filename)) + f"?theme={t.name}"
             label = self.cfg.get("switch_labels", {}).get(t.name, t.cfg.get("label", t.name))
             out.append({"name": t.name, "label": label, "url": url})
         return out

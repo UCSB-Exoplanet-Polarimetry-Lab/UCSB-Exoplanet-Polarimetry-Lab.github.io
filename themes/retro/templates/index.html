@@ -45,8 +45,15 @@
     <p>{{ page.group_detail }}</p>
     <h3 style="margin-top:6px">A note from the PI</h3>
     <p><span class="frame" style="float:right;margin:0 0 10px 16px;width:120px"><img src="{{ img('images/me.jpg') }}" alt="{{ site.pi }}"></span>
-    {{ page.pi_note.replace('{first_author}', site.first_author).replace('{cv}', root ~ 'assets/cv.pdf') }}
-    <a href="{{ root }}assets/cv.pdf">Here</a> is my CV.</p>
+    {{ page.pi_note.replace('{first_author}', site.first_author).replace('{cv}', root ~ 'assets/cv.pdf') }}</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:4px 0 6px">
+      <span class="px small">MAX ON THE WEB:</span>
+      <a class="btn sm" href="{{ site.ads }}" title="My papers on NASA ADS"><img src="{{ img('images/ads.png') }}" alt="NASA ADS"> ADS</a>
+      <a class="btn sm" href="{{ site.github }}" title="GitHub">GitHub</a>
+      <a class="btn sm" href="{{ site.orcid }}" title="ORCID"><img src="{{ img('images/orcid16.png') }}" alt="ORCID" style="height:16px"> ORCID</a>
+      <a class="btn sm" href="{{ root }}assets/cv.pdf">CV (PDF)</a>
+      <a class="btn sm" href="{{ site.first_author }}">First-author papers</a>
+    </div>
   </div>
   <div style="clear:both"></div>
   <div class="doors">

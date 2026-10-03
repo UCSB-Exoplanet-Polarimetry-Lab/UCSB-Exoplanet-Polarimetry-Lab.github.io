@@ -110,6 +110,16 @@ current:
     ads: ""
     orcid: ""
 
+  - name: "Ivan Bijamov"
+    role: "Undergraduate Student"
+    image: "ivan_bijamov.jpg"
+    description: "Ivan is an undergraduate at Connecticut College interested in debris disks, high-contrast imaging, and exoplanet detection. He is currently modeling JWST/NIRCam observations of the HD 30447 debris disk to characterize its morphology and search for planetary companions."
+    email: "ibijamov@conncoll.edu"
+    website: "https://ivanbijamov.com"
+    github: "IvanBijamov"
+    ads: ""
+    orcid: ""
+
 # Group Alumni
 alumni:
   - name: "Jack Grossman"

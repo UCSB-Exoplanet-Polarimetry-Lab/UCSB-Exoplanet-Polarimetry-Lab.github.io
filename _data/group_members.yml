@@ -1,15 +1,5 @@
 # Current Group Members
 current:
-  - name: "Rebecca Zhang"
-    role: "Graduate Student"
-    image: "Rebecca_Zhang_Slack_Profile_Picture.jpg"
-    description: "Rebecca's research focuses on characterizing the instrumental polarization of SCExAO VAMPIRES and developing new polarimetry techniques for exoplanet characterization."
-    email: "manxuanzhang@ucsb.edu"
-    website: ""
-    github: "https://github.com/becca9808"
-    ads: "https://ui.adsabs.harvard.edu/search/q=orcid%3A%200000-0003-3567-6839&sort=date%20desc%2C%20bibcode%20desc&p_=0"
-    orcid: "https://orcid.org/0000-0003-3567-6839"
-    
   - name: "Connor Vancil"
     role: "Graduate Student"
     image: ""
@@ -60,23 +50,6 @@ current:
     ads: ""
     orcid: ""
 
-  - name: "Jaren N. Ashcraft (He/They)"
-    role: "NASA Hubble Fellow"
-    image: ""
-    description: "Jaren conducts research at the intersection of optical instrumentation and direct exoplanet detection. Jaren has lead efforts to characterize NASA's Habitable Worlds Observatory's polarization aberrations, advance calibration of Mueller polarimeters, and design coronagraph masks for space-based ultraviolet exoplanet characterization."
-    email: "jarenashcraft@ucsb.edu"
-    website: "https://jashcraf.github.io"
-    github: "https://github.com/Jashcraf"
-    orcid: "https://orcid.org/0000-0001-5082-7442"
-
-  - name: "Andy Zhou"
-    role: "Undergraduate Student"
-    image: ""
-    description: "Andy’s research focuses on high-contrast imaging. His current work is on focal-plane wavefront sensing, developing regularized Speckle Area Nulling (SAN) method to suppress quasi-static speckles that can mimic planets."
-    email: "xiaochuan@ucsb.edu"
-    website: ""
-    github: "https://github.com/Andyzhou336"
-
   - name: "Mihir Kondapalli"
     role: "Undergraduate Student"
     image: ""
@@ -112,6 +85,37 @@ current:
 
 # Group Alumni
 alumni:
+  - name: "Rebecca Zhang"
+    role: "Former Graduate Student"
+    image: "Rebecca_Zhang_Slack_Profile_Picture.jpg"
+    description: "Rebecca's research focuses on characterizing the instrumental polarization of SCExAO VAMPIRES and developing new polarimetry techniques for exoplanet characterization."
+    current_position: "Postdoctoral Scholar at UC Berkeley"
+    email: "manxuanzhang@ucsb.edu"
+    website: ""
+    github: "https://github.com/becca9808"
+    ads: "https://ui.adsabs.harvard.edu/search/q=orcid%3A%200000-0003-3567-6839&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+    orcid: "https://orcid.org/0000-0003-3567-6839"
+    
+
+  - name: "Jaren N. Ashcraft (He/They)"
+    role: "Former NASA Hubble Fellow"
+    image: ""
+    description: "Jaren conducts research at the intersection of optical instrumentation and direct exoplanet detection. Jaren has lead efforts to characterize NASA's Habitable Worlds Observatory's polarization aberrations, advance calibration of Mueller polarimeters, and design coronagraph masks for space-based ultraviolet exoplanet characterization."
+    current_position: "Jet Propulsion Laboratory"
+    email: "jarenashcraft@ucsb.edu"
+    website: "https://jashcraf.github.io"
+    github: "https://github.com/Jashcraf"
+    orcid: "https://orcid.org/0000-0001-5082-7442"
+
+  - name: "Andy Zhou"
+    role: "Former Undergraduate Student"
+    image: ""
+    description: "Andy’s research focuses on high-contrast imaging. His current work is on focal-plane wavefront sensing, developing regularized Speckle Area Nulling (SAN) method to suppress quasi-static speckles that can mimic planets."
+    current_position: ""
+    email: "xiaochuan@ucsb.edu"
+    website: ""
+    github: "https://github.com/Andyzhou336"
+
   - name: "Jack Grossman"
     role: "Former Undergraduate Student"
     image: ""

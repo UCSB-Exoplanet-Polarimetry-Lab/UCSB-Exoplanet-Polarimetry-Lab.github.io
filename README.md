@@ -105,4 +105,4 @@ and deploys. See the comments at the top of the two workflow files for the two s
   If the files can't load, `script.js` falls back to an original FM-style loop generated with the Web Audio API.
 - The counter, guestbook and theme preference live only in the visitor's browser (localStorage). Nothing is sent anywhere.
 - `frames.html` is the frameset edition. Pages detect when they're inside it and hide their own banner and nav.
-- Every animation is CSS; there are no GIFs. CALM DOWN turns them all off (then says PARTY TIME).
+- Every animation is CSS; there are no GIFs. CALM DOWN turns them all off (then says LIVE A LITTLE).

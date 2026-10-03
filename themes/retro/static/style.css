@@ -73,7 +73,7 @@ h1,h2,h3,h4{line-height:1.25}
 /* CALM DOWN: a soft pastel blue, the calmest button on the page */
 #calmBtn{background:#CFE3F7;border-color:#E6F1FC #9CBFE0 #9CBFE0 #E6F1FC;color:#1F3A5C}
 #calmBtn:hover{background:#DDEBF9}
-/* the one thing allowed to flash in calm mode: the way back to the party */
+/* the one thing allowed to flash in calm mode: the way back */
 #calmBtn.party{animation:flash .6s step-end infinite;background:var(--pink);color:#fff;border-color:#FFB6F0}
 @keyframes party{0%,49%{background:var(--pink);color:#fff}50%,100%{background:var(--yellow);color:var(--ink)}}
 #calmBtn.party{animation:party .6s step-end infinite}

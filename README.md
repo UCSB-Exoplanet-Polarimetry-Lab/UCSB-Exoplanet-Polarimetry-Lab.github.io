@@ -87,14 +87,17 @@ minus meeting abstracts, and writes `_data/publications.json`. Members with an O
 `group_members.yml` are matched by ORCID; others by `author:"Last, First" AND aff:"Santa Barbara"`.
 Add `ads_query:` to a member to override, or a bibcode to `exclude_bibcodes` to drop a paper.
 `--print-query` shows the query and an ADS search link. Needs a token in `$ADS_DEV_KEY` or
-`~/.ads/dev_key`. The weekly GitHub Action runs it and opens a PR when the list changes.
+`~/.ads/dev_key`. The weekly GitHub Action runs it and opens a PR when the list changes. The PR is
+opened with a fine-grained personal access token (secret `PUBLICATIONS_PAT`, pull-requests + contents
+read/write on this repo only), so the repo-wide "Actions may create and approve pull requests" switch
+stays off.
 
 ## Deploying
 
 Push this folder to a GitHub repo (the `UCSB-Exoplanet-Polarimetry-Lab.github.io` repo, replacing
 the Jekyll setup). Settings -> Pages -> Source: **GitHub Actions**. Every push to `main` builds
-and deploys. See the comments at the top of the two workflow files for the ADS secret and PR
-permission settings.
+and deploys. See the comments at the top of the two workflow files for the two secrets they need
+(`ADS_DEV_KEY`, `PUBLICATIONS_PAT`).
 
 ## Retro theme notes
 

@@ -8,8 +8,13 @@ name: Weekly publications update
 # One-time setup in the repo settings:
 #   1. Settings -> Secrets and variables -> Actions -> New repository secret: ADS_DEV_KEY
 #      (token from https://ui.adsabs.harvard.edu/user/settings/token)
-#   2. Settings -> Actions -> General -> Workflow permissions:
-#      "Read and write permissions" + tick "Allow GitHub Actions to create and approve pull requests"
+#   2. A fine-grained personal access token so the Action can CREATE pull requests without the repo-wide
+#      "allow Actions to create and approve pull requests" switch (that switch is all-or-nothing, and we
+#      don't want Actions approving anything). Make one at https://github.com/settings/personal-access-tokens:
+#        Resource owner: UCSB-Exoplanet-Polarimetry-Lab; Repository access: only this repo;
+#        Repository permissions: Contents = Read and write, Pull requests = Read and write; expiry up to a year.
+#      Save it as the repository secret PUBLICATIONS_PAT. (When it expires the workflow fails with an email;
+#      make a new one and update the secret.)
 
 on:
   schedule:
@@ -17,8 +22,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 jobs:
   update:
@@ -36,6 +40,7 @@ jobs:
       - name: Open a pull request for approval
         uses: peter-evans/create-pull-request@v7
         with:
+          token: ${{ secrets.PUBLICATIONS_PAT }}
           branch: auto/publications
           delete-branch: true
           add-paths: _data/publications.json

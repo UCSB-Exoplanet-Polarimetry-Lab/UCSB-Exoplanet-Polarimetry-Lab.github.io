@@ -45,8 +45,15 @@
     <p>{{ page.group_detail }}</p>
     <h3 style="margin-top:6px">A note from the PI</h3>
     <p><span class="frame" style="float:right;margin:0 0 10px 16px;width:120px"><img src="{{ img('images/me.jpg') }}" alt="{{ site.pi }}"></span>
-    {{ page.pi_note.replace('{first_author}', site.first_author).replace('{cv}', root ~ 'assets/cv.pdf') }}
-    <a href="{{ root }}assets/cv.pdf">Here</a> is my CV.</p>
+    {{ page.pi_note.replace('{first_author}', site.first_author).replace('{cv}', root ~ 'assets/cv.pdf') }}</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:4px 0 6px">
+      <span class="px small">MAX ON THE WEB:</span>
+      <a class="btn sm" href="{{ site.ads }}" title="My papers on NASA ADS"><img src="{{ img('images/ads.png') }}" alt="NASA ADS"> ADS</a>
+      <a class="btn sm" href="{{ site.github }}" title="GitHub">GitHub</a>
+      <a class="btn sm" href="{{ site.orcid }}" title="ORCID"><img src="{{ img('images/orcid16.png') }}" alt="ORCID" style="height:16px"> ORCID</a>
+      <a class="btn sm" href="{{ root }}assets/cv.pdf">CV (PDF)</a>
+      <a class="btn sm" href="{{ site.first_author }}">First-author papers</a>
+    </div>
   </div>
   <div style="clear:both"></div>
   <div class="doors">
@@ -60,7 +67,7 @@
   <h2 class="sec">WHAT'S NEW {{ I.tag('new') }}<span class="path">news &amp; travel</span></h2>
   <div class="news">
   {% for it in data.news_items[:page.news_count or 8] %}
-    <div class="news-item{% if it.celebrate %} party{% endif %}" style="border-left-color:{{ it.cat.color }}">{% if it.celebrate %}{% for k in "abcdef" %}<span class="fw {{ k }}" aria-hidden="true"></span>{% endfor %}{% endif %}<div class="news-meta"><span>{{ it.date | date }}{% if (today - it.date).days < 92 %} <span class="tag-new blinker">NEW!</span>{% endif %}</span><span class="news-cat" style="background:{{ it.cat.color }};color:{{ '#141413' if it.cat.name == 'update' else '#fff' }}">{{ it.cat.display_name | upper }}</span></div><div class="news-body">{% if it.link %}<a href="{{ it.link }}" target="_blank" rel="noopener">{{ it.description | e }}</a>{% else %}{{ it.description | e }}{% endif %}</div></div>
+    <div class="news-item{% if it.celebrate %} party{% endif %}" style="border-left-color:{{ it.cat.color }}">{% if it.celebrate %}{% for k in "abcde" %}<span class="fw {{ k }}" aria-hidden="true"></span>{% endfor %}{% endif %}<div class="news-meta"><span>{{ it.date | date }}{% if (today - it.date).days < 92 %} <span class="tag-new blinker">NEW!</span>{% endif %}</span><span class="news-cat" style="background:{{ it.cat.color }};color:{{ '#141413' if it.cat.name == 'update' else '#fff' }}">{{ it.cat.display_name | upper }}</span></div><div class="news-body">{% if it.link %}<a href="{{ it.link }}" target="_blank" rel="noopener">{{ it.description | e }}</a>{% else %}{{ it.description | e }}{% endif %}</div></div>
   {% endfor %}
   </div>
 </section>

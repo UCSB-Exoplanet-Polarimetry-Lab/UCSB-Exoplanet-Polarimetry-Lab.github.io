@@ -73,7 +73,7 @@ h1,h2,h3,h4{line-height:1.25}
 /* CALM DOWN: a soft pastel blue, the calmest button on the page */
 #calmBtn{background:#CFE3F7;border-color:#E6F1FC #9CBFE0 #9CBFE0 #E6F1FC;color:#1F3A5C}
 #calmBtn:hover{background:#DDEBF9}
-/* the one thing allowed to flash in calm mode: the way back to the party */
+/* the one thing allowed to flash in calm mode: the way back */
 #calmBtn.party{animation:flash .6s step-end infinite;background:var(--pink);color:#fff;border-color:#FFB6F0}
 @keyframes party{0%,49%{background:var(--pink);color:#fff}50%,100%{background:var(--yellow);color:var(--ink)}}
 #calmBtn.party{animation:party .6s step-end infinite}
@@ -269,29 +269,28 @@ label{font-size:13px;font-weight:700;display:block;margin-bottom:4px}
 /* floated portraits shrink on phones */
 @media (max-width:480px){.prose .frame[style*="float"]{width:84px !important}}
 
-/* fireworks for celebratory news items: pure CSS. Each burst is one dot whose 16 box-shadows fly outward
+/* fireworks for celebratory news items: pure CSS. Each burst is one dot whose box-shadows fly outward
    (same list length at both keyframes so every browser interpolates the colours), and a slow hue-rotate
    cycles each burst through the spectrum between loops. */
-.news-item.party{position:relative;overflow:hidden;background:linear-gradient(#fff,#FFF1CC)}
+.news-item.party{position:relative;overflow:hidden;background:linear-gradient(#fff,#FFF4D8)}
 .news-item.party .news-body{font-weight:700;position:relative}
-.fw{position:absolute;width:7px;height:7px;border-radius:50%;pointer-events:none;opacity:0;--c:#FF3B3B;
-    animation:fw 1.5s cubic-bezier(.15,.7,.3,1) infinite, hue 4s linear infinite}
-.fw.a{left:8%;top:52%}
-.fw.b{left:27%;top:24%;--c:#FFD23F;animation-delay:.25s,.7s}
-.fw.c{left:46%;top:66%;--c:#3BFF6A;animation-delay:.5s,1.4s}
-.fw.d{left:64%;top:28%;--c:#3BC8FF;animation-delay:.75s,2.1s}
-.fw.e{left:82%;top:62%;--c:#FF3BE4;animation-delay:1s,2.8s}
-.fw.f{left:94%;top:22%;--c:#FFB13B;animation-delay:1.25s,3.5s}
+.fw{position:absolute;width:6px;height:6px;border-radius:50%;pointer-events:none;opacity:0;--c:#FF3B3B;
+    animation:fw 1.9s cubic-bezier(.15,.7,.3,1) infinite, hue 5s linear infinite}
+.fw.a{left:9%;top:52%}
+.fw.b{left:30%;top:26%;--c:#FFD23F;animation-delay:.4s,.9s}
+.fw.c{left:52%;top:64%;--c:#3BFF6A;animation-delay:.8s,1.8s}
+.fw.d{left:72%;top:30%;--c:#3BC8FF;animation-delay:1.2s,2.7s}
+.fw.e{left:91%;top:58%;--c:#FF3BE4;animation-delay:1.6s,3.6s}
 @keyframes fw{
-  0%{transform:scale(.15);opacity:1;box-shadow:
+  0%{transform:scale(.15);opacity:.9;box-shadow:
     0 0 0 0 var(--c),0 0 0 0 var(--c),0 0 0 0 var(--c),0 0 0 0 var(--c),0 0 0 0 var(--c),0 0 0 0 var(--c),
     0 0 0 0 var(--c),0 0 0 0 var(--c),0 0 0 0 var(--c),0 0 0 0 var(--c),0 0 0 0 var(--c),0 0 0 0 var(--c),
     0 0 0 0 #fff,0 0 0 0 #fff,0 0 0 0 #fff,0 0 0 0 #fff}
-  60%{opacity:1}
-  100%{transform:scale(1.2);opacity:0;box-shadow:
-    48px 0 0 1px var(--c),42px 24px 0 1px var(--c),24px 42px 0 1px var(--c),0 48px 0 1px var(--c),-24px 42px 0 1px var(--c),-42px 24px 0 1px var(--c),
-    -48px 0 0 1px var(--c),-42px -24px 0 1px var(--c),-24px -42px 0 1px var(--c),0 -48px 0 1px var(--c),24px -42px 0 1px var(--c),42px -24px 0 1px var(--c),
-    20px 20px 0 0 #fff,-20px -20px 0 0 #fff,20px -20px 0 0 #fff,-20px 20px 0 0 #fff}
+  55%{opacity:.85}
+  100%{transform:scale(1.1);opacity:0;box-shadow:
+    44px 0 0 0 var(--c),38px 22px 0 0 var(--c),22px 38px 0 0 var(--c),0 44px 0 0 var(--c),-22px 38px 0 0 var(--c),-38px 22px 0 0 var(--c),
+    -44px 0 0 0 var(--c),-38px -22px 0 0 var(--c),-22px -38px 0 0 var(--c),0 -44px 0 0 var(--c),22px -38px 0 0 var(--c),38px -22px 0 0 var(--c),
+    18px 18px 0 -1px #fff,-18px -18px 0 -1px #fff,18px -18px 0 -1px #fff,-18px 18px 0 -1px #fff}
 }
 .calm .fw{animation:none;display:none}
 @media (prefers-reduced-motion:reduce){.fw{animation:none;display:none}}

@@ -10,11 +10,6 @@
   {% for n in nav %}<a class="btn" href="{{ n.url }}" target="main" style="width:100%;justify-content:flex-start">{{ n.label }}</a>
   {% endfor %}
   <hr class="rainbow" aria-hidden="true">
-  <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center">
-    <a class="btn sm" href="{{ site.ads }}" target="main" title="My papers on NASA ADS"><img src="{{ img('images/ads.png') }}" alt="NASA ADS"></a>
-    <a class="btn sm" href="{{ site.github }}" target="main">GitHub</a>
-    <a class="btn sm" href="{{ site.orcid }}" target="main"><img src="{{ img('images/orcid16.png') }}" alt="ORCID" style="height:16px"></a>
-  </div>
   <div style="display:flex;gap:4px"><button class="btn sm px" type="button" id="prevTrack" title="Previous track">|&lt;&lt;</button><button class="btn sm px" type="button" id="soundBtn" aria-pressed="false" title="Play / stop the soundtrack" style="flex:1">&#9835; SOUND OFF</button><button class="btn sm px" type="button" id="nextTrack" title="Next track">&gt;&gt;|</button></div>
   <a class="badge" href="mailto:{{ site.email }}" style="background:#C8102E;border-color:#FFD27A;width:100%;min-width:0">{{ I.mail() }}E-MAIL ME</a>
   <div class="counter" style="padding:8px"><span class="lbl">VISITOR NUMBER</span><div class="digits" id="visitorDigits" style="transform:scale(.8)"><span>0</span><span>0</span><span>1</span><span>9</span><span>9</span><span>8</span></div></div>

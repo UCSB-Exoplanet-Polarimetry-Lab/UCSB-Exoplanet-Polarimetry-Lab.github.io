@@ -11,7 +11,7 @@
   var calmBtn = document.getElementById('calmBtn');
   function setCalm(on) {
     site.classList.toggle('calm', on);
-    if (calmBtn) { calmBtn.textContent = on ? 'PARTY TIME' : 'CALM DOWN'; calmBtn.classList.toggle('party', on); calmBtn.setAttribute('aria-pressed', on); }
+    if (calmBtn) { calmBtn.textContent = on ? 'LIVE A LITTLE' : 'CALM DOWN'; calmBtn.classList.toggle('party', on); calmBtn.setAttribute('aria-pressed', on); }
     store('mmb-calm', on ? '1' : '0');
   }
   if (store('mmb-calm') === '1') setCalm(true);

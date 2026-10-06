@@ -82,6 +82,7 @@ class Theme:
         self.env.filters["e"] = html.escape
         self.env.filters["date"] = lambda d, fmt="%b %-d, %Y": d.strftime(fmt)
         self.env.filters["dateiso"] = lambda d: d.isoformat()
+        self.env.tests["member"] = self.is_member            # usable as: authors | select("member")
         self.env.globals.update(site=site, data=data, theme=self.cfg, theme_name=name, root=self.root,
                                 updated=TODAY.strftime("%b %-d, %Y"), year=TODAY.year, today=TODAY,
                                 img=self.img, href=self.href, nav=self.nav(), switch=self.switch,

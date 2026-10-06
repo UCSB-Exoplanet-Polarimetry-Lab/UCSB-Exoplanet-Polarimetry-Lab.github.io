@@ -4,7 +4,7 @@
 {%- for a in list[:8] -%}
 	{%- if is_member(a) %}<strong>{{ a | e }}</strong>{% else %}{{ a | e }}{% endif %}{{ "; " if not loop.last }}
 {%- endfor -%}
-{%- if list | length > 8 %}; et al.{% endif -%}
+{%- if list | length > 8 %}; et al.{% set hidden = list[8:] | select("member") | list %}{% if hidden %} (incl. {% for h in hidden %}<strong>{{ h | e }}</strong>{{ ", " if not loop.last }}{% endfor %}){% endif %}{% endif -%}
 {% endmacro %}
 {% block main %}
 <section class="post">

@@ -33,7 +33,8 @@
       <td><div style="font-weight:700;line-height:1.35"><a href="{{ ads }}">{{ p.title | e }}</a></div>
         <div class="small" style="color:var(--ink2);margin-top:3px">{{ authors(p.authors) }}</div>
         <div class="small muted" style="margin-top:3px"><em>{{ p.journal or '' }}</em>{% if p.citations %} &middot; {{ p.citations }} citation{{ 's' if p.citations != 1 }}{% endif %} &middot; <a href="{{ ads }}">ADS</a>{% if p.doi %} &middot; <a href="https://doi.org/{{ p.doi }}">DOI</a>{% endif %}{% if p.arxiv %} &middot; <a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv</a>{% endif %}</div></td>
-      <td style="text-align:right;white-space:nowrap"><span class="px" style="font-size:9px;border:1px solid var(--ink);padding:2px 5px">{{ KIND.get(p.kind, 'OTHER') }}</span></td>
+      <td style="text-align:right;white-space:nowrap"><span class="px" style="font-size:9px;border:1px solid var(--ink);padding:2px 5px">{{ KIND.get(p.kind, 'OTHER') }}</span>
+        {% set n = member_count(p.authors) %}{% if n > 1 %}<br><span class="px" style="font-size:9px;background:var(--yellow);padding:2px 5px;display:inline-block;margin-top:4px">{{ n }} GROUP MEMBERS</span>{% endif %}</td>
     </tr>
     {% endfor %}
   {% endfor %}

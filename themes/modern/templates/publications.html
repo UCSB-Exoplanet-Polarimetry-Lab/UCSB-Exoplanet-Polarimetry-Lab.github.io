@@ -41,6 +41,7 @@
 				{% if p.doi %}&middot; <a href="https://doi.org/{{ p.doi }}">DOI</a>{% endif %}
 				{% if p.arxiv %}&middot; <a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv</a>{% endif %}
 				{% if p.citations %}&middot; {{ p.citations }} citation{{ 's' if p.citations != 1 }}{% endif %}
+				{% set n = member_count(p.authors) %}{% if n > 1 %}&middot; <strong>{{ n }} group members</strong>{% endif %}
 			</span>
 		</li>
 		{% endfor %}

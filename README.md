@@ -82,9 +82,14 @@ Every theme must provide `page.html`, `index.html`, `group.html`, `publications.
 
 ## Publications from ADS
 
-`scripts/fetch_ads.py` queries ADS for (PI OR every current group member) since `since_year`,
-minus meeting abstracts, and writes `_data/publications.json`. Members with an ORCID in
-`group_members.yml` are matched by ORCID; others by `author:"Last, First" AND aff:"Santa Barbara"`.
+`scripts/fetch_ads.py` queries ADS for (PI OR every current group member) since `since_year`
+and writes `_data/publications.json`. Each member is matched by `author:"Last, First" AND
+aff:"Santa Barbara"`, or by ORCID when `group_members.yml` has one (name matching matters: many SPIE
+proceedings in ADS carry no ORCIDs). The `keep:` block in `ads_config.yml` decides what stays: refereed
+papers, preprints, and proceedings from listed series (SPIE); meeting abstracts, HST/JWST proposals and
+other conference series are dropped, at fetch time and again at build time. On the page, current members
+are bold (matched on last name + first initial), hidden members behind "et al." are listed, and papers
+with two or more group members get a count badge.
 Add `ads_query:` to a member to override, or a bibcode to `exclude_bibcodes` to drop a paper.
 `--print-query` shows the query and an ADS search link. Needs a token in `$ADS_DEV_KEY` or
 `~/.ads/dev_key`. The weekly GitHub Action runs it and opens a PR when the list changes. The PR is

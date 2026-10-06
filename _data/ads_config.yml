@@ -11,3 +11,10 @@ since_year: 2020          # the group started at UCSB in Nov 2020
 max_rows: 500
 exclude_doctypes: [abstract]   # no AAS/DPS meeting abstracts; real papers and proceedings only
 exclude_bibcodes: []      # bibcodes to drop from the list, e.g. ["2021AAS...23712345X"]
+
+# What to keep from the ADS results. Everything else (meeting abstracts, HST/JWST proposals, other
+# conference series) is dropped. Applied both when fetching and when building.
+keep:
+  refereed: true
+  preprints: true
+  proceedings_from: ["SPIE"]     # bibcode prefixes of proceedings series to keep, e.g. 2024SPIE13100E..63P

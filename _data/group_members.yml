@@ -30,6 +30,16 @@ current:
     ads: ""
     orcid: ""
   
+  - name: "Jingwen Zhang"
+    role: "Postdoctoral Scholar"
+    image: ""
+    description: "Jingwen studies exoplanets and planetary systems with the goal of understanding how planets form, including the orbital architectures of planets in binary star systems and high-resolution spectroscopy of giant planets."
+    email: "jwzhang@ucsb.edu"
+    website: "https://jingwenzhang.space/"
+    github: "https://github.com/zjwhale"
+    ads: ""
+    orcid: "https://orcid.org/0000-0002-2696-2406"
+
   - name: "Briley Lewis"
     role: "NSF Astronomy and Astrophysics Postdoctoral Fellow"
     image: "briley-lewis.jpeg"

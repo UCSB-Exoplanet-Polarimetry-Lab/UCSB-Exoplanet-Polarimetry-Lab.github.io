@@ -29,6 +29,11 @@ def load_data():
     d = {k: read_yaml(DATA / f"{k}.yml") for k in ("news", "group_members", "carousel", "ads_config")}
     pj = DATA / "publications.json"
     d["publications"] = json.load(open(pj)) if pj.exists() else None
+    if d["publications"]:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("fetch_ads", ROOT / "scripts" / "fetch_ads.py")
+        fetch_ads = importlib.util.module_from_spec(spec); spec.loader.exec_module(fetch_ads)
+        d["publications"]["items"] = [p for p in d["publications"]["items"] if fetch_ads.keep_publication(p, d["ads_config"])]
     # news sorted newest first, with category objects attached
     cats = {c["name"]: c for c in d["news"].get("categories", [])}
     items = []
@@ -55,9 +60,11 @@ def load_pages():
 
 
 def member_lastnames(members):
-    names = ["Millar-Blanchaer"]
+    """(last name, first initial) for the PI and every current member, e.g. ("Zhang", "J")."""
+    names = [("Millar-Blanchaer", "M")]
     for m in members.get("current", []):
-        names.append(re.sub(r"\([^)]*\)", "", m["name"]).strip().split()[-1])
+        parts = re.sub(r"\([^)]*\)", "", m["name"]).strip().split()
+        names.append((parts[-1], parts[0][0]))
     return names
 
 
@@ -87,7 +94,7 @@ class Theme:
                                 updated=TODAY.strftime("%b %-d, %Y"), year=TODAY.year, today=TODAY,
                                 img=self.img, href=self.href, nav=self.nav(), switch=self.switch,
                                 member_lastnames=member_lastnames(data["group_members"]),
-                                pubs_by_year=publications_by_year, is_member=self.is_member)
+                                pubs_by_year=publications_by_year, is_member=self.is_member, member_count=self.member_count)
 
     # --- helpers available inside templates ---
     def img(self, src):
@@ -124,8 +131,13 @@ class Theme:
         return out
 
     def is_member(self, author):
-        last = author.split(",")[0].strip().lower()
-        return any(last == h.lower() for h in self.env.globals["member_lastnames"])
+        """ADS author string "Last, First M." matches a member on last name and first initial."""
+        last, _, first = author.partition(",")
+        last, first = last.strip().lower(), first.strip()[:1].lower()
+        return any(last == l.lower() and (not first or first == i.lower()) for l, i in self.env.globals["member_lastnames"])
+
+    def member_count(self, authors):
+        return sum(1 for a in authors if self.is_member(a))
 
     # --- build ---
     def build(self):

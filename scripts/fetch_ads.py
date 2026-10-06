@@ -33,21 +33,32 @@ def orcid_id(value):
 def member_term(m):
     if m.get("ads_query"):
         return m["ads_query"]
-    oid = orcid_id(m.get("orcid"))
-    if oid:
-        return f'orcid:"{oid}"'
     last, first = clean_name(m["name"])
-    return f'(author:"{last}, {first}" AND aff:"Santa Barbara")'
+    by_name = f'(author:"{last}, {first}" AND aff:"Santa Barbara")'
+    oid = orcid_id(m.get("orcid"))
+    return f'({by_name} OR orcid:"{oid}")' if oid else by_name
 
 
 def build_query(cfg, members):
-    terms = [f'orcid:"{cfg["pi"]["orcid"]}"']
+    pi = cfg["pi"]
+    terms = [f'(author:"{pi["name"].split(",")[0]}, {pi["name"].split(",")[1].strip()[0]}" OR orcid:"{pi["orcid"]}")']
     terms += [member_term(m) for m in members["current"]]
     people = " OR ".join(terms)
     q = f"({people}) AND collection:astronomy AND year:[{cfg['since_year']} TO 9999]"
     for dt in cfg.get("exclude_doctypes") or []:     # e.g. "abstract" drops AAS/DPS meeting abstracts
         q += f" AND NOT doctype:{dt}"
     return q
+
+
+def keep_publication(pub, cfg):
+    """Apply the `keep:` rules from ads_config.yml (shared with build.py)."""
+    keep = cfg.get("keep") or {}
+    if pub["kind"] == "refereed":
+        return keep.get("refereed", True)
+    if pub["kind"] == "preprint":
+        return keep.get("preprints", True)
+    series = keep.get("proceedings_from") or []
+    return any(pub["bibcode"][4:4 + len(sx)] == sx for sx in series)
 
 
 def token():
@@ -104,7 +115,7 @@ def main():
     for d in docs:
         if d["bibcode"] in skip:
             continue
-        pubs.append({
+        pub = {
             "bibcode": d["bibcode"],
             "title": (d.get("title") or ["Untitled"])[0],
             "authors": d.get("author") or [],
@@ -115,7 +126,9 @@ def main():
             "doi": (d.get("doi") or [None])[0],
             "arxiv": arxiv_of(d),
             "citations": d.get("citation_count", 0),
-        })
+        }
+        if keep_publication(pub, cfg):
+            pubs.append(pub)
     OUT.write_text(json.dumps({"query": query, "search_url": url, "count": len(pubs), "items": pubs}, indent=1, ensure_ascii=False) + "\n")
     print(f"wrote {OUT} with {len(pubs)} publications")
 

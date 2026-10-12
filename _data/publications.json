@@ -1,7 +1,7 @@
 {
- "query": "(orcid:\"0000-0001-6205-9233\" OR orcid:\"0009-0007-6432-0328\" OR orcid:\"0000-0001-5053-2660\" OR (author:\"Lopez, Ronald\" AND aff:\"Santa Barbara\") OR orcid:\"0000-0002-8984-4319\" OR (author:\"Hersey, Ryan\" AND aff:\"Santa Barbara\") OR (author:\"Kondapalli, Mihir\" AND aff:\"Santa Barbara\") OR (author:\"Shen, Eric\" AND aff:\"Santa Barbara\") OR (author:\"McIntosh, Thomas\" AND aff:\"Santa Barbara\") OR (author:\"Choi, Sarah\" AND aff:\"Santa Barbara\")) AND collection:astronomy AND year:[2020 TO 9999] AND NOT doctype:abstract",
- "search_url": "https://ui.adsabs.harvard.edu/search/q=%28orcid%3A%220000-0001-6205-9233%22+OR+orcid%3A%220009-0007-6432-0328%22+OR+orcid%3A%220000-0001-5053-2660%22+OR+%28author%3A%22Lopez%2C+Ronald%22+AND+aff%3A%22Santa+Barbara%22%29+OR+orcid%3A%220000-0002-8984-4319%22+OR+%28author%3A%22Hersey%2C+Ryan%22+AND+aff%3A%22Santa+Barbara%22%29+OR+%28author%3A%22Kondapalli%2C+Mihir%22+AND+aff%3A%22Santa+Barbara%22%29+OR+%28author%3A%22Shen%2C+Eric%22+AND+aff%3A%22Santa+Barbara%22%29+OR+%28author%3A%22McIntosh%2C+Thomas%22+AND+aff%3A%22Santa+Barbara%22%29+OR+%28author%3A%22Choi%2C+Sarah%22+AND+aff%3A%22Santa+Barbara%22%29%29+AND+collection%3Aastronomy+AND+year%3A%5B2020+TO+9999%5D+AND+NOT+doctype%3Aabstract&sort=date+desc%2C+bibcode+desc",
- "count": 88,
+ "query": "(orcid:\"0000-0001-6205-9233\" OR orcid:\"0009-0007-6432-0328\" OR orcid:\"0000-0001-5053-2660\" OR (author:\"Lopez, Ronald\" AND aff:\"Santa Barbara\") OR orcid:\"0000-0002-8984-4319\" OR (author:\"Hersey, Ryan\" AND aff:\"Santa Barbara\") OR (author:\"Kondapalli, Mihir\" AND aff:\"Santa Barbara\") OR (author:\"Shen, Eric\" AND aff:\"Santa Barbara\") OR (author:\"McIntosh, Thomas\" AND aff:\"Santa Barbara\") OR (author:\"Choi, Sarah\" AND aff:\"Santa Barbara\") OR (author:\"Bijamov, Ivan\" AND aff:\"Santa Barbara\")) AND collection:astronomy AND year:[2020 TO 9999] AND NOT doctype:abstract",
+ "search_url": "https://ui.adsabs.harvard.edu/search/q=%28orcid%3A%220000-0001-6205-9233%22+OR+orcid%3A%220009-0007-6432-0328%22+OR+orcid%3A%220000-0001-5053-2660%22+OR+%28author%3A%22Lopez%2C+Ronald%22+AND+aff%3A%22Santa+Barbara%22%29+OR+orcid%3A%220000-0002-8984-4319%22+OR+%28author%3A%22Hersey%2C+Ryan%22+AND+aff%3A%22Santa+Barbara%22%29+OR+%28author%3A%22Kondapalli%2C+Mihir%22+AND+aff%3A%22Santa+Barbara%22%29+OR+%28author%3A%22Shen%2C+Eric%22+AND+aff%3A%22Santa+Barbara%22%29+OR+%28author%3A%22McIntosh%2C+Thomas%22+AND+aff%3A%22Santa+Barbara%22%29+OR+%28author%3A%22Choi%2C+Sarah%22+AND+aff%3A%22Santa+Barbara%22%29+OR+%28author%3A%22Bijamov%2C+Ivan%22+AND+aff%3A%22Santa+Barbara%22%29%29+AND+collection%3Aastronomy+AND+year%3A%5B2020+TO+9999%5D+AND+NOT+doctype%3Aabstract&sort=date+desc%2C+bibcode+desc",
+ "count": 97,
  "items": [
   {
    "bibcode": "2026ApJ..1008...22C",
@@ -44,6 +44,317 @@
    "doi": "10.3847/1538-4357/ae9083",
    "arxiv": "2607.22426",
    "citations": 1
+  },
+  {
+   "bibcode": "2026SPIE14154E..9SH",
+   "title": "Results from early prototyping of a metasurface polarization aberration corrector for large observatories",
+   "authors": [
+    "Hersey, Ryan D.",
+    "Palatnick, Skyler",
+    "Millar-Blanchaer, Maxwell A.",
+    "Ashcraft, Jaren",
+    "Shanks, Daniel",
+    "Wallace, J. Kent",
+    "Wenger, Tobias",
+    "Mitchell, William",
+    "Duong, Courtney",
+    "Choi, Sarah E."
+   ],
+   "year": "2026",
+   "pubdate": "2026-08-00",
+   "journal": "Advances in Optical and Mechanical Technologies for Telescopes and Instrumentation VII",
+   "kind": "proceedings",
+   "doi": "10.1117/12.3106348",
+   "arxiv": null,
+   "citations": 0
+  },
+  {
+   "bibcode": "2026SPIE14154E..9HP",
+   "title": "A metasurface scalar vortex coronagraph for the SCALES instrument",
+   "authors": [
+    "Palatnick, Skyler",
+    "Millar-Blanchaer, Maxwell A.",
+    "Hersey, Ryan D.",
+    "Wallace, J. Kent",
+    "Wenger, Tobias",
+    "Skemer, Andy",
+    "Stelter, R. Deno",
+    "Ashcraft, Jaren",
+    "Mitchell, William"
+   ],
+   "year": "2026",
+   "pubdate": "2026-08-00",
+   "journal": "Advances in Optical and Mechanical Technologies for Telescopes and Instrumentation VII",
+   "kind": "proceedings",
+   "doi": "10.1117/12.3105761",
+   "arxiv": null,
+   "citations": 0
+  },
+  {
+   "bibcode": "2026SPIE14149E..BKL",
+   "title": "The design and integration of the optical system for MOMOS: multi-object MKID optical spectrometer",
+   "authors": [
+    "López, Ronald A.",
+    "Kim, Crystal S.",
+    "Bailey, John I.",
+    "Mazin, Benjamin A."
+   ],
+   "year": "2026",
+   "pubdate": "2026-08-00",
+   "journal": "Ground-based and Airborne Instrumentation for Astronomy XI",
+   "kind": "proceedings",
+   "doi": "10.1117/12.3105467",
+   "arxiv": null,
+   "citations": 0
+  },
+  {
+   "bibcode": "2026SPIE14149E..4SH",
+   "title": "NIR astrocomb integration with Keck Planet Imager and Characterizer (KPIC)",
+   "authors": [
+    "Horstman, Katelyn",
+    "Ciardi, David R.",
+    "Beichman, Charles",
+    "Finnerty, Luke",
+    "Echeverri, Daniel",
+    "Anakalea-Buckley, Elijah",
+    "Sappey, Ben",
+    "Hsu, Chih-Chun",
+    "Doppmann, Greg",
+    "Leifer, Stehanie",
+    "Ge, Jinhao",
+    "Kim, Yoo Jung",
+    "Ruffio, Jean-Baptiste",
+    "Fitzgerald, Michael P.",
+    "Mawet, Dimitri",
+    "Wang, Jason J.",
+    "Jovanovic, Nemanja",
+    "Baker, Ashley",
+    "Bartos, Randall",
+    "Bond, Charlotte Z.",
+    "Calvin, Benjamin",
+    "Cetre, Sylvain",
+    "Delorme, Jacques-Robert",
+    "Liberman, Joshua",
+    "López, Ronald",
+    "Plume, Emily C.",
+    "Morris, Evan",
+    "Pezzato, Jacklyn",
+    "Ruane, Garreth",
+    "Schofield, Tobias",
+    "Skemer, Andrew",
+    "Venenciano, Taylor",
+    "Wallace, J. Kent",
+    "Wallack, Nicole L.",
+    "Wizinowich, Peter",
+    "Xin, Yinzi",
+    "Xuan, Jerry W."
+   ],
+   "year": "2026",
+   "pubdate": "2026-08-00",
+   "journal": "Ground-based and Airborne Instrumentation for Astronomy XI",
+   "kind": "proceedings",
+   "doi": "10.1117/12.3105322",
+   "arxiv": null,
+   "citations": 0
+  },
+  {
+   "bibcode": "2026SPIE14149E..1PZ",
+   "title": "Enabling quantitative polarimetry for Keck/NIRC2: preliminary Mueller matrix model calibration",
+   "authors": [
+    "Zhang, Manxuan",
+    "Lewis, Briley L.",
+    "Millar-Blanchaer, Maxwell A.",
+    "Marin, Eduardo",
+    "Nguyen, Jayke S.",
+    "Melby, William",
+    "Alvarez, Carlos",
+    "Ashcraft, Jaren N.",
+    "Cisse, Mahawa",
+    "Claveau, Charles-Antoine",
+    "Delorme, Jacques-Robert",
+    "Doppmann, Greg",
+    "Fitzgerald, Michael P.",
+    "Freeman, Matthew",
+    "Gomez, Percy",
+    "Hammen, Trisha",
+    "Hersey, Ryan",
+    "Jovanovic, Nemanja",
+    "Kassis, Marc",
+    "Lilley, Scott",
+    "Lu, Jessica",
+    "Lyke, James E.",
+    "Matthews, Keith",
+    "Mawet, Dimitri",
+    "McIntosh, Thomas",
+    "Service, Max",
+    "Simmons, Lauren",
+    "Taylor, Jacob",
+    "van Holstein, Rob G.",
+    "Wetherell, Ed"
+   ],
+   "year": "2026",
+   "pubdate": "2026-08-00",
+   "journal": "Ground-based and Airborne Instrumentation for Astronomy XI",
+   "kind": "proceedings",
+   "doi": "10.1117/12.3102735",
+   "arxiv": null,
+   "citations": 0
+  },
+  {
+   "bibcode": "2026SPIE14145E..4VA",
+   "title": "The Roman Coronagraph Community Participation Program: observation planning and data reduction for polarimetric mode",
+   "authors": [
+    "Anche, Ramya M.",
+    "Mizuki, Toshiyuki",
+    "Hom, Justin",
+    "Lau, Alexis",
+    "Choudhary, Saanika",
+    "Ashcraft, Jaren N.",
+    "Do O, Clarissa",
+    "Nagai, Tsutsumi",
+    "Noiret, Sophie",
+    "Shen, Eric",
+    "Uyama, Taichi",
+    "Xie, Chen",
+    "Zhang, Jingwen",
+    "Bailey, Vanessa P.",
+    "Cady, Eric",
+    "Gersh-Range, Jessica",
+    "Girard, Julien H.",
+    "Gonzalez, Guillermo",
+    "Livingston, John",
+    "Mennesson, Bertrand",
+    "Millar-Blanchaer, Maxwell A.",
+    "Milton, Julia",
+    "Murakami, Naoshi",
+    "Savransky, Dmitry",
+    "Tamura, Motohide",
+    "Wang, Jason J.",
+    "Wolff, Schuyler G.",
+    "Ygouf, Marie"
+   ],
+   "year": "2026",
+   "pubdate": "2026-08-00",
+   "journal": "Space Telescopes and Instrumentation 2026: Optical, Infrared, and Millimeter Wave",
+   "kind": "proceedings",
+   "doi": "10.1117/12.3105290",
+   "arxiv": null,
+   "citations": 0
+  },
+  {
+   "bibcode": "2026SPIE14145E..4RZ",
+   "title": "The Roman Coronagraph Community Participation Program: corgisim, a simulation suite for the Nancy Grace Roman Space Telescope Coronagraph Instrument",
+   "authors": [
+    "Zhang, Jingwen",
+    "Noiret, Sophie",
+    "Millar-Blanchaer, Maxwell A.",
+    "Wang, Jason",
+    "Lau, Alexis",
+    "Zimmerman, Neil",
+    "Gersh-Range, Jessica",
+    "Shen, Eric",
+    "Ludwick, Kevin",
+    "Uyama, Taichi",
+    "Xie, Chen",
+    "Bailey, Vanessa P.",
+    "Krist, John",
+    "Choquet, Elodie",
+    "Girard, Julien",
+    "Bidot, Alexis",
+    "Vigan, Arthur"
+   ],
+   "year": "2026",
+   "pubdate": "2026-08-00",
+   "journal": "Space Telescopes and Instrumentation 2026: Optical, Infrared, and Millimeter Wave",
+   "kind": "proceedings",
+   "doi": "10.1117/12.3103057",
+   "arxiv": null,
+   "citations": 0
+  },
+  {
+   "bibcode": "2026SPIE14145E..4PM",
+   "title": "The Roman Coronagraph community participation program: calibration strategy for the Mueller matrix using on-sky sources",
+   "authors": [
+    "Mizuki, Toshiyuki",
+    "Hom, Justin",
+    "Mennesson, Bertrand",
+    "Anche, Ramya M.",
+    "Millar-Blanchaer, Maxwell A.",
+    "Bailey, Vanessa P.",
+    "Kawabata, Koji",
+    "Takeuchi, Mitsuhiko",
+    "Tamura, Motohide",
+    "Murakami, Naoshi",
+    "Livingston, John",
+    "Wang, Jason J.",
+    "Wolff, Schuyler G.",
+    "Gonzalez, Guillermo",
+    "Shen, Eric",
+    "Nagai, Tsutsumi",
+    "Uyama, Taichi"
+   ],
+   "year": "2026",
+   "pubdate": "2026-08-00",
+   "journal": "Space Telescopes and Instrumentation 2026: Optical, Infrared, and Millimeter Wave",
+   "kind": "proceedings",
+   "doi": "10.1117/12.3102232",
+   "arxiv": null,
+   "citations": 0
+  },
+  {
+   "bibcode": "2026SPIE14145E..0XW",
+   "title": "The Roman Coronagraph Community Participation Program: data reduction pipeline design and implementation",
+   "authors": [
+    "Wang, Jason J.",
+    "Millar-Blanchaer, Maxwell A.",
+    "Ygouf, Marie",
+    "Milton, Julia",
+    "Schreiber, Jürgen",
+    "Ludwick, Kevin J.",
+    "Bogat, Ellis",
+    "Chavez, Amanda",
+    "Shen, Eric",
+    "Baburaj, Aneesh",
+    "Anche, Ramya",
+    "Mizuki, Toshiyuki",
+    "Uyama, Taichi",
+    "Shinbaro, Ezar",
+    "Lau, Alexis",
+    "Zimmerman, Neil T.",
+    "Noiret, Sophie",
+    "Balmer, William",
+    "Sutlieff, Ben J.",
+    "Maillard, Adrien",
+    "Samland, Matthias",
+    "Eldorado Riggs, A. J.",
+    "Do Ó, Clarissa",
+    "Zhang, Jingwen",
+    "Strampelli, Giovanni M.",
+    "Altinier, Lisa",
+    "Liang, Michael",
+    "Gersh-Range, Jessica",
+    "Fluckiger, Kylee",
+    "Livingston, John",
+    "Noel, Malachi",
+    "Savransky, Dmitry",
+    "Woodland, Michele",
+    "Nagai, Tsutsumi",
+    "Hom, Justin",
+    "Niessner, Al",
+    "Wong, Cynthia",
+    "Cady, Eric J.",
+    "Bailey, Vanessa P.",
+    "Gonzalez, Guillermo",
+    "Greenbaum, Alexandra Z.",
+    "Biancalani, Enrico"
+   ],
+   "year": "2026",
+   "pubdate": "2026-08-00",
+   "journal": "Space Telescopes and Instrumentation 2026: Optical, Infrared, and Millimeter Wave",
+   "kind": "proceedings",
+   "doi": "10.1117/12.3101066",
+   "arxiv": null,
+   "citations": 0
   },
   {
    "bibcode": "2026ASTCS..1130005H",
@@ -209,7 +520,7 @@
    "kind": "refereed",
    "doi": "10.1126/science.adu6266",
    "arxiv": "2512.15861",
-   "citations": 4
+   "citations": 5
   },
   {
    "bibcode": "2026AJ....171...36H",
@@ -436,7 +747,7 @@
    "kind": "refereed",
    "doi": "10.3847/1538-4357/ae1963",
    "arxiv": "2510.20216",
-   "citations": 4
+   "citations": 5
   },
   {
    "bibcode": "2025ApJ...994..199M",
@@ -500,7 +811,7 @@
    "kind": "refereed",
    "doi": "10.3847/1538-4357/ae0615",
    "arxiv": null,
-   "citations": 4
+   "citations": 5
   },
   {
    "bibcode": "2025ApJ...993...36G",
@@ -630,7 +941,7 @@
    "kind": "refereed",
    "doi": "10.3847/2041-8213/ade798",
    "arxiv": "2506.19932",
-   "citations": 22
+   "citations": 23
   },
   {
    "bibcode": "2025JATIS..11b5002K",
@@ -1343,7 +1654,7 @@
    "kind": "refereed",
    "doi": "10.3847/2041-8213/ad3e7c",
    "arxiv": "2312.03852",
-   "citations": 44
+   "citations": 47
   },
   {
    "bibcode": "2024AJ....167..205T",
@@ -1514,7 +1825,7 @@
    "kind": "refereed",
    "doi": "10.1093/mnras/stae368",
    "arxiv": "2402.00214",
-   "citations": 12
+   "citations": 13
   },
   {
    "bibcode": "2024ApJ...963L...2S",
@@ -1780,7 +2091,7 @@
    "kind": "refereed",
    "doi": "10.3847/1538-4357/ad0e69",
    "arxiv": "2311.14599",
-   "citations": 19
+   "citations": 20
   },
   {
    "bibcode": "2023PASP..135l5001A",
@@ -2028,7 +2339,7 @@
    "kind": "refereed",
    "doi": "10.3847/2041-8213/acd93e",
    "arxiv": "2208.14990",
-   "citations": 116
+   "citations": 120
   },
   {
    "bibcode": "2023jwst.prop.4050C",
@@ -2306,7 +2617,7 @@
    "kind": "refereed",
    "doi": "10.3847/2041-8213/acb04a",
    "arxiv": "2209.00620",
-   "citations": 184
+   "citations": 187
   },
   {
    "bibcode": "2023AJ....165..113R",
@@ -2783,7 +3094,7 @@
    "kind": "refereed",
    "doi": "10.3847/2041-8213/ac3e62",
    "arxiv": "2111.12708",
-   "citations": 9
+   "citations": 10
   },
   {
    "bibcode": "2021AJ....162..148W",
@@ -2929,7 +3240,7 @@
    "kind": "refereed",
    "doi": "10.3847/1538-4357/abf0a9",
    "arxiv": "2101.07177",
-   "citations": 49
+   "citations": 50
   },
   {
    "bibcode": "2021ApJ...909L...6P",
@@ -5746,7 +6057,7 @@
    "kind": "refereed",
    "doi": "10.3847/1538-3881/ab9199",
    "arxiv": "2004.13722",
-   "citations": 113
+   "citations": 115
   },
   {
    "bibcode": "2020AJ....159..278V",
@@ -5769,7 +6080,7 @@
    "kind": "refereed",
    "doi": "10.3847/1538-3881/ab8e34",
    "arxiv": "2004.13728",
-   "citations": 60
+   "citations": 61
   },
   {
    "bibcode": "2020AJ....159..263W",
@@ -5827,7 +6138,7 @@
    "kind": "refereed",
    "doi": "10.3847/1538-3881/ab8aef",
    "arxiv": "2004.09597",
-   "citations": 98
+   "citations": 101
   },
   {
    "bibcode": "2020AJ....159..251D",
@@ -5904,7 +6215,7 @@
    "kind": "refereed",
    "doi": "10.3847/1538-3881/ab8881",
    "arxiv": "2004.06027",
-   "citations": 27
+   "citations": 28
   },
   {
    "bibcode": "2020AJ....159..244N",
@@ -6130,7 +6441,7 @@
    "kind": "refereed",
    "doi": "10.3847/1538-3881/ab5b92",
    "arxiv": "1911.11273",
-   "citations": 51
+   "citations": 52
   },
   {
    "bibcode": "2020JATIS...6a5006D",
